@@ -1,0 +1,18 @@
+@import '../../partials/global';
+
+.header {
+    &__banner {
+        width: 100%;
+    }
+    &__name {
+        font-family: 'Valorant';
+    }
+}
+
+.text {
+    color: $val-grey;
+    width: 400px;
+    text-align: left;
+    font-family: 'DINNextW1G';
+    font-weight: 50;
+}
