@@ -1,0 +1,41 @@
+@import '../../partials/global';
+
+.header__gallery {
+    &-banner {
+        width: 100%;
+        margin: 0;
+    }
+    &-name {
+        font-family: 'Valorant';
+        font-size: 6rem;
+        color: white;
+        opacity: 0.7;
+        letter-spacing: 0.2em;
+
+        &1 {
+            font-family: 'Blackout';
+            margin-top: 10%;
+            letter-spacing: 1.5rem;
+        }
+        &-container {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            margin-top: 9%;
+
+            &1 {
+                margin-top: 1%;
+                height: 5px;
+            }
+        }
+    }
+}
+
+.text {
+    color: $val-grey;
+    width: 400px;
+    text-align: left;
+    font-family: 'DINNextW1G';
+    font-weight: 50;
+}
