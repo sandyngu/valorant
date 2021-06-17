@@ -15,7 +15,9 @@
         &1 {
             font-family: 'Blackout';
             margin-top: 10%;
-            letter-spacing: 1.5rem;
+            letter-spacing: 1.55rem;
+            height: 40px;
+            overflow:hidden;
         }
         &-container {
             position: absolute;
@@ -26,7 +28,7 @@
 
             &1 {
                 margin-top: 1%;
-                height: 5px;
+                z-index: 1;
             }
         }
     }
