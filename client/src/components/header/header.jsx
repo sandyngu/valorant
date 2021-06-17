@@ -4,7 +4,7 @@ import Navigation from '../Navigation/Navigation';
 import HomeBanner from '../../assets/images/val-banner-dark.png';
 import ClipsBanner from '../../assets/images/bind.jpg';
 import GalleryBanner from '../../assets/images/valmap.png';
-import SomethingBanner from '../../assets/images/ascent2.jpg';
+import SomethingBanner from '../../assets/images/split.jpg';
 
 class Header extends React.Component {
 

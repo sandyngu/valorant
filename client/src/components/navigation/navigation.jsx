@@ -18,7 +18,7 @@ function Navigation(props) {
                     <Link to='/gallery' className="nav__link" onClick={() => props.changeGalleryBanner()}>
                         <li className="nav-list__link">Gallery</li>
                     </Link>/ /
-                    <Link to='/clips' className="nav__link" /*onClick={props.changeBanner()}*/>
+                    <Link to='/clips' className="nav__link" onClick={() => props.changeSomethingBanner()}>
                         <li className="nav-list__link">Something</li>
                     </Link>
                 </ul>
