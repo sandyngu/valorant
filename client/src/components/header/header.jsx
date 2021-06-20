@@ -1,83 +1,83 @@
 import React from 'react';
 import './header.scss';
 import Navigation from '../Navigation/Navigation';
-import HomeBanner from '../../assets/images/val-banner-dark.png';
+import HomeBanner from '../../assets/images/val-banner-dark.jpg';
 import ClipsBanner from '../../assets/images/bind.jpg';
 import GalleryBanner from '../../assets/images/valmap.png';
 import SomethingBanner from '../../assets/images/split.jpg';
 
 class Header extends React.Component {
-
     state = {
         banner: HomeBanner,
         homePage: false,
         clipsPage: false,
         galleryPage: false,
         somethingPage: false
-      }
+    };
     
-      changeBanner = () => {
-        if (this.state.clipsPage) {
-          this.setState({
-            banner: ClipsBanner
-          }) 
-          console.log('clips page!');
-        } else if (this.state.galleryPage) {
-          this.setState({
-            banner: GalleryBanner
-          })
-          console.log('gallery page!');
-        } else if (this.state.somethingPage) {
-          this.setState({
-            banner: SomethingBanner
-          })
-          console.log('something page!');
-        } else {
-          this.setState({
-            banner: HomeBanner
-          })
-          console.log('home page!');
-        }
-        console.log(this.state.banner)
-      }
+      // changeBanner() {
+      //   if (this.state.clipsPage) {
+      //     this.setState({
+      //       banner: ClipsBanner
+      //     }) 
+      //     console.log('clips page!');
+      //   } else if (this.state.galleryPage) {
+      //     this.setState({
+      //       banner: GalleryBanner
+      //     })
+      //     console.log('gallery page!');
+      //   } else if (this.state.somethingPage) {
+      //     this.setState({
+      //       banner: SomethingBanner
+      //     })
+      //     console.log('something page!');
+      //   } else {
+      //     this.setState({
+      //       banner: HomeBanner
+      //     })
+      //     console.log('home page!');
+      //   }
+      //   console.log(this.state.banner)
+      // }
 
       changeHomeBanner = () => {
           this.setState({
-              homePage: true,
-              clipsPage: false,
-              galleryPage: false,
-              somethingPage: false
-          })
+              banner: HomeBanner,
+              // homePage: true,
+              // clipsPage: false,
+              // galleryPage: false,
+              // somethingPage: false
+          }, () => {console.log(this.state.homePage)})  
       }
 
       changeClipsBanner = () => {
           this.setState({
-              homePage: false,
-              clipsPage: true,
-              galleryPage: false,
-              somethingPage: false
-          })
-          this.changeBanner();
+              banner: ClipsBanner,
+              // homePage: false,
+              // clipsPage: true,
+              // galleryPage: false,
+              // somethingPage: false
+          }, () => {console.log(this.state.clipsPage)})
       }
 
       changeGalleryBanner = () => {
         this.setState({
-              homePage: false,
-              clipsPage: false,
-              galleryPage: true,
-              somethingPage: false
-        })
-        this.changeBanner();
+              banner: GalleryBanner,
+              // homePage: false,
+              // clipsPage: false,
+              // galleryPage: true,
+              // somethingPage: false
+        },  () => {console.log(this.state.galleryPage)})
     }
 
     changeSomethingBanner = () => {
         this.setState({
-              homePage: false,
-              clipsPage: false,
-              galleryPage: false,
-              somethingPage: true
-        })
-        this.changeBanner();
+              banner: SomethingBanner,
+              // homePage: false,
+              // clipsPage: false,
+              // galleryPage: false,
+              // somethingPage: true
+        },  () => {console.log(this.state.somethingPage)})
     }
 
       render() {

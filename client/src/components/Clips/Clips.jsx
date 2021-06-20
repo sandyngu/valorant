@@ -1,8 +1,7 @@
-import axios from 'axios';
 import React from 'react';
-// import banner from '../../assets/images/val-banner-dark.png';
-// import Navigation from '../Navigation/Navigation';
+import axios from 'axios';
 import Header from '../Header/Header';
+import Video from '../Video/Video';
 import './clips.scss';
 
 class Clips extends React.Component {
@@ -15,15 +14,19 @@ class Clips extends React.Component {
         axios.get('/clips') 
         .then(res => {
             this.setState({
-                clips: res.data
+                clips: [res.data]
             })
+            console.log(res.data)
         })
+        .catch(err => console.log(err))
     }
 
     render() {
         return (
             <div className="header__clips">
                 <Header />
+            {this.state.clips.map(video => 
+                <Video />)}    
             </div>
         )
     }
