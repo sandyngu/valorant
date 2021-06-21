@@ -2,16 +2,8 @@
 
 .video {
     position: absolute;
-    margin: 10% 14%;
-
-    &-container {
-        display: flex;
-        width: 100%;
-    }
-
-    &__heading {
-        background-color: $val-red;
-    }
+    margin: 0 14vw;
+    display: flex;
 
     &__clip {
         width: 100%;

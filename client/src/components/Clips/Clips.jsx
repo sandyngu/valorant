@@ -23,8 +23,10 @@ class Clips extends React.Component {
 
     render() {
         return (
-            <div className="header__clips">
+            <div className="clips">
                 <Header />
+                <div className="clips__heading-box"></div>
+                <h2 className="clips__heading">Valorant Clips</h2>
             {this.state.clips.map(video => 
                 <Video key={video.id}
                 date={video.date}

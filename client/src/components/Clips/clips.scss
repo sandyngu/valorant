@@ -1,6 +1,6 @@
 @import '../../partials/global';
 
-.header__clips {
+.clips {
     &-banner {
         width: 100%;
         margin: 0;
@@ -28,6 +28,27 @@
                 margin-top: 1%;
                 height: 5px;
             }
+        }
+    }
+    &__heading {
+        background-color: $val-red;
+        text-align: right;
+        width: 25%;
+        text-transform: uppercase;
+        font-family: 'Tungsten';
+        font-size: 4vw;
+        margin: 7% 7% 3% 7%;
+        padding: 0 2vw;
+
+        &-box {
+            border: 2px solid white;
+            width: 25%;
+            margin: 0 7% 3% 7%;
+            position: absolute;
+            top: 0;
+            left: 5%;
+            margin-top: 37.5vw;
+            height: 5vw;
         }
     }
 }
