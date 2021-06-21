@@ -26,7 +26,11 @@ class Clips extends React.Component {
             <div className="header__clips">
                 <Header />
             {this.state.clips.map(video => 
-                <Video />)}    
+                <Video key={video.id}
+                date={video.date}
+                agent={video.agent}
+                video={video.video}
+                description={video.description} />)}    
             </div>
         )
     }
