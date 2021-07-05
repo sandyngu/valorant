@@ -10,7 +10,7 @@ class Clips extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('https://sandyngu.github.io/valorant/clips.json') 
+        axios.get('/clips') 
         .then(res => {
             this.setState({
                 clips: [res.data]
