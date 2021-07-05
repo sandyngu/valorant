@@ -23,7 +23,6 @@ class Clips extends React.Component {
     render() {
         return (
             <>
-            <Header />
             <div className="clips">
                 <div className="clips__heading-box"></div>
                 <div className="clips__heading">

@@ -7,7 +7,6 @@ import './gallery.scss';
 function Gallery() {
     return (
         <>
-        <Header />
         <div className="gallery">
         <div className="clips__heading-box"></div>
                 <div className="clips__heading">
