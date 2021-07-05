@@ -2,21 +2,29 @@
 
 .video {
     position: absolute;
-    margin: 0 14vw;
+    margin: 0 5vw;
     display: flex;
+    flex-wrap: wrap;
 
     &__clip {
         width: 100%;
         
         &-container {
-            width: 30%;
-            margin: 2%;
+            background-image: url('../../assets/images/videoclipbackground.png');
+            background-size: 100%;
+            width: 24%;
+            margin: 1vw;
+            background-color: rgba(0,0,0,0.4);
+            padding: 2vw;
+            border-radius: 0.4vw;
+            opacity: 0;
         }
 
         &-text {
             color: white;
             font-size: 1vw;
             text-transform: uppercase;
+            font-weight: bold;
         
             &-container {
                 display: flex;
@@ -26,6 +34,7 @@
                 text-transform: none;
                 text-align: left;
                 margin: 0;
+                font-size: 0.9vw;
             }
         }
     }

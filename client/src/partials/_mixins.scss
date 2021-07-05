@@ -1,0 +1,26 @@
+@keyframes slide {
+    from {
+        width: 40vw;
+    }
+    to {
+        width: 23.8vw;
+    }
+}
+
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 97% 
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: white; 
+    }
+}

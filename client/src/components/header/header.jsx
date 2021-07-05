@@ -7,77 +7,48 @@ import GalleryBanner from '../../assets/images/valmap.png';
 import SomethingBanner from '../../assets/images/split.jpg';
 
 class Header extends React.Component {
-    state = {
-        banner: HomeBanner,
-        homePage: false,
-        clipsPage: false,
-        galleryPage: false,
-        somethingPage: false
-    };
-    
-      // changeBanner() {
-      //   if (this.state.clipsPage) {
-      //     this.setState({
-      //       banner: ClipsBanner
-      //     }) 
-      //     console.log('clips page!');
-      //   } else if (this.state.galleryPage) {
-      //     this.setState({
-      //       banner: GalleryBanner
-      //     })
-      //     console.log('gallery page!');
-      //   } else if (this.state.somethingPage) {
-      //     this.setState({
-      //       banner: SomethingBanner
-      //     })
-      //     console.log('something page!');
-      //   } else {
-      //     this.setState({
-      //       banner: HomeBanner
-      //     })
-      //     console.log('home page!');
-      //   }
-      //   console.log(this.state.banner)
-      // }
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            banner: HomeBanner,
+            homePage: false,
+            clipsPage: false,
+            galleryPage: false,
+            somethingPage: false
+        };
+
+        this.changeHomeBanner = this.changeHomeBanner.bind(this);
+        this.changeClipsBanner = this.changeClipsBanner.bind(this);
+        this.changeGalleryBanner = this.changeGalleryBanner.bind(this);
+        this.changeSomethingBanner = this.changeSomethingBanner.bind(this)
+    }
 
       changeHomeBanner = () => {
           this.setState({
               banner: HomeBanner,
-              // homePage: true,
-              // clipsPage: false,
-              // galleryPage: false,
-              // somethingPage: false
-          }, () => {console.log(this.state.homePage)})  
+          })  
       }
 
       changeClipsBanner = () => {
+        document.querySelector('.nav-list__link-clips').click();
           this.setState({
               banner: ClipsBanner,
-              // homePage: false,
-              // clipsPage: true,
-              // galleryPage: false,
-              // somethingPage: false
-          }, () => {console.log(this.state.clipsPage)})
+          })
       }
 
       changeGalleryBanner = () => {
+        document.querySelector('.nav-list__link-gallery').click();
         this.setState({
               banner: GalleryBanner,
-              // homePage: false,
-              // clipsPage: false,
-              // galleryPage: true,
-              // somethingPage: false
-        },  () => {console.log(this.state.galleryPage)})
+        })
     }
 
     changeSomethingBanner = () => {
+        document.querySelector('.nav-list__link-friendsclips').click();
         this.setState({
-              banner: SomethingBanner,
-              // homePage: false,
-              // clipsPage: false,
-              // galleryPage: false,
-              // somethingPage: true
-        },  () => {console.log(this.state.somethingPage)})
+              banner: SomethingBanner,            
+        })
     }
 
       render() {

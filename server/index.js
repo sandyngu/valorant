@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 require('dotenv').config();
 const clipsData = require('./clips.json');
+const friendsClipsData = require('./friendsclips.json');
 
 app.use(bodyParser.json())
 
@@ -14,6 +15,10 @@ app.get('/', function(req, res){
 
 app.get('/clips', (_req, res) => {
   res.json(clipsData);
+})
+
+app.get('/friendsclips', (_req, res) => {
+  res.json(friendsClipsData);
 })
 
 app.listen(PORT, () => console.log(`Listening on ${BACKEND_URL}:${PORT}`));
