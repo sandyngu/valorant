@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import Header from '../Header/Header';
 import Video from '../Video/Video';
 import '../ClipsPage/clipspage.scss';
 
@@ -11,7 +10,7 @@ class Clips extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('/friendsclips') 
+        axios.get('https://sandyngu.github.io/valorant/friendsclips.json') 
         .then(res => {
             this.setState({
                 clips: [res.data]
