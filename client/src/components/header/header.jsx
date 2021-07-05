@@ -2,15 +2,12 @@ import React from 'react';
 import './header.scss';
 import Navigation from '../Navigation/Navigation';
 import HomeBanner from '../../assets/images/val-banner-dark.jpg';
-import ClipsBanner from '../../assets/images/bind.jpg';
-import GalleryBanner from '../../assets/images/valmap.png';
-import SomethingBanner from '../../assets/images/split.jpg';
+import FriendsBanner from '../../assets/images/bind.jpg';
+import ClipsBanner from '../../assets/images/valmap.png';
+import GalleryBanner from '../../assets/images/split.jpg';
 
 class Header extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
+        state = {
             banner: HomeBanner,
             homePage: false,
             clipsPage: false,
@@ -18,22 +15,21 @@ class Header extends React.Component {
             somethingPage: false
         };
 
-        this.changeHomeBanner = this.changeHomeBanner.bind(this);
-        this.changeClipsBanner = this.changeClipsBanner.bind(this);
-        this.changeGalleryBanner = this.changeGalleryBanner.bind(this);
-        this.changeSomethingBanner = this.changeSomethingBanner.bind(this)
-    }
-
       changeHomeBanner = () => {
           this.setState({
               banner: HomeBanner,
-          })  
+              homePage: true
+          })
+          if (this.state.homePage) {
+              document.querySelector('.nav-list-logo').classList.add('active')  
+          }
       }
 
       changeClipsBanner = () => {
         document.querySelector('.nav-list__link-clips').click();
           this.setState({
               banner: ClipsBanner,
+              clipsPage: true
           })
       }
 
@@ -41,13 +37,15 @@ class Header extends React.Component {
         document.querySelector('.nav-list__link-gallery').click();
         this.setState({
               banner: GalleryBanner,
+              galleryPage: true
         })
     }
 
-    changeSomethingBanner = () => {
+    changeFriendsBanner = () => {
         document.querySelector('.nav-list__link-friendsclips').click();
         this.setState({
-              banner: SomethingBanner,            
+              banner: FriendsBanner,   
+              friendsClipsPage: true         
         })
     }
 
@@ -61,7 +59,7 @@ class Header extends React.Component {
                   <div className="header__name-container header__name-container2">
                       <h1 className="header__name header__name2">Chawpsticks #NA1</h1>
                   </div>
-                  <Navigation changeHomeBanner={this.changeHomeBanner} changeClipsBanner={this.changeClipsBanner} changeGalleryBanner={this.changeGalleryBanner} changeSomethingBanner={this.changeSomethingBanner}/>
+                  <Navigation changeHomeBanner={this.changeHomeBanner} changeClipsBanner={this.changeClipsBanner} changeGalleryBanner={this.changeGalleryBanner} changeFriendsBanner={this.changeFriendsBanner}/>
               </div>
           )
       }
