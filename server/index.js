@@ -13,6 +13,9 @@ app.get('/', function(req, res){
   res.sendFile(__dirname+'/bin/index.html'); // change the path to your index.html
 });
 
+app.use(express.static('../client/build/'));
+app.use('/', express.static('../client/build/index.html'));
+
 app.get('/clips', (_req, res) => {
   res.json(clipsData);
 })
