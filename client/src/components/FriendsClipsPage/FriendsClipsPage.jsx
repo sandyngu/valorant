@@ -10,7 +10,7 @@ class Clips extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('/friendsclips') 
+        axios.get('./friendsclips') 
         .then(res => {
             this.setState({
                 clips: [res.data]
