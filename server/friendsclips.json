@@ -68,5 +68,12 @@
         "agent": "Bruce",
         "video":"http://127.0.0.1:8887/Friends Val Clips/Bruce-Clutch-Moments-clip-from-Jun-16,-2021.mp4",
         "description": "3K pistol clutch."
+    },
+    {
+        "id": "10",
+        "date": "04.23.2021",
+        "agent": "Kyle",
+        "video":"http://127.0.0.1:8887/Kyle's Amazing Clutch - VALORANT   2021-04-23 16-58-40.mp4",
+        "description": "Kyle's precise gunplay clutch."
     }
 ]

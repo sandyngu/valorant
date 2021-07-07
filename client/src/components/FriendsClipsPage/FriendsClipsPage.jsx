@@ -10,7 +10,7 @@ class Clips extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('./friendsclips') 
+        axios.get('/friendsclips') 
         .then(res => {
             this.setState({
                 clips: [res.data]
@@ -21,22 +21,16 @@ class Clips extends React.Component {
 
     render() {
         return (
-            <>
             <div className="clips">
                 <div className="clips__heading-box"></div>
                 <div className="clips__heading">
                     <div className="clips__heading-text">Friends' Clips</div>
                 </div>
                 {this.state.clips.map(video => 
-                    <Video clipsData={this.state.clips}/*key={video.id}
-                    date={video.date}
-                    agent={video.agent}
-                    video={video.video}
-                    description={video.description}*/ />)}    
+                    <Video clipsData={this.state.clips} key={video.id} />)}    
                     <div className="clips__body">
                 </div>
             </div>
-            </>
         )
     }
 }
