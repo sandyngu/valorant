@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Jett from '../../assets/images/jett.gif';
 import './home.scss';
 
-function Home(props) {
+function Home() {
 
-    const trackerAPIKey = "75000a71-51ac-4a26-8f83-87119556c816";
-    const riotAPIKey = "RGAPI-d3c98792-673b-4a52-bd41-96ce5ec0dd01";
+    // const trackerAPIKey = "75000a71-51ac-4a26-8f83-87119556c816";
+    // const riotAPIKey = "RGAPI-d3c98792-673b-4a52-bd41-96ce5ec0dd01";
 
     function clipsPage() {
         document.querySelector('.nav-list__link-clips').click();
@@ -29,12 +28,15 @@ function Home(props) {
                         <br/><br/>Here you will be blessed with some of my highlight reels and my friends' highlight reels from the game. I am hardstuck gold and have spent an unhealthy amount of time on the game. Tracker.gg says I have spent almost 1100 hours on the game. I have been playing since beta.
                         <br/><br/>Please feel free to browse around and join me on my journey to radiant. Enjoy the content, agent :).
                     </div>
-                    <div className="home__text-button-box home__text-button-box1"></div>
-                    <button className="home__text-button" onClick={() => clipsPage()}>View My Clips</button>
-                    <div className="home__text-button-box home__text-button-box2"></div>
-                    <br/><button className="home__text-button" onClick={() => clipsPage()}>View My Friends' Clips</button>
-                    <div className="home__text-button-box home__text-button-box3"></div>
-                    <br/><button className="home__text-button" onClick={() => clipsPage()}>View The Gallery</button>
+                    <div className="home__text-line"></div>
+                    <div className="home__text-button-container">
+                        <div className="home__text-button-box home__text-button-box1"></div>
+                        <button className="home__text-button home__text-button1" onClick={() => clipsPage()}>View My Clips</button>
+                        <div className="home__text-button-box home__text-button-box2"></div>
+                        <button className="home__text-button home__text-button2" onClick={() => clipsPage()}>View My Friends' Clips</button>
+                        <div className="home__text-button-box home__text-button-box3"></div>
+                        <button className="home__text-button home__text-button3" onClick={() => clipsPage()}>View The Gallery</button>
+                    </div>
                 </div>
                 <img src={Jett} alt="Jett" className="home__jett"/>
             </div>

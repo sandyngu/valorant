@@ -3,7 +3,6 @@
 .home {
     background-color: rgba(255,255,255,0.1);
     width: 80%;
-    height: 2000px;
     position: absolute;
     left: 10%;
     top: 0;
@@ -17,12 +16,12 @@
         width: 90%;
         position: absolute;
         background-color: rgba(255,255,255,0.1);
-        height: 100%;
         left: 5%;
+        height: 90%;
     }
 
     &__jett {
-        opacity: 0.6;
+        opacity: 0.9;
         transform: rotateY(180deg);
         margin: 3vw 5vw;
         width: 63.5vw;
@@ -35,7 +34,7 @@
         text-transform: uppercase;
         letter-spacing: 0.11vw;
         line-height: 4.8vw;
-        background-color: rgba(235, 231, 225, 0.6);
+        background-color: rgba(235, 231, 225, 0.9);
         color: $val-black;
 
         &-container {
@@ -76,6 +75,11 @@
             text-transform: uppercase;
             font-weight: bold;
         }
+        &-line {
+            width: 100%;
+            border-top: 0.1vw solid rgba(0,0,0,0.2);
+            margin-top: 2vw;
+        }
         &-button {
             background-color: $val-red;
             outline: none;
@@ -84,18 +88,32 @@
             text-transform: uppercase;
             font-weight: bold;
             font-size: 1vw;
-            position: relative;
-            margin-top: 2vw;
+            position: absolute;
+            margin: -0.13vw 0 2vw 0;
+            left: 29%;
+            background: linear-gradient(to left, $val-red 50%, $val-black 50%) right;
+            background-size: 200%;
+            transition: 0.75s ease-out;
+
+            &2 {
+                margin-top: 5.08vw;
+                left: 20.3%;
+            }
+            &3 {
+                margin-top: 10.35vw;
+                left: 25.2%;
+            }
 
             &:hover {
                 cursor: pointer;
-                background-color: $val-black;
                 color: white;
-                animation: button 1.5s;
+                background-position: left;
+                // background-color: $val-black;
+                // animation: button 1.5s;     
             }
-            &:active {
-                color: white;
-                background-color: $val-black;
+
+            &-container {
+                margin-top: 3vw;
             }
 
             &-box {
@@ -103,17 +121,17 @@
                 padding: 2vw 5.65vw;
                 position: absolute;
                 top: 0;
-                margin-top: 12.4vw;
+                margin-top: 15.4vw;
                 left: 27%;
                 z-index: 0;
 
                 &2 {
-                    margin-top: 17.62vw;
+                    margin-top: 20.62vw;
                     padding: 2vw 7.8vw;
                     left: 18.3%;
                 }
                 &3 {
-                    margin-top: 22.85vw;
+                    margin-top: 25.85vw;
                     padding: 2vw 6.65vw;
                     left: 22.9%;
                 }
