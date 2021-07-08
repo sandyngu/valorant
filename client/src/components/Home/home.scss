@@ -89,8 +89,13 @@
 
             &:hover {
                 cursor: pointer;
+                background-color: $val-black;
                 color: white;
-                animation: button 2.5s;
+                animation: button 1.5s;
+            }
+            &:active {
+                color: white;
+                background-color: $val-black;
             }
 
             &-box {
@@ -98,17 +103,17 @@
                 padding: 2vw 5.65vw;
                 position: absolute;
                 top: 0;
-                margin-top: 36.6%;
+                margin-top: 12.4vw;
                 left: 27%;
                 z-index: 0;
 
                 &2 {
-                    margin-top: 14.35vw;
+                    margin-top: 17.62vw;
                     padding: 2vw 7.8vw;
                     left: 18.3%;
                 }
                 &3 {
-                    margin-top: 19.55vw;
+                    margin-top: 22.85vw;
                     padding: 2vw 6.65vw;
                     left: 22.9%;
                 }
