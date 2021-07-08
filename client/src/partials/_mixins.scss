@@ -18,9 +18,18 @@
 
 @keyframes blink {
     from, to { 
-        border-color: transparent 
+        border-color: transparent; 
     }
     50% { 
         border-color: white; 
+    }
+}
+
+@keyframes button {
+    from, to { 
+        background-color: #ff4655; 
+    }
+    50% { 
+        background-color: #0f1923; 
     }
 }

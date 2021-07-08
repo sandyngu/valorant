@@ -8,7 +8,11 @@ function Home(props) {
     const trackerAPIKey = "75000a71-51ac-4a26-8f83-87119556c816";
     const riotAPIKey = "RGAPI-d3c98792-673b-4a52-bd41-96ce5ec0dd01";
 
-    
+    function clipsPage() {
+        document.querySelector('.nav-list__link-clips').click();
+        window.scrollTo(0, 0);
+    }
+
     return (
         <div className="home">
             <div className="clips__heading-box"></div>
@@ -17,15 +21,19 @@ function Home(props) {
             </div>
             <div className="home__container">
                 <div className="home__box"></div>
-                <div className="home__heading">Hello, welcome to Chawpsticks' <br/><span className="home__heading-val">Valorant</span> website.</div>
+                <div className="home__heading-container">
+                    <div className="home__heading">Hello, welcome to <br/> Chawpsticks' <br/><span className="home__heading-val">Valorant</span> website.</div>
+                </div>
                 <div className="home__text-container">
                     <div className="home__text"><span className="home__text-first">Valorant is a 5v5 character-based tactical shooter.</span> 
                         <br/><br/>Here you will be blessed with some of my highlight reels and my friends' highlight reels from the game. I am hardstuck gold and have spent an unhealthy amount of time on the game. Tracker.gg says I have spent almost 1100 hours on the game. I have been playing since beta.
                     </div>
-                    <div className="home__text-button-box"></div>
-                    <Link to='/clips' onClick={() => props.changeClipsBanner()}>
-                        <button className="home__text-button">View My Clips</button>
-                    </Link>
+                    <div className="home__text-button-box home__text-button-box1"></div>
+                    <button className="home__text-button" onClick={() => clipsPage()}>View My Clips</button>
+                    <div className="home__text-button-box home__text-button-box2"></div>
+                    <br/><button className="home__text-button" onClick={() => clipsPage()}>View My Friends' Clips</button>
+                    <div className="home__text-button-box home__text-button-box3"></div>
+                    <br/><button className="home__text-button" onClick={() => clipsPage()}>View The Gallery</button>
                 </div>
                 <img src={Jett} alt="Jett" className="home__jett"/>
             </div>
