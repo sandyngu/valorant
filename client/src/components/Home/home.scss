@@ -51,7 +51,7 @@
 
         &-val {
             font-family: "Valorant";
-            color: darkred;
+            color: $val-red;
             font-size: 6vw;
             letter-spacing: -0.5vw;
         }
@@ -84,10 +84,10 @@
             background-color: $val-red;
             outline: none;
             border: none;
-            padding: 1vw 2vw;
+            padding: 1.1vw 2.65vw;
             text-transform: uppercase;
             font-weight: bold;
-            font-size: 1vw;
+            font-size: 0.8vw;
             position: absolute;
             margin: -0.13vw 0 2vw 0;
             left: 29%;
@@ -98,10 +98,12 @@
             &2 {
                 margin-top: 5.08vw;
                 left: 20.3%;
+                padding: 1.1vw 3.09vw;
             }
             &3 {
                 margin-top: 10.35vw;
                 left: 25.2%;
+                padding: 1.1vw 2.85vw;
             }
 
             &:hover {

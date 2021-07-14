@@ -173,5 +173,12 @@
         "agent": "Sage",
         "video":"http://127.0.0.1:8887/!! CRAZY - VALORANT   2021-03-09 18-10-00.mp4",
         "description": "Raymond and Tim React to Flick."
+    },
+    {
+        "id": "25",
+        "date": "07.14.2021",
+        "agent": "Brimstone",
+        "video":"http://127.0.0.1:8887/SteelSeries Moments/VALORANT__2021-07-14__17-54-27.mp4",
+        "description": "ACE!"
     }
 ]
