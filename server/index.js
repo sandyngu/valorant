@@ -24,4 +24,16 @@ app.get('/friendsclips', (_req, res) => {
   res.json(friendsClipsData);
 })
 
+app.post('/clips', (req, res) => {
+  const { newVideo } = req.body
+  console.log(newVideo)
+
+  const nextClipsList = clipsData.pop();
+  nextClipsList.push(newVideo);
+  
+  clipsData.push(nextClipsList)
+
+  res.json(clipsData)
+})
+
 app.listen(PORT, () => console.log(`Listening on ${BACKEND_URL}:${PORT}`));

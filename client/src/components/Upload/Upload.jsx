@@ -5,30 +5,32 @@ import Brim from '../../assets/images/brimmy.gif';
 
 function Upload() {
 
-    // function cancelForm() {
-    //     const uploadForm = document.querySelector('.upload-section__form');
-    //     uploadForm.reset();
-    // };
+    function cancelForm(e) {
+        const uploadForm = document.querySelector('.upload__form');
+        uploadForm.reset();
+        e.preventDefault();
+    };
 
-    // uploadVideo = (e) => {
-    //     e.preventDefault();
-    //     this.cancelForm();
-    //     window.scrollTo(0, 0);
+    function uploadVideo(e) {
+        e.preventDefault();
+        cancelForm(e);
+        window.scrollTo(0, 0);
     
 
-    // const newVideo = {
-    //     id: 1,
-    //     date: e.target.date.value,
-    //     agent: e.target.date.value,
-    //     video: e.target.video.value,
-    //     description: e.target.description.value
-    // }
+    const newVideo = {
+        id: 1,
+        date: e.target.date.value,
+        agent: e.target.agent.value,
+        video: e.target.video.value,
+        description: e.target.description.value
+    }
 
-    // axios.post('/videos', newVideo)
-    //         .catch(err => console.log(err));
+    axios.post('/clips', {newVideo})
+            .catch(err => console.log(err));
+            console.log(newVideo)
 
-    //         alert('New Video Successfully Uploaded!');
-    //     };
+            alert('New Video Successfully Uploaded!');
+        };
 
     return (
         <div className="upload">
@@ -39,18 +41,18 @@ function Upload() {
             <div className="upload__container">
                 <img src={Brim} className="upload__container-brim" alt="Brimstone Gif"/>
                 
-                    <form className="upload__form" /*onSubmit={this.uploadVideo}*/>
-                        <label className="upload__form-title">Date Your Video (mm.dd.yyyy)</label>
+                    <form className="upload__form" onSubmit={(e) => {uploadVideo(e)}}>
+                        <label className="upload__form-title">Date Your Video (mm.dd.yyyy):</label>
                         <br/><input type="text" name="date" className="upload__form-input upload__form-input-date" placeholder="Add a date to your video"/>
-                        <br/><label className="upload__form-title">Agent Name</label>
+                        <br/><label className="upload__form-title">Agent Name:</label>
                         <br/><input type="text" name="agent" className="upload__form-input upload__form-input-agent" placeholder="What agent is being used?"/>
-                        <br/><label className="upload__form-title">Video URL/Path</label>
-                        <br/><input type="text" name="date" className="upload__form-input upload__form-input-date" placeholder="Where can we get the video?"/>
-                        <br/><label className="upload__form-title">Description</label>
+                        <br/><label className="upload__form-title">Video URL/Path (include .mp4):</label>
+                        <br/><input type="text" name="video" className="upload__form-input upload__form-input-date" placeholder="Where can we get the video?"/>
+                        <br/><label className="upload__form-title">Description:</label>
                         <br/><input type="text" name="description" className="upload__form-input upload__form-input-description" placeholder="What's happening in the clip?"/>
                         <div className="upload__form-options">
                             <button className="upload__form-options-button upload__form-options-button--submit">Submit</button>
-                            <button className="upload__form-options-button upload__form-options-button--cancel" /*onClick={this.cancelForm}*/>Cancel</button>
+                            <button className="upload__form-options-button upload__form-options-button--cancel" onClick={(e) => cancelForm(e)}>Cancel</button>
                         </div>
                     </form>
                 
