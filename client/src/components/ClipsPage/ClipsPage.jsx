@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import Video from '../Video/Video';
 import './clipspage.scss';
+import Upload from '../../assets/images/upload.png';
 
 class Clips extends React.Component {
 
@@ -24,6 +24,14 @@ class Clips extends React.Component {
         document.querySelector('.nav__link-upload').click();
     }
 
+    uploadHover = () => {
+        document.querySelector('.clips__button-upload').classList.add('clips__button-upload--hover');
+    }
+
+    uploadLeave = () => {
+        document.querySelector('.clips__button-upload').classList.remove('clips__button-upload--hover');
+    }
+
     render() {
         return (
             <>
@@ -39,7 +47,9 @@ class Clips extends React.Component {
                 <div className="clips__body"></div>
                 <div className="clips__line"></div>
                 <div className="clips__button-box"></div>
-                <button className="clips__button" onClick={() => this.uploadClick()}>Upload</button>
+                <button className="clips__button" onClick={() => this.uploadClick()} onMouseOver={() => this.uploadHover()} onMouseLeave={() => this.uploadLeave()}>Upload
+                    <img src={Upload} className="clips__button-upload" alt="Upload Logo"/>
+                </button>
             </div>
             </>
         )

@@ -61,12 +61,15 @@
         color: white;
         height: 50px;
         border-bottom: 0.1vw white solid;
+        position: relative;
     }
     &__button {
         left: 43.3%;
         margin-top: 3vw;
-        padding: 1.1vw 3.8vw;
-
+        padding: 1.05vw 3vw;
+        z-index: 2;
+        position: absolute;
+        
         &-box {
             border: white 0.1vw solid;
             padding: 2vw 5.65vw;
@@ -75,6 +78,15 @@
             margin-top: 195vw;
             left: 42.65%;
             z-index: 0;
+        }
+        &-upload {
+            width: 1.2vw;
+            margin-left: 0.5vw;
+            vertical-align: bottom;
+
+            &--hover {
+                animation: 2.5s upload infinite;
+            }
         }
     }
 }

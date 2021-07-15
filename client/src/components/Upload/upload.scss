@@ -1,3 +1,5 @@
+@import '../../partials/global';
+
 .upload {
     background-color: rgba(255,255,255,0.1);
     width: 80%;
@@ -7,4 +9,52 @@
     top: 0;
     margin-top: 33%;  
     display: inline-block;
+
+    &__container {
+        display: flex;
+        background-color: rgba(255,255,255,0.1);
+        margin: 2vw;
+
+        &-brim {
+            margin: 1.5vw;
+            width: 50%;
+        }
+    }
+    &__form {
+        margin: 3vw;
+        width: 100%;
+        
+        &-title {
+            color: white;
+            font-size: 1.3vw;
+        }
+        &-input {
+            padding: 0.75vw 1vw;
+            width: 80%;
+            margin: 1vw;
+            font-size: 1vw;
+            font-family: DINNextW1G,arial,georgia,sans-serif;
+            background-color: rgb(194, 192, 192);
+        }
+        &-options {
+            display: flex;
+            justify-content: space-around;
+
+            &-button--cancel {
+                background: linear-gradient(to left, $val-black 50%, rgb(116, 115, 115) 50%) right;
+                background-size: 201%;
+                color: white;
+
+                &:hover {
+                    cursor: pointer;
+                    color: black;
+                    background-position: left;    
+                }
+            }
+        }
+    }
+}
+
+input::-webkit-input-placeholder {
+    color: black;
 }
