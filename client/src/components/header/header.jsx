@@ -5,20 +5,16 @@ import HomeBanner from '../../assets/images/val-banner-dark.jpg';
 import FriendsBanner from '../../assets/images/bind.jpg';
 import ClipsBanner from '../../assets/images/valmap.png';
 import GalleryBanner from '../../assets/images/split.jpg';
+import UploadBanner from '../../assets/images/bind.png';
 
 class Header extends React.Component {
         state = {
             banner: HomeBanner,
-            homePage: false,
-            clipsPage: false,
-            galleryPage: false,
-            somethingPage: false
         };
 
       changeHomeBanner = () => {
           this.setState({
               banner: HomeBanner,
-              homePage: true
           })
           if (this.state.homePage) {
               document.querySelector('.nav-list-logo').classList.add('active')  
@@ -29,7 +25,6 @@ class Header extends React.Component {
         document.querySelector('.nav-list__link-clips').click();
           this.setState({
               banner: ClipsBanner,
-              clipsPage: true
           })
       }
 
@@ -37,17 +32,21 @@ class Header extends React.Component {
         document.querySelector('.nav-list__link-gallery').click();
         this.setState({
               banner: GalleryBanner,
-              galleryPage: true
         })
     }
 
-    changeFriendsBanner = () => {
-        document.querySelector('.nav-list__link-friendsclips').click();
-        this.setState({
-              banner: FriendsBanner,   
-              friendsClipsPage: true         
-        })
-    }
+        changeFriendsBanner = () => {
+            document.querySelector('.nav-list__link-friendsclips').click();
+            this.setState({
+                banner: FriendsBanner,         
+            })
+        }
+
+        changeUploadBanner = () => {
+            this.setState({
+                banner: UploadBanner,         
+            })
+        }
 
       render() {
           return (
@@ -59,7 +58,7 @@ class Header extends React.Component {
                   <div className="header__name-container header__name-container2">
                       <h1 className="header__name header__name2">Chawpsticks #NA1</h1>
                   </div>
-                  <Navigation changeHomeBanner={this.changeHomeBanner} changeClipsBanner={this.changeClipsBanner} changeGalleryBanner={this.changeGalleryBanner} changeFriendsBanner={this.changeFriendsBanner}/>
+                  <Navigation changeHomeBanner={this.changeHomeBanner} changeClipsBanner={this.changeClipsBanner} changeGalleryBanner={this.changeGalleryBanner} changeFriendsBanner={this.changeFriendsBanner} changeUploadBanner={this.changeUploadBanner}/>
               </div>
           )
       }

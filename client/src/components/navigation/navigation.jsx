@@ -21,6 +21,7 @@ function Navigation(props) {
                     <Link to='/gallery' className="nav__link" onClick={() => props.changeGalleryBanner()}>
                         <li className="nav-list__link nav-list__link-gallery">Gallery</li>
                     </Link>
+                    <Link to='/upload' className="nav__link-upload" onClick={() => props.changeUploadBanner()}></Link>
                 </ul>
             </nav>
         </div>

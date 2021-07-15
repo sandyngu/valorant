@@ -81,19 +81,6 @@
             margin-top: 2vw;
         }
         &-button {
-            background-color: $val-red;
-            outline: none;
-            border: none;
-            padding: 1.1vw 2.65vw;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 0.8vw;
-            position: absolute;
-            margin: -0.13vw 0 2vw 0;
-            left: 29%;
-            background: linear-gradient(to left, $val-red 50%, $val-black 50%) right;
-            background-size: 200%;
-            transition: 0.75s ease-out;
 
             &2 {
                 margin-top: 5.08vw;
@@ -104,14 +91,6 @@
                 margin-top: 10.35vw;
                 left: 25.2%;
                 padding: 1.1vw 2.85vw;
-            }
-
-            &:hover {
-                cursor: pointer;
-                color: white;
-                background-position: left;
-                // background-color: $val-black;
-                // animation: button 1.5s;     
             }
 
             &-container {
