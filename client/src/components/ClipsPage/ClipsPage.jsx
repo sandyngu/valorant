@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import Video from '../Video/Video';
-import './clipspage.scss';
 import Upload from '../../assets/images/upload.png';
+import './clipspage.scss';
 
 class Clips extends React.Component {
 

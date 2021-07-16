@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Video from '../Video/Video';
+import Upload from '../../assets/images/upload.png';
 import '../ClipsPage/clipspage.scss';
 
 class Clips extends React.Component {
@@ -19,6 +20,18 @@ class Clips extends React.Component {
         .catch(err => console.log(err))
     }
 
+    uploadClick = () => {
+        document.querySelector('.nav__link-upload').click();
+    }
+
+    uploadHover = () => {
+        document.querySelector('.clips__button-upload').classList.add('clips__button-upload--hover');
+    }
+
+    uploadLeave = () => {
+        document.querySelector('.clips__button-upload').classList.remove('clips__button-upload--hover');
+    }
+
     render() {
         return (
             <div className="clips">
@@ -29,6 +42,10 @@ class Clips extends React.Component {
                 {this.state.clips.map(video => 
                     <Video clipsData={this.state.clips} key={video.id} />)}    
                     <div className="clips__body">
+                    <div className="clips__button-box"></div>
+                    <button className="clips__button" onClick={() => this.uploadClick()} onMouseOver={() => this.uploadHover()} onMouseLeave={() => this.uploadLeave()}>Upload
+                        <img src={Upload} className="clips__button-upload" alt="Upload Logo"/>
+                    </button>
                 </div>
             </div>
         )
