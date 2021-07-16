@@ -64,8 +64,9 @@
         position: relative;
     }
     &__button {
-        left: 43.3%;
-        margin-top: 3vw;
+        right: 10%;
+        top: 0;
+        margin-top: 6vw;
         padding: 1.05vw 3vw;
         z-index: 2;
         position: absolute;
@@ -75,8 +76,8 @@
             padding: 2vw 5.65vw;
             position: absolute;
             top: 0;
-            margin-top: 195vw;
-            left: 42.65%;
+            margin-top: 5.55vw;
+            right: 9.45%;
             z-index: 0;
         }
         &-upload {
