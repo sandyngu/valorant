@@ -26,18 +26,6 @@ app.get('/friendsclips', (_req, res) => {
   res.json(friendsClipsData);
 })
 
-// app.post('/clips', (req, res) => {
-//   const { newVideo } = req.body
-//   console.log(newVideo)
-
-//   // const nextClipsList = clipsData;
-//   // nextClipsList.push(newVideo);
-  
-//   // clipsData.push(newVideo);
-
-//   res.json(clipsData)
-// })
-
 app.post('/clips', (req, res) => {
   console.log(req.body);
   const { newVideo } = req.body
@@ -45,6 +33,16 @@ app.post('/clips', (req, res) => {
   videoData.push(newVideo);
   console.log(videoData);
   fs.writeFileSync('./clips.json', JSON.stringify(videoData), null, 2);
+  res.status(201).send({status: 'Video Added'});
+})
+
+app.post('/friendsclips', (req, res) => {
+  console.log(req.body);
+  const { newVideo } = req.body
+  const friendsVideoData = JSON.parse(fs.readFileSync('./friendsclips.json'));
+  friendsVideoData.push(newVideo);
+  console.log(friendsVideoData);
+  fs.writeFileSync('./friendsclips.json', JSON.stringify(friendsVideoData), null, 2);
   res.status(201).send({status: 'Video Added'});
 })
 
