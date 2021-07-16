@@ -7,7 +7,7 @@
     position: absolute;
     left: 10%;
     top: 0;
-    margin-top: 33%;  
+    margin: 33vw 0;  
     display: inline-block;
 
     &__container {
@@ -16,8 +16,9 @@
         margin: 2vw;
 
         &-brim {
-            margin: 1.5vw;
-            width: 50%;
+            margin: 3vw 1.5vw;
+            width: 55%;
+            height: 90%;
         }
     }
     &__form {
@@ -26,19 +27,21 @@
         
         &-title {
             color: white;
-            font-size: 1.3vw;
+            font-size: 1.1vw;
         }
         &-input {
             padding: 0.75vw 1vw;
             width: 80%;
             margin: 1vw;
-            font-size: 1vw;
+            font-size: 0.9vw;
             font-family: DINNextW1G,arial,georgia,sans-serif;
             background-color: rgb(194, 192, 192);
+            border-radius: 0.3vw;
+            outline: none;
         }
         &-options {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
 
             &-button--cancel {
                 background: linear-gradient(to left, $val-black 50%, rgb(116, 115, 115) 50%) right;
