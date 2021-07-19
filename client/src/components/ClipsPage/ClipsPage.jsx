@@ -4,7 +4,7 @@ import Video from '../Video/Video';
 import Upload from '../../assets/images/upload.png';
 import './clipspage.scss';
 
-class Clips extends React.Component {
+class ClipsPage extends React.Component {
 
     state = {
         clips: []
@@ -56,4 +56,4 @@ class Clips extends React.Component {
     }
 }
 
-export default Clips;
+export default ClipsPage;

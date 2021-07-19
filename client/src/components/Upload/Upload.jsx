@@ -43,11 +43,27 @@ class Upload extends React.Component {
             this.cancelForm(e);
             document.querySelector('.nav-list__link-friendsclips').click();
 
-         } else {
+        } else {
             alert('The Code You Entered Was Incorrect, Upload Not Complete');
+        }   
+    };
+
+    checkpage = (e) => {
+
+        if (e.target.page.value === "Chawpsticks' Clips") {
+            this.setState({
+                forClips: true,
+                forFriendsClips: false
+            })
+        } else if (e.target.page.value === "Friends' Clips") {
+            this.setState({
+                forClips: false,
+                forFriendsClips: true
+            })
         }
-        
-        };
+        console.log(e.target.page.value)
+    }
+
     render() {
 
         return (
@@ -63,13 +79,30 @@ class Upload extends React.Component {
                             <label className="upload__form-title">Page:</label>
                             <select className="upload__form-dropdown upload__form-input" name="page">
                                 <option className="upload__form-dropdown-option">Which page is this for?</option>
-                                <option className="upload__form-dropdown-option">Chawpsticks' Clips</option>
-                                <option className="upload__form-dropdown-option">Friends' Clips</option>
+                                <option className="upload__form-dropdown-option" onClick={(e) => {this.checkPage(e)}}>Chawpsticks' Clips</option>
+                                <option className="upload__form-dropdown-option" onClick={(e) => {this.checkPage(e)}}>Friends' Clips</option>
                             </select>
                             <label className="upload__form-title">Date (mm.dd.yyyy):</label>
                             <input type="text" name="date" className="upload__form-input upload__form-input-date" placeholder="Add a date to your video"/>
                             <label className="upload__form-title">Agent Name:</label>
-                            <input type="text" name="agent" className="upload__form-input upload__form-input-agent" placeholder="What agent is being used?"/>
+                            <select className="upload__form-dropdown upload__form-input" name="agent">
+                                <option className="upload__form-dropdown-option">Which agent is being used?</option>
+                                <option className="upload__form-dropdown-option">Astra</option>
+                                <option className="upload__form-dropdown-option">Breach</option>
+                                <option className="upload__form-dropdown-option">Brimstone</option>
+                                <option className="upload__form-dropdown-option">Jett</option>
+                                <option className="upload__form-dropdown-option">KAY/O</option>
+                                <option className="upload__form-dropdown-option">Killjoy</option>
+                                <option className="upload__form-dropdown-option">Omen</option>
+                                <option className="upload__form-dropdown-option">Phoenix</option>
+                                <option className="upload__form-dropdown-option">Raze</option>
+                                <option className="upload__form-dropdown-option">Reyna</option>
+                                <option className="upload__form-dropdown-option">Sage</option>
+                                <option className="upload__form-dropdown-option">Sova</option>
+                                <option className="upload__form-dropdown-option">Skye</option>
+                                <option className="upload__form-dropdown-option">Viper</option>
+                                <option className="upload__form-dropdown-option">Yoru</option>
+                            </select>
                             <label className="upload__form-title">Video URL/Path (include .mp4):</label>
                             <input type="text" name="video" className="upload__form-input upload__form-input-video" placeholder="Where can we get the video?"/>
                             <label className="upload__form-title">Description:</label>

@@ -16,16 +16,16 @@
         width: 90%;
         position: absolute;
         background-color: rgba(255,255,255,0.1);
-        left: 5%;
-        height: 90%;
+        left: 5%; 
+        height: 80%;  
     }
 
     &__jett {
         opacity: 0.9;
         transform: rotateY(180deg);
-        margin: 3vw 5vw;
         width: 63.5vw;
         margin-top: 22.1vw;
+        margin-bottom: 7vw;
     }
     &__heading {
         padding: 3vw 0 0 3vw;
@@ -36,17 +36,21 @@
         line-height: 4.8vw;
         background-color: rgba(235, 231, 225, 0.9);
         color: $val-black;
+        margin: 0;
 
         &-container {
             width: 63.5vw;
             position: absolute;
-            right: 9.95%;
             opacity: 1;
             top: 0;
             margin: 15vw 0 0 0;
             padding: 2vw 0 0 0;
             z-index: 2;
             text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
         }
 
         &-val {
@@ -74,6 +78,9 @@
         &-first {
             text-transform: uppercase;
             font-weight: bold;
+        }
+        &--strike {
+            text-decoration: line-through;
         }
         &-line {
             width: 100%;
