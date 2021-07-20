@@ -1,18 +1,19 @@
 import React from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
+import $ from 'jquery';
 import './upload.scss';
 import Brim from '../../assets/images/brimmy.gif';
 
-class Upload extends React.Component {
+function Upload() {
 
-    cancelForm = (e) => {
+    function cancelForm (e) {
         const uploadForm = document.querySelector('.upload__form');
         uploadForm.reset();
         e.preventDefault();
     };
 
-    uploadVideo = (e) => {
+    function uploadVideo(e) {
         e.preventDefault();
 
         const generatedId = uuidv4();
@@ -31,7 +32,7 @@ class Upload extends React.Component {
             console.log(newVideo)
             
             alert('New Video Successfully Uploaded!');
-            this.cancelForm(e);
+            cancelForm(e);
             document.querySelector('.nav-list__link-clips').click();
 
         } else if (e.target.code.value === "696969" && e.target.page.value === "Friends' Clips") {
@@ -40,7 +41,7 @@ class Upload extends React.Component {
             console.log(newVideo)
             
             alert('New Video Successfully Uploaded!');
-            this.cancelForm(e);
+            cancelForm(e);
             document.querySelector('.nav-list__link-friendsclips').click();
 
         } else {
@@ -48,77 +49,85 @@ class Upload extends React.Component {
         }   
     };
 
-    checkpage = (e) => {
+    $(document).ready(function() {
+  
+        $("#page").change(function() {
+          
+            let el = $(this) ;
+            
+            if(el.val() === "Chawpsticks' Clips" ) {
+                $(".upload__form-dropdown-option--friend").hide();
+                $(".upload__form-dropdown-option--divider").hide();
+                $(".upload__form-dropdown-option--agent").show();
+            } else if(el.val() === "Friends' Clips" ) {
+                $(".upload__form-dropdown-option--agent").hide();
+                $(".upload__form-dropdown-option--divider").hide(); 
+                $(".upload__form-dropdown-option--friend").show();
+            } else {
+                $(".upload__form-dropdown-option--agent").show();
+                $(".upload__form-dropdown-option--divider").show(); 
+                $(".upload__form-dropdown-option--friend").show();
+            }
+        });  
+    });
 
-        if (e.target.page.value === "Chawpsticks' Clips") {
-            this.setState({
-                forClips: true,
-                forFriendsClips: false
-            })
-        } else if (e.target.page.value === "Friends' Clips") {
-            this.setState({
-                forClips: false,
-                forFriendsClips: true
-            })
-        }
-        console.log(e.target.page.value)
-    }
-
-    render() {
-
-        return (
-            <div className="upload">
-                <div className="clips__heading-box"></div>
-                    <div className="clips__heading">
-                        <div className="clips__heading-text">Upload</div>
-                    </div>
-                <div className="upload__container">
-                    <img src={Brim} className="upload__container-brim" alt="Brimstone Gif"/>
-                    
-                        <form className="upload__form" onSubmit={(e) => {this.uploadVideo(e)}}>
-                            <label className="upload__form-title">Page:</label>
-                            <select className="upload__form-dropdown upload__form-input" name="page">
-                                <option className="upload__form-dropdown-option">Which page is this for?</option>
-                                <option className="upload__form-dropdown-option" onClick={(e) => {this.checkPage(e)}}>Chawpsticks' Clips</option>
-                                <option className="upload__form-dropdown-option" onClick={(e) => {this.checkPage(e)}}>Friends' Clips</option>
-                            </select>
-                            <label className="upload__form-title">Date (mm.dd.yyyy):</label>
-                            <input type="text" name="date" className="upload__form-input upload__form-input-date" placeholder="Add a date to your video"/>
-                            <label className="upload__form-title">Agent Name:</label>
-                            <select className="upload__form-dropdown upload__form-input" name="agent">
-                                <option className="upload__form-dropdown-option">Which agent is being used?</option>
-                                <option className="upload__form-dropdown-option">Astra</option>
-                                <option className="upload__form-dropdown-option">Breach</option>
-                                <option className="upload__form-dropdown-option">Brimstone</option>
-                                <option className="upload__form-dropdown-option">Jett</option>
-                                <option className="upload__form-dropdown-option">KAY/O</option>
-                                <option className="upload__form-dropdown-option">Killjoy</option>
-                                <option className="upload__form-dropdown-option">Omen</option>
-                                <option className="upload__form-dropdown-option">Phoenix</option>
-                                <option className="upload__form-dropdown-option">Raze</option>
-                                <option className="upload__form-dropdown-option">Reyna</option>
-                                <option className="upload__form-dropdown-option">Sage</option>
-                                <option className="upload__form-dropdown-option">Sova</option>
-                                <option className="upload__form-dropdown-option">Skye</option>
-                                <option className="upload__form-dropdown-option">Viper</option>
-                                <option className="upload__form-dropdown-option">Yoru</option>
-                            </select>
-                            <label className="upload__form-title">Video URL/Path (include .mp4):</label>
-                            <input type="text" name="video" className="upload__form-input upload__form-input-video" placeholder="Where can we get the video?"/>
-                            <label className="upload__form-title">Description:</label>
-                            <input type="text" name="description" className="upload__form-input upload__form-input-description" placeholder="What's happening in the clip?"/>
-                            <label className="upload__form-title">Code:</label>
-                            <input type="text" name="code" className="upload__form-input upload__form-input-code" placeholder="What's the secret code?"/>
-                            <div className="upload__form-options">
-                                <button className="upload__form-options-button upload__form-options-button--submit">Submit</button>
-                                <button className="upload__form-options-button upload__form-options-button--cancel" onClick={(e) => this.cancelForm(e)}>Cancel</button>
-                            </div>
-                        </form>
-                    
+    return (
+        <div className="upload">
+            <div className="clips__heading-box"></div>
+                <div className="clips__heading">
+                    <div className="clips__heading-text">Upload</div>
                 </div>
+            <div className="upload__container">
+                <img src={Brim} className="upload__container-brim" alt="Brimstone Gif"/>
+                <form className="upload__form" onSubmit={(e) => uploadVideo(e)}>
+                    <label className="upload__form-title">Page:</label>
+                    <select className="upload__form-dropdown upload__form-input" name="page" id="page">
+                        <option className="upload__form-dropdown-option">Which page is this for?</option>
+                        <option className="upload__form-dropdown-option">Chawpsticks' Clips</option>
+                        <option className="upload__form-dropdown-option">Friends' Clips</option>
+                    </select>
+                    <label className="upload__form-title">Date (mm.dd.yyyy):</label>
+                    <input type="text" name="date" className="upload__form-input upload__form-input-date" placeholder="Add a date to your video"/>
+                    <label className="upload__form-title">Agent Name:</label>
+                    <select className="upload__form-dropdown upload__form-input" name="agent" id="agent">
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Who is it?</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Astra</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Breach</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Brimstone</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Jett</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">KAY/O</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Killjoy</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Omen</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Phoenix</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Raze</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Reyna</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Sage</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Sova</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Skye</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Viper</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Yoru</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--divider">-------</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Andrew</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Bruce</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Ian</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Kyle</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Raymond</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Tim</option>
+                    </select>
+                    <label className="upload__form-title">Video URL/Path (include .mp4):</label>
+                    <input type="text" name="video" className="upload__form-input upload__form-input-video" placeholder="Where can we get the video?"/>
+                    <label className="upload__form-title">Description:</label>
+                    <input type="text" name="description" className="upload__form-input upload__form-input-description" placeholder="What's happening in the clip?"/>
+                    <label className="upload__form-title">Code:</label>
+                    <input type="text" name="code" className="upload__form-input upload__form-input-code" placeholder="What's the secret code?"/>
+                    <div className="upload__form-options">
+                        <button className="upload__form-options-button upload__form-options-button--submit">Submit</button>
+                        <button className="upload__form-options-button upload__form-options-button--cancel" onClick={(e) => cancelForm(e)}>Cancel</button>
+                    </div>
+                </form>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default Upload

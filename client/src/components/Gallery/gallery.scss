@@ -39,6 +39,54 @@
             }
         }
     }
+    &__photo {
+        position: absolute;
+        width: 635px;
+
+        &1 {
+            top: 0;
+            margin-top: 15vw;
+            left: 7%;
+        }
+        &2 {
+            top: 0;
+            margin-top: 35vw;
+            left: 7%;
+        }
+        &7 {
+            top: 0;
+            margin-top: 15vw;
+            right: 7%; 
+        }
+        &5 {
+            top: 0;
+            margin-top: 71.5vw;
+            left: 7%;
+        }
+        &6 {
+            top: 0;
+            margin-top: 67.5vw;
+            right: 7%; 
+        }
+        &3 {
+            top: 0;
+            margin-top: 91.5vw;
+            left: 7%; 
+            width: 300px;
+            height: 402px;
+        }
+        &4 {
+            top: 0;
+            margin-top: 87.5vw;
+            right: 7%; 
+        }
+        &8 {
+            top: 0;
+            margin-top: 91.5vw;
+            left: 29%;
+            width: 300px;
+        }
+    }
 }
 
 .text {
