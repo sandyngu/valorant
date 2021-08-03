@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 require('dotenv').config();
+const mysql = require("mysql");
+const knex = require("../knexfile");
 const fs = require('fs');
 const clipsData = require('./clips.json');
 const friendsClipsData = require('./friendsclips.json');
@@ -47,3 +49,35 @@ app.post('/friendsclips', (req, res) => {
 })
 
 app.listen(PORT, () => console.log(`Listening on ${BACKEND_URL}:${PORT}`));
+
+
+let connection;
+// make connection
+if (process.env.CLEARDB_DATABASE_URL) {
+  connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
+} else {
+  connection = mysql.createConnection(knex.development);
+}
+
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("../client/build"));
+
+  connection.on('error', function(err) {
+    connection = mysql.createConnection({
+      host: "127.0.0.1",
+      user: "valorant",
+      password: "valorant",
+      database: "valorant",
+      charset: "utf8",
+      insecureAuth: true
+    })
+    console.log(err.code);
+  });
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
+  });
+};
+
+module.exports = connection;
