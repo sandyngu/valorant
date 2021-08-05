@@ -1,7 +1,7 @@
-const bookshelf = require('../server/bookshelf');
+// const bookshelf = require('../bookshelf');
 
-const Clip = bookshelf.model('Clip', {
-    tableName: "clips"
-})
+// const Clip = bookshelf.model('Clip', {
+//     tableName: "clips"
+// })
 
-module.exports = Clip;
+// module.exports = Clip;

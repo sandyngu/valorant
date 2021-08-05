@@ -7,6 +7,8 @@ const knex = require("../knexfile");
 const fs = require('fs');
 const clipsData = require('./clips.json');
 const friendsClipsData = require('./friendsclips.json');
+const Clip = require('../models/Clip');
+const FriendsClip = require('../models/FriendsClip');
 
 app.use(bodyParser.json())
 
@@ -50,34 +52,49 @@ app.post('/friendsclips', (req, res) => {
 
 app.listen(PORT, () => console.log(`Listening on ${BACKEND_URL}:${PORT}`));
 
+// app.get('/clips', (req, res) => {
+//   Clip.where(req.query)
+//   .fetchAll()
+//   .then(clips => {
+//       res.status(200).json(clips);
+//   });
+// });
 
-let connection;
-// make connection
-if (process.env.CLEARDB_DATABASE_URL) {
-  connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
-} else {
-  connection = mysql.createConnection(knex.development);
-}
+// app.get('/friendsclips', (req, res) => {
+//   FriendsClip.where(req.query)
+//   .fetchAll()
+//   .then(friendsclips => {
+//       res.status(200).json(friendsclips);
+//   });
+// });
 
-if (process.env.NODE_ENV === "production") {
-  // Set static folder
-  app.use(express.static("../client/build"));
+// let connection;
+// // make connection
+// if (process.env.CLEARDB_DATABASE_URL) {
+//   connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
+// } else {
+//   connection = mysql.createConnection(knex.development);
+// }
 
-  connection.on('error', function(err) {
-    connection = mysql.createConnection({
-      host: "127.0.0.1",
-      user: "valorant",
-      password: "valorant",
-      database: "valorant",
-      charset: "utf8",
-      insecureAuth: true
-    })
-    console.log(err.code);
-  });
+// if (process.env.NODE_ENV === "production") {
+//   // Set static folder
+//   app.use(express.static("../client/build"));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
-  });
-};
+//   connection.on('error', function(err) {
+//     connection = mysql.createConnection({
+//       host: "127.0.0.1",
+//       user: "valorant",
+//       password: "valorant",
+//       database: "valorant",
+//       charset: "utf8",
+//       insecureAuth: true
+//     })
+//     console.log(err.code);
+//   });
 
-module.exports = connection;
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
+//   });
+// };
+
+// module.exports = connection;

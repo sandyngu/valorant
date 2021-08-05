@@ -1,14 +1,14 @@
-exports.up = knex => {
-    return knex.schema.createTable("friendsclips", table => {
-      table.increments("id").primary();
-      table.string("date").notNullable();
-      table.string("agent").notNullable();
-      table.string("video").notNullable();
-      table.string("description").notNullable();
-      table.timestamp("updated_at").defaultTo(knex.fn.now());
-    });
-  };
+// exports.up = knex => {
+//     return knex.schema.createTable("friendsclips", table => {
+//       table.increments("id").primary();
+//       table.string("date").notNullable();
+//       table.string("agent").notNullable();
+//       table.string("video").notNullable();
+//       table.string("description").notNullable();
+//       table.timestamp("updated_at").defaultTo(knex.fn.now());
+//     });
+//   };
 
-  exports.down = knex => {
-    return knex.schema.dropTable("friendsclips");
-  };
+//   exports.down = knex => {
+//     return knex.schema.dropTable("friendsclips");
+//   };

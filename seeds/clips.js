@@ -165,6 +165,18 @@ exports.seed = function(knex) {
                 agent: "Sage",
                 video: "http://127.0.0.1:8887/SteelSeries Moments/Stolen-Ace-Sage-Moments-clip-from-Jul-06,-2021.mp4",
                 description: "Stolen ace :(."
+            },
+            {
+                date: "08.03.2021",
+                agent: "Sage",
+                video: "http://127.0.0.1:8887/SteelSeries Moments/http://127.0.0.1:8887/SteelSeries Moments/VALORANT__2021-08-03__21-06-10.mp4",
+                description: "4K redemption xd."
+            },
+            {
+                date: "08.04.2021",
+                agent: "Sage",
+                video: "http://127.0.0.1:8887/SteelSeries Moments/4K-Pistol-Sage-Moments-clip-from-Aug-04,-2021.mp4",
+                description: "4K pistol trigger discipline?"
             }
             
           ]);
