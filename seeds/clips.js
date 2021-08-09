@@ -7,7 +7,7 @@ exports.seed = function(knex) {
             {
                 date: "04.22.2021",
                 agent: "Sage",
-                video: "http://127.0.0.1:8887/!! Ace Sage - VALORANT 2021-04-22 22-49-41.mp4",
+                video: "https://s3.console.aws.amazon.com/s3/object/valorantclips?region=us-east-2&prefix=SteelSeries+Moments/%21%21+Ace+Sage+-+VALORANT+2021-04-22+22-49-41.mp4",
                 description: "Saving the lost round with my acesuuuu."
             },
             {

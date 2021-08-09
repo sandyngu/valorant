@@ -3,35 +3,28 @@
         "id": "1",
         "date": "06.30.2021",
         "agent": "Andrew",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/5K Pistol Andrew.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/5K+Pistol+Andrew.mp4",
         "description": "Acesuuuuuuuu pistol round."
     },
     {
         "id": "2",
         "date": "11.22.2020",
         "agent": "Ian",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/Ian's 5K.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/Ian's+5K.mp4",
         "description": "Precise Op gunplay."
-    },
-    {
-        "id": "3",
-        "date": "10.13.2020",
-        "agent": "Andrew",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/5K Pistol Andrew.mp4",
-        "description": "REPLACE"
     },
     {
         "id": "4",
         "date": "10.07.2020",
         "agent": "Andrew",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/Told Raymond its a 4K Arrow.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/Told+Raymond+its+a+4K+Arrow.mp4",
         "description": "4K Odin."
     },
     {
         "id": "5",
         "date": "12.19.2020",
         "agent": "Tim",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/Replay_2020.12.19-00.46_Trim.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/Replay_2020.12.19-00.46_Trim.mp4",
         "description": "Acesuuuuuuu."
     },
     {
@@ -45,49 +38,49 @@
         "id": "7",
         "date": "11.28.2020",
         "agent": "Andrew",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/Andrew 6K.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/Andrew+6K.mp4",
         "description": "1v6!!!!!!!!"
     },
     {
         "id": "8",
         "date": "02.23.2021",
         "agent": "Andrew",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/YOLO - 4K Andrew.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/YOLO+-+4K+Andrew.mp4",
         "description": "4K."
     },
     {
         "id": "9",
         "date": "06.16.2021",
         "agent": "Bruce",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/Bruce-Clutch-Moments-clip-from-Jun-16,-2021.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/Bruce-Clutch-Moments-clip-from-Jun-16%2C-2021.mp4",
         "description": "3K pistol clutch."
     },
     {
         "id": "10",
         "date": "04.23.2021",
         "agent": "Kyle",
-        "video": "http://127.0.0.1:8887/Kyle's Amazing Clutch - VALORANT   2021-04-23 16-58-40.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/Kyle's+Amazing+Clutch+-+VALORANT+++2021-04-23+16-58-40.mp4",
         "description": "Kyle's precise gunplay clutch."
     },
     {
         "id": "11",
         "date": "07.12.2021",
         "agent": "Raymond",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/Raymond-Clutch-1v3-Moments-clip-from-Jul-12,-2021.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/Raymond-Clutch-1v3-Moments-clip-from-Jul-12%2C-2021.mp4",
         "description": "Clutching an eco 1v3."
     },
     {
         "id": "12",
         "date": "07.12.2021",
         "agent": "Tim",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/IS_THAT_A_CLIP.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/IS_THAT_A_CLIP.mp4",
         "description": "Acesuuuuuuuuuu."
     },
     {
         "id": "13",
         "date": "07.12.2021",
         "agent": "Tim",
-        "video": "http://127.0.0.1:8887/Friends Val Clips/WHY_ARE_YOU_ALIVE.mp4",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/Friends+Val+Clips/WHY_ARE_YOU_ALIVE.mp4",
         "description": "1v3 shoulda died doe."
     }
 ]
