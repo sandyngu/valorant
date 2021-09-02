@@ -7,7 +7,9 @@ import './clipspage.scss';
 class ClipsPage extends React.Component {
 
     state = {
-        clips: []
+        clips: [],
+        showClips: [],
+        page: 1
     }
 
     componentDidMount() {
@@ -19,19 +21,28 @@ class ClipsPage extends React.Component {
         })
         .catch(err => console.log(err))
     }
-
+    
     uploadClick = () => {
         document.querySelector('.nav__link-upload').click();
     }
-
+    
     uploadHover = () => {
         document.querySelector('.clips__button-upload').classList.add('clips__button-upload--hover');
     }
-
+    
     uploadLeave = () => {
         document.querySelector('.clips__button-upload').classList.remove('clips__button-upload--hover');
     }
-
+    
+    showClips() {
+        for (let i=0; i < this.state.clips.length; i++) {
+            if (this.state.clips.length > 1) {
+                this.state.showClips.pop(i);
+                console.log(this.state.showClips)
+            }
+        }
+    }
+    
     render() {
         return (
             <>
@@ -41,8 +52,10 @@ class ClipsPage extends React.Component {
                     <div className="clips__heading-text">My Clips</div>
                 </div>
                 <div className="clips__video-container">
-                    {this.state.clips.map(video => 
-                        <Video clipsData={this.state.clips} key={video.id}/>)}    
+                    {this.state.page===1 &&
+                        this.state.clips.map(video => 
+                            <Video clipsData={this.state.clips} key={video.id}/>)    
+                    }
                 </div>
                 <div className="clips__body"></div>
                 <div className="clips__line"></div>

@@ -4,216 +4,319 @@
         "date": "04.22.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/!!+Ace+Sage+-+VALORANT+2021-04-22+22-49-41.mp4",
-        "description": "Saving the lost round with my acesuuuu."
+        "description": "Saving the lost round with my acesuuuu.",
+        "page": "1"
     },
     {
         "id": "1",
         "date": "05.17.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/!!+4K+Salvaged+Sage+-+VALORANT+++2021-05-17+17-27-06_Trim.mp4",
-        "description": "Whiffing-turned-precise-gunplay"
+        "description": "Whiffing-turned-precise-gunplay",
+        "page": "1"
     },
     {
         "id": "2",
         "date": "05.21.2021",
         "agent": "Reyna",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/!!+Eco+Ace+Reyna+-+VALORANT+++2021-05-21+21-10-03_Trim.mp4",
-        "description": "Oh, just acing on an eco round."
+        "description": "Oh, just acing on an eco round.",
+        "page": "1"
     },
     {
         "id": "3",
         "date": "05.05.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/!!+4K+Sage+-+VALORANT+++2021-05-05+23-02-23_Trim.mp4",
-        "description": "Killin' 4 of 'em by myself."
+        "description": "Killin' 4 of 'em by myself.",
+        "page": "1"
     },
     {
         "id": "4",
         "date": "05.22.2021",
         "agent": "Reyna",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/!!+4K+Reyna+-+VALORANT+++2021-05-22+22-45-03_Trim.mp4",
-        "description": "4K pistol round."
+        "description": "4K pistol round.",
+        "page": "1"
     },
     {
         "id": "5",
         "date": "05.28.2021",
         "agent": "Reyna",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/!!+4K+Reyna+-+VALORANT+++2021-05-28+13-41-52_Trim.mp4",
-        "description": "4K pistol round."
+        "description": "4K pistol round.",
+        "page": "1"
     },
     {
         "id": "6",
         "date": "05.08.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/!!+4K+Sage+-+VALORANT+++2021-05-08+23-15-01_Trim_Trim.mp4",
-        "description": "4K tappin' heads, 13-0!"
+        "description": "4K tappin' heads, 13-0!",
+        "page": "1"
     },
     {
         "id": "7",
         "date": "05.25.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/!!+3K+Brim+-+VALORANT+++2021-05-25+23-02-48_Trim.mp4",
-        "description": "3K headshots."
+        "description": "3K headshots.",
+        "page": "1"
     },
     {
         "id": "8",
         "date": "05.21.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/!!+3K+Flick+Brim+-+VALORANT+++2021-05-21+22-56-07_Trim.mp4",
-        "description": "Kyle reacting to ma flick."
+        "description": "Kyle reacting to ma flick.",
+        "page": "1"
     },
     {
-        "id": "8",
+        "id": "9",
         "date": "05.15.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/Ace+Lost+Sage+-+VALORANT+++2021-05-15+21-01-46_Trim.mp4",
-        "description": "Ace but lost round."
+        "description": "Ace but lost round.",
+        "page": "1"
     },
     {
         "id": "10",
         "date": "05.29.2021",
         "agent": "Reyna",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/VALORANT__2021-05-29__15-27-49.mp4",
-        "description": "Reyna ace."
+        "description": "Reyna ace.",
+        "page": "1"
     },
     {
         "id": "11",
         "date": "06.08.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Brim-Moments-clip-from-Jun-08%2C-2021.mp4",
-        "description": "4K pistol round."
+        "description": "4K pistol round.",
+        "page": "1"
     },
     {
         "id": "12",
         "date": "06.13.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Sage-Moments-clip-from-Jun-13%2C-2021.mp4",
-        "description": "4K on Sagé."
+        "description": "4K on Sagé.",
+        "page": "1"
     },
     {
         "id": "13",
         "date": "06.20.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Clutch-Brim-Moments-clip-from-Jun-20%2C-2021.mp4",
-        "description": "1v4 clutchhhh."
+        "description": "1v4 clutchhhh.",
+        "page": "1"
     },
     {
         "id": "14",
         "date": "06.20.2021",
         "agent": "Phoenix",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Phoenix-Moments-clip-from-Jun-20%2C-2021.mp4",
-        "description": "4K."
+        "description": "4K.",
+        "page": "1"
     },
     {
         "id": "15",
         "date": "06.23.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/VALORANT__2021-06-23__20-16-34.mp4",
-        "description": "4K pistol round."
+        "description": "4K pistol round.",
+        "page": "1"
     },
     {
         "id": "16",
         "date": "07.05.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/Ace-No-1st-Kill-Moments-clip-from-Jul-05%2C-2021.mp4",
-        "description": "Ace no 1st kill."
+        "description": "Ace no 1st kill.",
+        "page": "2"
     },
     {
         "id": "17",
         "date": "06.20.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Clutch-Brim2-Moments-clip-from-Jun-20%2C-2021.mp4",
-        "description": "4K clutch."
+        "description": "4K clutch.",
+        "page": "2"
     },
     {
         "id": "18",
         "date": "06.20.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/Ace-Brim-Moments-clip-from-Jun-20%2C-2021.mp4",
-        "description": "Go get that ace, babe."
+        "description": "Go get that ace, babe.",
+        "page": "2"
     },
     {
         "id": "19",
         "date": "06.19.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Brim-Moments-clip-from-Jun-19%2C-2021.mp4",
-        "description": "4K pistol round."
+        "description": "4K pistol round.",
+        "page": "2"
     },
     {
         "id": "20",
         "date": "06.17.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Clutch-Moments-clip-from-Jun-17%2C-2021.mp4",
-        "description": "1v4 clutch!"
+        "description": "1v4 clutch!",
+        "page": "2"
     },
     {
         "id": "21",
         "date": "06.14.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/Ace-Moments-clip-from-Jun-14%2C-2021.mp4",
-        "description": "Acesuuuuuuuuuuuuu."
+        "description": "Acesuuuuuuuuuuuuu.",
+        "page": "2"
     },
     {
         "id": "22",
         "date": "05.28.2021",
         "agent": "Reyna",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/VALORANT__2021-05-28__13-45-15.mp4",
-        "description": "1v4 clutch, 00.03 defuse."
+        "description": "1v4 clutch, 00.03 defuse.",
+        "page": "2"
     },
     {
         "id": "23",
         "date": "07.01.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Pistol-Sage-Moments-clip-from-Jul-01%2C-2021.mp4",
-        "description": "4K pistol round."
+        "description": "4K pistol round.",
+        "page": "2"
     },
     {
         "id": "24",
         "date": "07.01.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/!!+CRAZY+-+VALORANT+++2021-03-09+18-10-00.mp4",
-        "description": "Raymond and Tim React to Flick."
+        "description": "Raymond and Tim React to Flick.",
+        "page": "2"
     },
     {
         "id": "25",
         "date": "07.14.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/VALORANT__2021-07-14__17-54-27.mp4",
-        "description": "ACE!"
+        "description": "ACE!",
+        "page": "2"
     },
     {
         "id": "de426d39-85c5-48e6-b604-a7999dee36fb",
         "date": "07.06.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/Stolen-Ace-Sage-Moments-clip-from-Jul-06%2C-2021.mp4",
-        "description": "Stolen ace :(."
+        "description": "Stolen ace :(.",
+        "page": "2"
     },
     {
         "id": "26",
         "date": "08.03.2021",
         "agent": "Sage",
-        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/VALORANT__2021-08-03__21-06-10.mp4",
-        "description": "4K redemption xd."
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/MERGED+-+VALORANT__2021-08-03__21-06-10_1.mp4",
+        "description": "4K redemption xd.",
+        "page": "2"
     },
     {
         "id": "27",
         "date": "08.04.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Pistol-Sage-Moments-clip-from-Aug-04%2C-2021.mp4",
-        "description": "4K pistol trigger discipline?"
+        "description": "4K pistol trigger discipline?",
+        "page": "2"
     },
     {
         "id": "28",
         "date": "08.02.2021",
         "agent": "Brimstone",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Brim-Moments-clip-from-Aug-02%2C-2021.mp4",
-        "description": "4K."
+        "description": "4K.",
+        "page": "2"
     },
     {
         "id": "29",
         "date": "07.30.2021",
         "agent": "Sage",
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Pistol-Sage-Moments-clip-from-Jul-30%2C-2021.mp4",
-        "description": "4K pistol clutch."
+        "description": "4K pistol clutch.",
+        "page": "2"
+    },
+    {
+        "id": "30",
+        "date": "08.12.2021",
+        "agent": "Sage",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Sage-Moments-clip-from-Aug-12%2C-2021.mp4",
+        "description": "4K!",
+        "page": "2"
+    },
+    {
+        "id": "31",
+        "date": "08.12.2021",
+        "agent": "Phoenix",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/Forced-Ace-Phoenix-Moments-clip-from-Aug-12%2C-2021.mp4",
+        "description": "I forced after losing pistol ACEEE.",
+        "page": "3"
+    },
+    {
+        "id": "32",
+        "date": "08.06.2021",
+        "agent": "Sage",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Eco-Sage-Moments-clip-from-Aug-06%2C-2021.mp4",
+        "description": "4K on an eco.",
+        "page": "3"
+    },
+    {
+        "id": "33",
+        "date": "08.19.2021",
+        "agent": "Sage",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Amazing-Gameplay-Moments-clip-from-Aug-19%2C-2021.mp4",
+        "description": "4K amazing gameplay.",
+        "page": "3"
+    },
+    {
+        "id": "34",
+        "date": "08.22.2021",
+        "agent": "Brimstone",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Brim-Moments-clip-from-Aug-22%2C-2021.mp4",
+        "description": "4K farmin'.",
+        "page": "3"
+    },
+    {
+        "id": "35",
+        "date": "08.23.2021",
+        "agent": "Sage",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/MERGED+-+VALORANT__2021-08-23_.mp4",
+        "description": "Acesuuuuuuu!!",
+        "page": "3"
+    },
+    {
+        "id": "36",
+        "date": "09.01.2021",
+        "agent": "Sage",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/3K-Sage-Clutch-Moments-clip-from-Sep-01%2C-2021.mp4",
+        "description": "Clutching the round 1v3.",
+        "page": "3"
+    },
+    {
+        "id": "37",
+        "date": "08.31.2021",
+        "agent": "Brimstone",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/Brim-Tings-Moments-clip-from-Aug-31%2C-2021.mp4",
+        "description": "Mad lurkin', 3K.",
+        "page": "3"
+    },
+    {
+        "id": "38",
+        "date": "09.01.2021",
+        "agent": "Brimstone",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/3K-Brim-Molly-Clutch-Moments-clip-from-Sep-01%2C-2021.mp4",
+        "description": "Clutching with my line-ups :).",
+        "page": "3"
     }
 ]
