@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.scss';
 import Navigation from '../Navigation/Navigation';
-import HomeBanner from '../../assets/images/val-banner-dark.jpg';
+import HomeBanner from '../../assets/images/valbanner2.jpg';
 import FriendsBanner from '../../assets/images/bind.jpg';
 import ClipsBanner from '../../assets/images/valmap.png';
 import GalleryBanner from '../../assets/images/split.jpg';

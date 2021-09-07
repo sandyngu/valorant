@@ -318,5 +318,29 @@
         "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/3K-Brim-Molly-Clutch-Moments-clip-from-Sep-01%2C-2021.mp4",
         "description": "Clutching with my line-ups :).",
         "page": "3"
+    },
+    {
+        "id": "39",
+        "date": "09.05.2021",
+        "agent": "Sage",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/3K-Bucky-Sage-Moments-clip-from-Sep-04%2C-2021.mp4",
+        "description": "3K with a bucky.",
+        "page": "3"
+    },
+    {
+        "id": "40",
+        "date": "09.05.2021",
+        "agent": "Brimstone",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/4K-Brim-Clutch-Moments-clip-from-Sep-05%2C-2021.mp4",
+        "description": "4K clutch!!!!",
+        "page": "3"
+    },
+    {
+        "id": "41",
+        "date": "09.06.2021",
+        "agent": "Sage",
+        "video": "https://valorantclips.s3.us-east-2.amazonaws.com/SteelSeries+Moments/1v3-Clutch-LOL-Moments-clip-from-Sep-06%2C-2021.mp4",
+        "description": "3K clutch somehow?",
+        "page": "3"
     }
 ]
