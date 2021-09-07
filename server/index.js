@@ -12,7 +12,11 @@ const FriendsClip = require('../models/FriendsClip');
 
 app.use(bodyParser.json())
 
-const {PORT, BACKEND_URL} = process.env
+const PORT = process.env.PORT || 5000
+
+const distDir = __dirname + "/dist/";
+ app.use(express.static(distDir));
+ app.use(express.urlencoded({ extended: false }));
 
 app.get('/', function(req, res){
   res.sendFile(__dirname+'/bin/index.html'); // change the path to your index.html
@@ -50,7 +54,7 @@ app.use('/', express.static('../client/build/index.html'));
 //   res.status(201).send({status: 'Video Added'});
 // })
 
-app.listen(PORT, () => console.log(`Listening on ${BACKEND_URL}:${PORT}`));
+// app.listen(PORT, () => console.log(`Listening on ${BACKEND_URL}:${PORT}`));
 
 app.get('/clips', (req, res) => {
   Clip.where(req.query)
@@ -98,3 +102,7 @@ if (process.env.NODE_ENV === "production") {
 };
 
 module.exports = connection;
+
+app.listen(PORT, () => {
+  console.log(`=> rePORTing for duty on port ${PORT}. <=`);
+});
