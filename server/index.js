@@ -25,34 +25,12 @@ app.get('/', function(req, res){
 app.use(express.static('../client/build/'));
 app.use('/', express.static('../client/build/index.html'));
 
-app.get('/clips', (_req, res) => { 
-    res.json(clipsData);
-})
-
-
-app.get('/friendsclips', (_req, res) => {
-  res.json(friendsClipsData);
-})
-
-// app.post('/clips', (req, res) => {
-//   console.log(req.body);
-//   const { newVideo } = req.body
-//   const videoData = JSON.parse(fs.readFileSync('./clips.json'));
-//   videoData.push(newVideo);
-//   console.log(videoData);
-//   fs.writeFileSync('./clips.json', JSON.stringify(videoData), null, 2);
-//   res.status(201).send({status: 'Video Added'});
+// app.get('/clips', (_req, res) => { 
+//     res.json(clipsData);
 // })
 
-// app.post('/friendsclips', (req, res) => {
-//   console.log(req.body);
-//   const { newVideo } = req.body
-//   const friendsVideoData = JSON.parse(fs.readFileSync('./friendsclips.json'));
-//   friendsVideoData.push(newVideo);
-//   console.log(friendsVideoData);
-//   fs.writeFileSync('./friendsclips.json', JSON.stringify(friendsVideoData), null, 2);
-//   res.status(201).send({status: 'Video Added'});
-// })
+// app.get('/friendsclips', (_req, res) => {
+//   res.json(friendsClipsData)
 
 // app.listen(PORT, () => console.log(`Listening on ${BACKEND_URL}:${PORT}`));
 
@@ -99,6 +77,21 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
   });
+
+  app.post('/clips', (req, res) => {
+    const { newVideo } = req.body
+    console.log(newVideo)
+  
+    connection.query('INSERT INTO clips(date, agent, video, description) VALUES (?,?,?,?)',
+    [newVideo.date, newVideo.agent, newVideo.video, newVideo.description],
+    
+    (err, res) => {
+      if (err) {
+        console.log(err);
+      };
+    });
+  });
+
 };
 
 module.exports = connection;

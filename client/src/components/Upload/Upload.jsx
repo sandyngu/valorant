@@ -16,10 +16,10 @@ function Upload() {
     function uploadVideo(e) {
         e.preventDefault();
 
-        const generatedId = uuidv4();
+        // const generatedId = uuidv4();
         
         const newVideo = {
-            id: generatedId,
+            // id: generatedId,
             date: e.target.date.value,
             agent: e.target.agent.value,
             video: e.target.video.value,
