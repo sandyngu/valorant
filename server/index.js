@@ -25,14 +25,14 @@ app.get('/', function(req, res){
 app.use(express.static('../client/build/'));
 app.use('/', express.static('../client/build/index.html'));
 
-// app.get('/clips', (_req, res) => { 
-//     res.json(clipsData);
-// })
+app.get('/clips', (_req, res) => { 
+    res.json(clipsData);
+})
 
 
-// app.get('/friendsclips', (_req, res) => {
-//   res.json(friendsClipsData);
-// })
+app.get('/friendsclips', (_req, res) => {
+  res.json(friendsClipsData);
+})
 
 // app.post('/clips', (req, res) => {
 //   console.log(req.body);
