@@ -77,6 +77,9 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
   });
+};
+
+  module.exports = connection;
   
   app.post('/clips', (req, res) => {
     const { date, agent, video, description } = req.body
@@ -91,9 +94,6 @@ if (process.env.NODE_ENV === "production") {
       };
     });
   });
-};
-
-module.exports = connection;
 
 app.listen(PORT, () => {
   console.log(`=> rePORTing for duty on port ${PORT}. <=`);
