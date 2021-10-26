@@ -77,13 +77,13 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
   });
-
+  
   app.post('/clips', (req, res) => {
-    const { newVideo } = req.body
-    console.log(newVideo)
+    const { date, agent, video, description } = req.body
+    console.log(req.body)
   
     connection.query('INSERT INTO clips(date, agent, video, description) VALUES (?,?,?,?)',
-    [newVideo.date, newVideo.agent, newVideo.video, newVideo.description],
+    [date, agent, video, description],
     
     (err, res) => {
       if (err) {
@@ -91,7 +91,6 @@ if (process.env.NODE_ENV === "production") {
       };
     });
   });
-
 };
 
 module.exports = connection;

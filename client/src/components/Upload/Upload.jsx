@@ -27,7 +27,12 @@ function Upload() {
         }
 
         if (e.target.code.value === "696969" && e.target.page.value === "Chawpsticks' Clips") {
-            axios.post('/clips', {newVideo})
+            axios.post('/clips', {
+                date: e.target.date.value,
+                agent: e.target.agent.value,
+                video: e.target.video.value,
+                description: e.target.description.value
+            })
             .catch(err => console.log(err));
             console.log(newVideo)
             
@@ -36,7 +41,12 @@ function Upload() {
             document.querySelector('.nav-list__link-clips').click();
 
         } else if (e.target.code.value === "696969" && e.target.page.value === "Friends' Clips") {
-            axios.post('/friendsclips', {newVideo})
+            axios.post('/friendsclips', {
+                date: e.target.date.value,
+                agent: e.target.agent.value,
+                video: e.target.video.value,
+                description: e.target.description.value
+            })
             .catch(err => console.log(err));
             console.log(newVideo)
             

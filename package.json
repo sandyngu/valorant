@@ -8,5 +8,29 @@
     "mysql": "^2.18.1",
     "react-router-dom": "^5.2.1",
     "sass": "^1.39.0"
-  }
+  },
+  "name": "valorant",
+  "version": "1.0.0",
+  "main": "bookshelf.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "start": "cd server && node server.js",
+    "server": "nodemon server.js --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "migrate": "knex migrate:latest",
+    "seed": "knex seed:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandyngu/valorant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandyngu/valorant/issues"
+  },
+  "homepage": "https://github.com/sandyngu/valorant#readme",
+  "description": ""
 }
