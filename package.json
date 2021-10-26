@@ -22,16 +22,19 @@
     "migrate": "knex migrate:latest",
     "seed": "knex seed:run"
   },
+  "engines": {
+    "node": "^12.18.3",
+    "npm": "^6.14.6"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sandyngu/valorant.git"
   },
-  "author": "",
+  "author": "Sandy Nguyen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sandyngu/valorant/issues"
   },
   "homepage": "https://github.com/sandyngu/valorant#readme",
-  "description": "",
   "heroku-run-build-script": true
 }

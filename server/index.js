@@ -14,9 +14,9 @@ app.use(bodyParser.json())
 
 const PORT = process.env.PORT || 5000
 
-const distDir = __dirname + "/dist/";
- app.use(express.static(distDir));
- app.use(express.urlencoded({ extended: false }));
+// const distDir = __dirname + "/dist/";
+//  app.use(express.static(distDir));
+//  app.use(express.urlencoded({ extended: false }));
 
 // app.get('/', function(req, res){
 //   res.sendFile(__dirname+'/bin/index.html'); // change the path to your index.html
