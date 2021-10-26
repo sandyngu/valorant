@@ -32,5 +32,6 @@
     "url": "https://github.com/sandyngu/valorant/issues"
   },
   "homepage": "https://github.com/sandyngu/valorant#readme",
-  "description": ""
+  "description": "",
+  "heroku-run-build-script": true
 }
