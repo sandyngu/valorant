@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 const mysql = require("mysql");
 const knex = require("../knexfile");
+const path = require('path');
 const fs = require('fs');
 const clipsData = require('./clips.json');
 const friendsClipsData = require('./friendsclips.json');
@@ -79,21 +80,21 @@ if (process.env.NODE_ENV === "production") {
   });
 };
 
-  module.exports = connection;
+module.exports = connection;
+
+app.post('/clips', (req, res) => {
+  const { date, agent, video, description } = req.body
+  console.log(req.body)
+
+  connection.query('INSERT INTO clips(date, agent, video, description) VALUES (?,?,?,?)',
+  [date, agent, video, description],
   
-  app.post('/clips', (req, res) => {
-    const { date, agent, video, description } = req.body
-    console.log(req.body)
-  
-    connection.query('INSERT INTO clips(date, agent, video, description) VALUES (?,?,?,?)',
-    [date, agent, video, description],
-    
-    (err, res) => {
-      if (err) {
-        console.log(err);
-      };
-    });
+  (err, res) => {
+    if (err) {
+      console.log(err);
+    };
   });
+});
 
 app.listen(PORT, () => {
   console.log(`=> rePORTing for duty on port ${PORT}. <=`);
