@@ -52,12 +52,16 @@ function Upload() {
             
             alert('New Video Successfully Uploaded!');
             cancelForm(e);
-            document.querySelector('.nav-list__link-friendsclips').click();
+            setTimeout(refreshPage, 3000);
 
         } else {
             alert('The Code You Entered Was Incorrect, Upload Not Complete');
         }   
     };
+
+    function refreshPage() {
+        document.querySelector('.nav-list__link-friendsclips').click()
+    }
 
     $(document).ready(function() {
   

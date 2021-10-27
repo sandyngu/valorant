@@ -51,6 +51,15 @@ app.get('/friendsclips', (req, res) => {
   });
 });
 
+let db_config = {
+    host: "us-cdbr-east-04.cleardb.com",
+    user: "b7e20582588cef",
+    password: "321846ae",
+    database: "heroku_fb81c49fbfec3d0",
+    charset: "utf8",
+    insecureAuth: true
+};
+
 let connection;
 // make connection
 if (process.env.CLEARDB_DATABASE_URL) {
@@ -81,6 +90,29 @@ if (process.env.NODE_ENV === "production") {
 };
 
 module.exports = connection;
+
+// For Server Disconnection After Upload //
+
+function handleDisconnect() {
+  connection = mysql.createConnection(db_config);
+
+  connection.connect(function(err) {
+    if(err) {
+      console.log('error when connecting to db:', err);
+      setTimeout(handleDisconnect, 1000);
+    }
+  });
+  connection.on('error', function(err) {
+    console.log('db error', err);
+    if(err.code === 'PROTOCOL_CONNECTION_LOST') {
+    handleDisconnect();
+  } else {
+    throw err;
+  }
+});
+}
+
+handleDisconnect();
 
 app.post('/clips', (req, res) => {
   const { date, agent, video, description } = req.body
