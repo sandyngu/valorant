@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/valorant/static/css/main.df731a0b.chunk.css",
-    "main.js": "/valorant/static/js/main.c00c6632.chunk.js",
-    "main.js.map": "/valorant/static/js/main.c00c6632.chunk.js.map",
+    "main.css": "/valorant/static/css/main.94641e80.chunk.css",
+    "main.js": "/valorant/static/js/main.f952581a.chunk.js",
+    "main.js.map": "/valorant/static/js/main.f952581a.chunk.js.map",
     "runtime-main.js": "/valorant/static/js/runtime-main.ed8269ed.js",
     "runtime-main.js.map": "/valorant/static/js/runtime-main.ed8269ed.js.map",
     "static/js/2.a9c1be39.chunk.js": "/valorant/static/js/2.a9c1be39.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.246068fd.chunk.js": "/valorant/static/js/3.246068fd.chunk.js",
     "static/js/3.246068fd.chunk.js.map": "/valorant/static/js/3.246068fd.chunk.js.map",
     "index.html": "/valorant/index.html",
-    "static/css/main.df731a0b.chunk.css.map": "/valorant/static/css/main.df731a0b.chunk.css.map",
+    "static/css/main.94641e80.chunk.css.map": "/valorant/static/css/main.94641e80.chunk.css.map",
     "static/js/2.a9c1be39.chunk.js.LICENSE.txt": "/valorant/static/js/2.a9c1be39.chunk.js.LICENSE.txt",
     "static/media/upload.scss": "/valorant/static/media/Valorant Font.86ec8370.ttf",
     "static/media/agents.27c12db0.png": "/valorant/static/media/agents.27c12db0.png",
@@ -19,7 +19,7 @@
     "static/media/bind.7026ebcc.png": "/valorant/static/media/bind.7026ebcc.png",
     "static/media/bind.9cd60c73.jpg": "/valorant/static/media/bind.9cd60c73.jpg",
     "static/media/brimmy.28c922a7.gif": "/valorant/static/media/brimmy.28c922a7.gif",
-    "static/media/index.css": "/valorant/static/media/dark-background.510d9961.jpg",
+    "static/media/index.scss": "/valorant/static/media/dark-background.510d9961.jpg",
     "static/media/gals.7fa81fee.jpg": "/valorant/static/media/gals.7fa81fee.jpg",
     "static/media/jett.eabe4238.gif": "/valorant/static/media/jett.eabe4238.gif",
     "static/media/jett1.ac6fe658.jpg": "/valorant/static/media/jett1.ac6fe658.jpg",
@@ -34,7 +34,7 @@
   "entrypoints": [
     "static/js/runtime-main.ed8269ed.js",
     "static/js/2.a9c1be39.chunk.js",
-    "static/css/main.df731a0b.chunk.css",
-    "static/js/main.c00c6632.chunk.js"
+    "static/css/main.94641e80.chunk.css",
+    "static/js/main.f952581a.chunk.js"
   ]
 }
