@@ -73,25 +73,18 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("../client/build"));
 
   connection.on('error', function(err) {
-    connection = mysql.createConnection({
-      host: "us-cdbr-east-04.cleardb.com",
-      user: "b7e20582588cef",
-      password: "321846ae",
-      database: "heroku_fb81c49fbfec3d0",
-      charset: "utf8",
-      insecureAuth: true
-    })
+    connection = mysql.createConnection(db_config)
     console.log(err.code);
   });
 
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
   });
-};
+}
 
 module.exports = connection;
 
-// For Server Disconnection After Upload //
+// For Server Disconnection After Upload; Duplicates Upload //
 
 function handleDisconnect() {
   connection = mysql.createConnection(db_config);
@@ -99,7 +92,7 @@ function handleDisconnect() {
   connection.connect(function(err) {
     if(err) {
       console.log('error when connecting to db:', err);
-      setTimeout(handleDisconnect, 1000);
+      setTimeout(handleDisconnect, 2000);
     }
   });
   connection.on('error', function(err) {
@@ -114,11 +107,31 @@ function handleDisconnect() {
 
 handleDisconnect();
 
+setInterval(function () {
+  connection.query('SELECT 1');
+}, 5000);
+
 app.post('/clips', (req, res) => {
   const { date, agent, video, description } = req.body
+  req.setTimeout(60*10*1000)
   console.log(req.body)
 
   connection.query('INSERT INTO clips(date, agent, video, description) VALUES (?,?,?,?)',
+  [date, agent, video, description],
+  
+  (err, res) => {
+    if (err) {
+      console.log(err);
+    };
+  });
+});
+
+app.post('/friendsclips', (req, res) => {
+  const { date, agent, video, description } = req.body
+  console.log(req.body)
+  req.setTimeout(60*10*1000)
+
+  connection.query('INSERT INTO friendsclips(date, agent, video, description) VALUES (?,?,?,?)',
   [date, agent, video, description],
   
   (err, res) => {
