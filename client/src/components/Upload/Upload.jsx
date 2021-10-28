@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
 import $ from 'jquery';
 import './upload.scss';
 import Brim from '../../assets/images/brimmy.gif';
@@ -15,11 +14,8 @@ function Upload() {
 
     function uploadVideo(e) {
         e.preventDefault();
-
-        // const generatedId = uuidv4();
         
         const newVideo = {
-            // id: generatedId,
             date: e.target.date.value,
             agent: e.target.agent.value,
             video: e.target.video.value,
@@ -38,7 +34,7 @@ function Upload() {
             
             alert('New Video Successfully Uploaded!');
             cancelForm(e);
-            document.querySelector('.nav-list__link-clips').click();
+            setTimeout(refreshClipsPage, 1500);
 
         } else if (e.target.code.value === "696969" && e.target.page.value === "Friends' Clips") {
             axios.post('/friendsclips', {
@@ -52,14 +48,18 @@ function Upload() {
             
             alert('New Video Successfully Uploaded!');
             cancelForm(e);
-            setTimeout(refreshPage, 3000);
+            setTimeout(refreshFriendsClipsPage, 1500);
 
         } else {
             alert('The Code You Entered Was Incorrect, Upload Not Complete');
         }   
     };
 
-    function refreshPage() {
+    function refreshClipsPage() {
+        document.querySelector('.nav-list__link-clips').click()
+    }
+
+    function refreshFriendsClipsPage() {
         document.querySelector('.nav-list__link-friendsclips').click()
     }
 
