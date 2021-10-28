@@ -23,7 +23,9 @@
     "server": "nodemon index.js --prefix server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "migrate": "knex migrate:latest",
-    "seed": "knex seed:run"
+    "seed": "knex seed:run",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install"
   },
   "engines": {
     "node": "^12.18.3",

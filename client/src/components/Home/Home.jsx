@@ -35,7 +35,7 @@ function Home() {
                 </div>
                 <div className="home__text-container">
                     <div className="home__text"><span className="home__text-first">Valorant is a 5v5 character-based tactical shooter.</span> 
-                        <br/><br/>Here you will be blessed with some of my highlight reels and my friends' highlight reels from the game. <span className="home__text--strike">I am hardstuck gold.</span> I am finally plat! and have spent an unhealthy amount of time on the game. Tracker.gg says I have spent almost 1100 hours on the game. I have been playing since beta.
+                        <br/><br/>Here you will be blessed with some of my highlight reels and my friends' highlight reels from the game. <span className="home__text--strike">I am hardstuck gold.</span> I am finally plat! and have spent an unhealthy amount of time on the game. Tracker.gg says I have spent 1300+ hours on the game. I have been playing since beta.
                         <br/><br/>Please feel free to browse around and join me on my journey to radiant. Enjoy the content, agent :).
                     </div>
                     <div className="home__text-line"></div>
