@@ -42,37 +42,57 @@ class ClipsPage extends React.Component {
                 console.log(this.state.showClips)
             }
         }
-    }    
+    }   
     
     render() {
+
         $(document).ready(function() {
             $(".clips__video-container").bind("mousewheel", function() {
                 return false;
-                
             });
         });
-        return (
-            <>
-            <div className="clips">
-                <div className="clips__heading-box"></div>
-                <div className="clips__heading">
-                    <div className="clips__heading-text">My Clips</div>
-                </div>
-                <div className="clips__video-container">
-                    {this.state.page===1 &&
-                        this.state.clips.map(video => 
-                            <Video clipsData={this.state.clips} key={video.id}/>)    
-                    }
-                </div>
-                <div className="clips__body"></div>
-                <div className="clips__line"></div>
-                <div className="clips__button-box"></div>
-                <button className="clips__button" onClick={() => this.uploadClick()} onMouseOver={() => this.uploadHover()} onMouseLeave={() => this.uploadLeave()}>Upload
-                    <img src={Upload} className="clips__button-upload" alt="Upload Logo"/>
-                </button>
+
+        var scrolled=0;
+
+        $(document).ready(function(){  
+            $(".clips__next").on("click" ,function(){
+                scrolled=scrolled+1918;
+                $(".clips__video-container").animate({
+                        scrollTop:  scrolled
+                });
+            });
+            
+            $(".clips__back").on("click" ,function(){
+                scrolled=scrolled-1918;
+                $(".clips__video-container").animate({
+                        scrollTop:  scrolled
+                });
+            });
+        });
+    return (
+        <>
+        <div className="clips">
+            <button className="clips__next">Next</button>
+            <button className="clips__back">Back</button>
+            <div className="clips__heading-box"></div>
+            <div className="clips__heading">
+                <div className="clips__heading-text">My Clips</div>
             </div>
-            </>
-        )
+            <div className="clips__video-container">
+                {this.state.page===1 &&
+                    this.state.clips.map(video => 
+                        <Video clipsData={this.state.clips} key={video.id}/>)    
+                }
+            </div>
+            <div className="clips__body"></div>
+            <div className="clips__line"></div>
+            <div className="clips__button-box"></div>
+            <button className="clips__button" onClick={() => this.uploadClick()} onMouseOver={() => this.uploadHover()} onMouseLeave={() => this.uploadLeave()}>Upload
+                <img src={Upload} className="clips__button-upload" alt="Upload Logo"/>
+            </button>
+        </div>
+        </>
+    )
     }
 }
 

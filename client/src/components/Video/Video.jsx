@@ -5,30 +5,30 @@ import './video.scss';
 function Video(props) {
     console.log(props.clipsData[0])
 
-    $(function(){  // $(document).ready shorthand
-        $('.video__clip-container').fadeIn('slow');
-      });
+    // $(function(){  // $(document).ready shorthand
+    //     $('.video__clip-container').fadeIn('slow');
+    //   });
       
-      $(document).ready(function() {
+    //   $(document).ready(function() {
           
-          /* Every time the window is scrolled ... */
-          $(window).scroll( function(){
+    //       /* Every time the window is scrolled ... */
+    //       $(window).scroll( function(){
           
-              /* Check the location of each desired element */
-              $('.video__clip-container').each( function(i){
+    //           /* Check the location of each desired element */
+    //           $('.video__clip-container').each( function(i){
                   
-                  var bottom_of_object = $(this).position().top + $(this).outerHeight();
-                  var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //               var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //               var bottom_of_window = $(window).scrollTop() + $(window).height();
                   
-                  /* If the object is completely visible in the window, fade it it */
-                  if( bottom_of_window > bottom_of_object ){
+    //               /* If the object is completely visible in the window, fade it it */
+    //               if( bottom_of_window > bottom_of_object ){
                       
-                      $(this).animate({'opacity':'1'},2000);
+    //                   $(this).animate({'opacity':'1'},2000);
                           
-                  }   
-              }); 
-          });
-      });
+    //               }   
+    //           }); 
+    //       });
+    //   });
 
     return (
         <div className="video">
