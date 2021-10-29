@@ -59,6 +59,8 @@
         height: 100vw;
         overflow: auto;
         overflow-x: hidden;
+        width: 85%;
+        margin: 0 7.5%;
 
         &::-webkit-scrollbar {
             display: none;

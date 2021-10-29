@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import $ from 'jquery';
 import Video from '../Video/Video';
 import Upload from '../../assets/images/upload.png';
 import './clipspage.scss';
@@ -41,9 +42,15 @@ class ClipsPage extends React.Component {
                 console.log(this.state.showClips)
             }
         }
-    }
+    }    
     
     render() {
+        $(document).ready(function() {
+            $(".clips__video-container").bind("mousewheel", function() {
+                return false;
+                
+            });
+        });
         return (
             <>
             <div className="clips">

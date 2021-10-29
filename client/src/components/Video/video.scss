@@ -1,9 +1,10 @@
 @import '../../partials/global';
 
 .video {
-    margin: 0 5vw;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
+    width: 68vw;
 
     &__clip {
         width: 100%;
@@ -17,8 +18,6 @@
             padding: 2vw;
             border-radius: 0.4vw;
             opacity: 0;
-            height: 20%;
-        overflow: auto;
         }
         &-text {
             color: white;
@@ -35,7 +34,6 @@
                 text-transform: none;
                 text-align: left;
                 margin: 1vw 0 0 0;
-                // margin: 0;
                 font-size: 0.9vw;
             }
             &-date {
