@@ -3,7 +3,6 @@
 .clips {
     background-color: rgba(255,255,255,0.1);
     width: 80%;
-    height: 4000px;
     position: absolute;
     left: 10%;
     top: 0;
@@ -54,6 +53,15 @@
             left: 5%;
             height: 5vw;
             opacity: 0.5;
+        }
+    }
+    &__video-container {
+        height: 100vw;
+        overflow: auto;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            display: none;
         }
     }
     &__line {
