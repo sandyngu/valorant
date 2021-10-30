@@ -74,13 +74,23 @@
         position: relative;
     }
     &__button {
-        right: 10%;
-        top: 0;
-        margin-top: 6vw;
-        padding: 1.05vw 3vw;
-        z-index: 2;
-        position: absolute;
-        
+
+        &-container {
+            display: flex;
+            justify-content: right;
+            margin: 1vw 5vw;
+        }
+        &--back {
+            margin-right: 1vw;
+        }
+        &--upload {
+            right: 10%;
+            top: 0;
+            margin-top: 6vw;
+            padding: 1.05vw 3vw;
+            z-index: 2;
+            position: absolute;
+        }
         &-box {
             border: white 0.1vw solid;
             padding: 2vw 5.65vw;

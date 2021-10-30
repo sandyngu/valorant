@@ -55,25 +55,25 @@ class ClipsPage extends React.Component {
         var scrolled=0;
 
         $(document).ready(function(){  
-            $(".clips__next").on("click" ,function(){
+            $(".clips__button--next").on("click" ,function(){
                 scrolled=scrolled+1918;
                 $(".clips__video-container").animate({
                         scrollTop:  scrolled
                 });
+                window.scrollTo(0,600);
             });
             
-            $(".clips__back").on("click" ,function(){
+            $(".clips__button--back").on("click" ,function(){
                 scrolled=scrolled-1918;
                 $(".clips__video-container").animate({
                         scrollTop:  scrolled
                 });
+                window.scrollTo(0,600);
             });
         });
     return (
         <>
         <div className="clips">
-            <button className="clips__next">Next</button>
-            <button className="clips__back">Back</button>
             <div className="clips__heading-box"></div>
             <div className="clips__heading">
                 <div className="clips__heading-text">My Clips</div>
@@ -86,8 +86,12 @@ class ClipsPage extends React.Component {
             </div>
             <div className="clips__body"></div>
             <div className="clips__line"></div>
+            <div className="clips__button-container">
+                <button className="clips__button--back">Back</button>
+                <button className="clips__button--next">Next</button>
+            </div>
             <div className="clips__button-box"></div>
-            <button className="clips__button" onClick={() => this.uploadClick()} onMouseOver={() => this.uploadHover()} onMouseLeave={() => this.uploadLeave()}>Upload
+            <button className="clips__button--upload" onClick={() => this.uploadClick()} onMouseOver={() => this.uploadHover()} onMouseLeave={() => this.uploadLeave()}>Upload
                 <img src={Upload} className="clips__button-upload" alt="Upload Logo"/>
             </button>
         </div>
