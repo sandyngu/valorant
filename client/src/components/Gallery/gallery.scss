@@ -10,6 +10,16 @@
     margin-top: 33%;  
     display: inline-block;
 
+    &__box {
+        width: 90%;
+        position: absolute;
+        background-color: rgba(255,255,255,0.1);
+        left: 5%; 
+        height: 90%;
+        top: 0;
+        margin-top: 12vw;
+    }
+
     &-banner {
         width: 100%;
         margin: 0;

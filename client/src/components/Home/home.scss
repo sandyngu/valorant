@@ -7,11 +7,11 @@
     left: 10%;
     top: 0;
     margin-top: 33%;
+    text-align: center;
 
     &__container {
         margin-top: 4vw;
     }
-
     &__box {
         width: 90%;
         position: absolute;
@@ -19,7 +19,6 @@
         left: 5%; 
         height: 80%;  
     }
-
     &__jett {
         opacity: 0.9;
         transform: rotateY(180deg);
