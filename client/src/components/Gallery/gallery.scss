@@ -3,7 +3,7 @@
 .gallery {
     background-color: rgba(255,255,255,0.1);
     width: 80%;
-    height: 4000px;
+    height: 7000px;
     position: absolute;
     left: 10%;
     top: 0;
@@ -41,7 +41,7 @@
     }
     &__photo {
         position: absolute;
-        width: 635px;
+        width: 33vw;
 
         &1 {
             top: 0;
@@ -60,31 +60,93 @@
         }
         &5 {
             top: 0;
-            margin-top: 71.5vw;
+            margin-top: 99vw;
+            width: 68.3vw;
             left: 7%;
         }
         &6 {
             top: 0;
-            margin-top: 67.5vw;
+            margin-top: 58vw;
             right: 7%; 
         }
         &3 {
             top: 0;
-            margin-top: 91.5vw;
+            margin-top: 139.5vw;
             left: 7%; 
-            width: 300px;
-            height: 402px;
+            width: 15.5vw;
+            height: 21vw;
         }
         &4 {
             top: 0;
-            margin-top: 87.5vw;
+            margin-top: 214.8vw;
             right: 7%; 
         }
         &8 {
             top: 0;
-            margin-top: 91.5vw;
-            left: 29%;
-            width: 300px;
+            margin-top: 139.5vw;
+            left: 28.8%;
+            width: 15.65vw;
+        }
+        &9 {
+            top: 0;
+            margin-top: 71.7vw;
+            left: 7%;
+            width: 33vw;
+            height: 25.4vw;
+        }
+        &10 {
+            top: 0;
+            margin-top: 139.5vw;
+            right: 7%;
+        }
+        &11 {
+            top: 0;
+            margin-top: 162.5vw;
+            left: 7%;
+        }
+        &12 {
+            width: 16vw;
+            top: 0;
+            margin-top: 192.5vw;
+            right: 28.4%;
+        }
+        &13 {
+            top: 0;
+            margin-top: 78.3vw;
+            right: 7%;
+            height: 18.9vw;
+        }
+        &14 {
+            top: 0;
+            margin-top: 192.5vw;
+            right: 7%;
+            width: 15vw;
+            height: 20.3vw;
+        }
+        &15 {
+            top: 0;
+            margin-top: 211vw;
+            left: 7%;
+            height: 22.5vw;
+        }
+        &16 {
+            top: 0;
+            margin-top: 235.5vw;
+            width: 68.3vw;
+            left: 7%;
+        }
+        &17 {
+            top: 0;
+            margin-top: 281vw;
+            left: 7%;
+            width: 43vw;
+        }
+        &18 {
+            top: 0;
+            margin-top: 281vw;
+            right: 7%;
+            width: 23vw;
+            height: 31.2vw;
         }
     }
 }
