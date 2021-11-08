@@ -6,6 +6,13 @@ body {
   background-image: url('./assets/images/dark-background.jpg');
 }
 
+.audio {
+  position: absolute;
+  top: 0;
+  margin: 22vw 2vw;
+  opacity: 0.5;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

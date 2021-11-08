@@ -36,6 +36,15 @@ function Upload() {
             cancelForm(e);
             setTimeout(refreshClipsPage, 1500);
 
+            $(document).ready(function() {
+                $(".upload__form-options-button--submit").click(function() {
+                    $(".clips__video-container").animate({
+                        scrollTop: $(
+                          '.clips__video-container').get(0).scrollHeight
+                    }, 2000);
+                });
+            });
+
         } else if (e.target.code.value === "696969" && e.target.page.value === "Friends' Clips") {
             axios.post('/friendsclips', {
                 date: e.target.date.value,
@@ -49,6 +58,15 @@ function Upload() {
             alert('New Video Successfully Uploaded!');
             cancelForm(e);
             setTimeout(refreshFriendsClipsPage, 1500);
+
+            $(document).ready(function() {
+                $(".upload__form-options-button--submit").click(function() {
+                    $(".clips__video-container").animate({
+                        scrollTop: $(
+                          '.clips__video-container').get(0).scrollHeight
+                    }, 2000);
+                });
+            });
 
         } else {
             alert('The Code You Entered Was Incorrect, Upload Not Complete');

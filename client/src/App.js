@@ -6,11 +6,18 @@ import ClipsPage from './components/ClipsPage/ClipsPage';
 import FriendsClipsPage from './components/FriendsClipsPage/FriendsClipsPage';
 import Gallery from './components/Gallery/Gallery';
 import Upload from './components/Upload/Upload';
+import Brim from './assets/audio/brimanthem.mp3'
 import './App.css';
 
 class App extends React.Component {
   
   render() {
+
+    setTimeout(function() {
+      var audio = document.getElementById("brimAudio");
+      audio.volume = 0.1;
+    }, 0);
+    
     return (
       <div className="App">
         <Header />
@@ -21,6 +28,7 @@ class App extends React.Component {
           <Route path='/gallery' exact component={Gallery} />
           <Route path='/upload' exact component={Upload} />
         </Switch>
+        <audio className="audio" volume="0.1" controls autoPlay src={Brim} id="brimAudio"/>
       </div>
     );
   }
