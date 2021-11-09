@@ -69,7 +69,7 @@
     &__line {
         margin: 0vw 5vw;
         color: white;
-        height: 50px;
+        height: 1vw;
         border-bottom: 0.1vw white solid;
         position: relative;
     }
@@ -78,10 +78,18 @@
         &-container {
             display: flex;
             justify-content: right;
-            margin: 1vw 5vw;
+            margin: 1.5vw 5vw;
         }
         &--back {
             margin-right: 1vw;
+        }
+        &--reverse {
+            right: 30%;
+            top: 0;
+            margin-top: 6vw;
+            padding: 1.05vw 3vw;
+            z-index: 2;
+            position: absolute;
         }
         &--upload {
             right: 10%;
@@ -99,6 +107,15 @@
             margin-top: 5.55vw;
             right: 9.45%;
             z-index: 0;
+        }
+        &-reverse {
+            width: 1.2vw;
+            margin-left: 0.5vw;
+            vertical-align: bottom;
+
+            &--hover {
+                animation: 2.5s upload infinite;
+            }
         }
         &-upload {
             width: 1.2vw;

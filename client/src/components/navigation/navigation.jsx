@@ -13,10 +13,13 @@ function Navigation(props) {
                         <img src={Logo} alt="Logo" className="nav-list-logo"/>
                     </Link>/ /
                     <Link to='/clips' className="nav__link" onClick={() => props.changeClipsBanner()}>
-                        <li className="nav-list__link nav-list__link-clips">My Clips</li>
+                        <li className="nav-list__link nav-list__link-clips">Chawp's Clips</li>
                     </Link>/ /
                     <Link to='/friendsclips' className="nav__link" onClick={() => props.changeFriendsBanner()}>
                         <li className="nav-list__link nav-list__link-friendsclips">Friends' Clips</li>
+                    </Link>/ /
+                    <Link to='/agentanthems' className="nav__link" onClick={() => props.changeFriendsBanner()}>
+                        <li className="nav-list__link nav-list__link-friendsclips">Agent Anthems</li>
                     </Link>/ /
                     <Link to='/gallery' className="nav__link" onClick={() => props.changeGalleryBanner()}>
                         <li className="nav-list__link nav-list__link-gallery">Gallery</li>

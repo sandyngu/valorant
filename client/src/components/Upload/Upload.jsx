@@ -75,10 +75,12 @@ function Upload() {
 
     function refreshClipsPage() {
         document.querySelector('.nav-list__link-clips').click()
+        $(".clips__video-container").scrollTop($(".clips__video-container")[0].scrollHeight);
     }
 
     function refreshFriendsClipsPage() {
         document.querySelector('.nav-list__link-friendsclips').click()
+        $(".clips__video-container").scrollTop($(".clips__video-container")[0].scrollHeight);
     }
 
     $(document).ready(function() {

@@ -1,0 +1,39 @@
+@import '../../partials/global';
+
+.agentanthems {
+    background-color: rgba(255,255,255,0.1);
+    width: 80%;
+    height: 140vw;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    margin-top: 33%;  
+    display: inline-block;
+
+    &__video {
+        width: 21vw;
+        height: 15vw;
+        margin: 0.5vw;
+        
+        &--main {
+            width: 45vw;
+            height: 30vw;
+            margin: 4.3vw;
+
+            &-border {
+                position: absolute;
+                width: 52vw;
+                height: 36vw;
+                left: 0%;
+                right: 0%;
+                top: 9%;
+                margin: auto;
+                background-color: rgba(255,255,255,0.1);
+            }
+        }
+        &-container {
+            width: 85%;
+            margin: 0 7.5%;
+        }
+    }
+}

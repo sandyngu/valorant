@@ -3,6 +3,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import Video from '../Video/Video';
 import Upload from '../../assets/images/upload.png';
+import Flip from '../../assets/images/flip.png';
 import './clipspage.scss';
 
 class ClipsPage extends React.Component {
@@ -34,6 +35,14 @@ class ClipsPage extends React.Component {
     uploadLeave = () => {
         document.querySelector('.clips__button-upload').classList.remove('clips__button-upload--hover');
     }
+
+    flipHover = () => {
+        document.querySelector('.clips__button-reverse').classList.add('clips__button-reverse--hover');
+    }
+    
+    flipLeave = () => {
+        document.querySelector('.clips__button-reverse').classList.remove('clips__button-reverse--hover');
+    }
     
     showClips() {
         for (let i=0; i < this.state.clips.length; i++) {
@@ -43,6 +52,14 @@ class ClipsPage extends React.Component {
             }
         }
     }   
+
+    flip = () => {
+        let arr = [this.state.clips]
+        arr.reverse();
+        this.setState({
+            clips: arr[0].reverse()
+        })
+    }
     
     render() {
 
@@ -60,7 +77,7 @@ class ClipsPage extends React.Component {
                 $(".clips__video-container").animate({
                         scrollTop:  scrolled
                 });
-                window.scrollTo(0,600);
+                window.scrollTo(0,850);
             });
             
             $(".clips__button--back").on("click" ,function(){
@@ -68,16 +85,20 @@ class ClipsPage extends React.Component {
                 $(".clips__video-container").animate({
                         scrollTop:  scrolled
                 });
-                window.scrollTo(0,600);
+                window.scrollTo(0,850);
             });
         });
+
     return (
         <>
         <div className="clips">
             <div className="clips__heading-box"></div>
             <div className="clips__heading">
-                <div className="clips__heading-text">My Clips</div>
+                <div className="clips__heading-text">Chawp's Clips</div>
             </div>
+            <button className="clips__button--reverse" onClick={() => this.flip()} onMouseOver={() => this.flipHover()} onMouseLeave={() => this.flipLeave()}>Most Recent
+                <img src={Flip} className="clips__button-reverse" alt="Reverse Logo"/>
+            </button>
             <div className="clips__video-container">
                 {this.state.page===1 &&
                     this.state.clips.map(video => 

@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import ClipsPage from './components/ClipsPage/ClipsPage';
 import FriendsClipsPage from './components/FriendsClipsPage/FriendsClipsPage';
+import AgentAnthems from './components/AgentAnthems/AgentAnthems';
 import Gallery from './components/Gallery/Gallery';
 import Upload from './components/Upload/Upload';
 import Brim from './assets/audio/brimanthem.mp3'
@@ -25,6 +26,7 @@ class App extends React.Component {
           <Route path='/' exact render={routeProps => <Home  {...routeProps} />} />
           <Route path='/clips' exact component={ClipsPage} />
           <Route path='/friendsclips' exact component={FriendsClipsPage} />
+          <Route path='/agentanthems' exact component={AgentAnthems} />
           <Route path='/gallery' exact component={Gallery} />
           <Route path='/upload' exact component={Upload} />
         </Switch>

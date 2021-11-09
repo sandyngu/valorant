@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import $ from 'jquery';
 import Video from '../Video/Video';
 import Upload from '../../assets/images/upload.png';
 import '../ClipsPage/clipspage.scss';
@@ -33,6 +34,33 @@ class FriendsClipsPage extends React.Component {
     }
 
     render() {
+
+        $(document).ready(function() {
+            $(".clips__video-container").bind("mousewheel", function() {
+                return false;
+            });
+        });
+
+        var scrolled=0;
+
+        $(document).ready(function(){  
+            $(".clips__button--next").on("click" ,function(){
+                scrolled=scrolled+1918;
+                $(".clips__video-container").animate({
+                        scrollTop:  scrolled
+                });
+                window.scrollTo(0,600);
+            });
+            
+            $(".clips__button--back").on("click" ,function(){
+                scrolled=scrolled-1918;
+                $(".clips__video-container").animate({
+                        scrollTop:  scrolled
+                });
+                window.scrollTo(0,600);
+            });
+        });
+
         return (
             <div className="clips">
                 <div className="clips__heading-box"></div>
