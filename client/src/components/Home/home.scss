@@ -4,6 +4,7 @@
     background-color: rgba(255,255,255,0.1);
     width: 80%;
     position: absolute;
+    height: 85vw;
     left: 10%;
     top: 0;
     margin-top: 33%;
@@ -25,6 +26,7 @@
         width: 63.5vw;
         margin-top: 22.1vw;
         margin-bottom: 7vw;
+        height: 41vw;
     }
     &__heading {
         padding: 3vw 0 0 3vw;
@@ -89,7 +91,7 @@
         &-button {
             position: absolute;
             margin: -0.13vw 0 2vw 0;
-            left: 29%;
+            left: 24.75%;
 
             &2 {
                 margin-top: 5.08vw;
@@ -98,6 +100,11 @@
             }
             &3 {
                 margin-top: 10.35vw;
+                left: 19%;
+                padding: 1.1vw 2.85vw;
+            }
+            &4 {
+                margin-top: 15.35vw;
                 left: 25.2%;
                 padding: 1.1vw 2.85vw;
             }
@@ -108,11 +115,11 @@
 
             &-box {
                 border: white 0.1vw solid;
-                padding: 2vw 5.65vw;
+                padding: 2vw 6.8vw;
                 position: absolute;
                 top: 0;
                 margin-top: 15.4vw;
-                left: 27%;
+                left: 22.7%;
                 z-index: 0;
 
                 &2 {
@@ -122,6 +129,11 @@
                 }
                 &3 {
                     margin-top: 25.85vw;
+                    padding: 2vw 8.2vw;
+                    left: 17.1%;
+                }
+                &4 {
+                    margin-top: 30.85vw;
                     padding: 2vw 6.65vw;
                     left: 22.9%;
                 }

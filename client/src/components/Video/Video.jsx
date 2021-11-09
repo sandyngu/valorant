@@ -1,12 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
 import './video.scss';
-import Ascent from '../../assets/images/maps/ascent.png';
-// import Bind from '../../assets/images/maps/bind.png';
-// import Breeze from '../../assets/images/maps/breeze.png';
-// import Haven from '../../assets/images/maps/haven.png';
-// import Icebox from '../../assets/images/maps/icebox.png';
-// import Split from '../../assets/images/maps/split.png';
 
 function Video(props) {
     console.log(props.clipsData[0])
@@ -39,8 +33,10 @@ function Video(props) {
             console.log(props)
             if (props.clipsData.agent === "Sage") {
                 document.querySelectorAll('.video__clip-text').forEach(el => el.classList.add('sage'));
-            } else {
+            } else if (props.clipsData.agent === "Reyna") {
               document.querySelectorAll('.video__clip-text').forEach(el => el.classList.add('reyna'));
+            } else if (props.clipsData.agent === "Brimstone") { 
+                document.querySelectorAll('.video__clip-text').forEach(el => el.classList.add('brimstone'));
             }
       });
 

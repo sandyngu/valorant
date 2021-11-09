@@ -19,9 +19,13 @@
             width: 45vw;
             height: 30vw;
             margin: 4.3vw;
+            top: 0;
+            margin-top: -33.5vw;
+            left: 10%;
+            z-index: 2;
+            position: absolute;
 
-            &-border {
-                position: absolute;
+            &-border {               
                 width: 52vw;
                 height: 36vw;
                 left: 0%;
@@ -29,11 +33,13 @@
                 top: 9%;
                 margin: auto;
                 background-color: rgba(255,255,255,0.1);
+                z-index: 0;
             }
         }
         &-container {
             width: 85%;
             margin: 0 7.5%;
+            position: absolute;
         }
     }
 }

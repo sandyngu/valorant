@@ -17,6 +17,11 @@ function Home() {
         window.scrollTo(0, 0);
     }
 
+    function agentAnthemsPage() {
+        document.querySelector('.nav-list__link-agentanthems').click();
+        window.scrollTo(0, 0);
+    }
+
     function galleryPage() {
         document.querySelector('.nav-list__link-gallery').click();
         window.scrollTo(0, 0);
@@ -41,11 +46,13 @@ function Home() {
                     <div className="home__text-line"></div>
                     <div className="home__text-button-container">
                         <div className="home__text-button-box home__text-button-box1"></div>
-                        <button className="home__text-button home__text-button1" onClick={() => clipsPage()}>View My Clips</button>
+                        <button className="home__text-button home__text-button1" onClick={() => clipsPage()}>View Chawp's Clips</button>
                         <div className="home__text-button-box home__text-button-box2"></div>
                         <button className="home__text-button home__text-button2" onClick={() => friendsClipsPage()}>View My Friends' Clips</button>
                         <div className="home__text-button-box home__text-button-box3"></div>
-                        <button className="home__text-button home__text-button3" onClick={() => galleryPage()}>View The Gallery</button>
+                        <button className="home__text-button home__text-button3" onClick={() => agentAnthemsPage()}>Listen to Agent Anthems</button>
+                        <div className="home__text-button-box home__text-button-box4"></div>
+                        <button className="home__text-button home__text-button4" onClick={() => galleryPage()}>View The Gallery</button>
                     </div>
                 </div>
                 <img src={Jett} alt="Jett" className="home__jett"/>

@@ -18,8 +18,8 @@ function Navigation(props) {
                     <Link to='/friendsclips' className="nav__link" onClick={() => props.changeFriendsBanner()}>
                         <li className="nav-list__link nav-list__link-friendsclips">Friends' Clips</li>
                     </Link>/ /
-                    <Link to='/agentanthems' className="nav__link" onClick={() => props.changeFriendsBanner()}>
-                        <li className="nav-list__link nav-list__link-friendsclips">Agent Anthems</li>
+                    <Link to='/agentanthems' className="nav__link" onClick={() => props.changeAgentsBanner()}>
+                        <li className="nav-list__link nav-list__link-agentanthems">Agent Anthems</li>
                     </Link>/ /
                     <Link to='/gallery' className="nav__link" onClick={() => props.changeGalleryBanner()}>
                         <li className="nav-list__link nav-list__link-gallery">Gallery</li>

@@ -9,7 +9,7 @@ function AgentAnthems() {
             <div className="clips__heading">
                 <div className="clips__heading-text">Agent Anthems</div>
             </div>
-            <img src={VideoBorder} className="agentanthems__video--main-border" alt="Main Video Border"/>
+            <center><img src={VideoBorder} className="agentanthems__video--main-border" alt="Main Video Border"/></center>
             <div className="agentanthems__video-container">
                 <center><iframe className="agentanthems__video agentanthems__video--main" src="https://www.youtube.com/embed/b0DByLCT79k" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
                 <br/><iframe className="agentanthems__video"  src="https://www.youtube.com/embed/-PEFc1JWX_E" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
