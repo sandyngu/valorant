@@ -16,7 +16,7 @@ class App extends React.Component {
 
     setTimeout(function() {
       var audio = document.getElementById("brimAudio");
-      audio.volume = 0.1;
+      audio.volume = 0.05;
     }, 0);
     
     return (
