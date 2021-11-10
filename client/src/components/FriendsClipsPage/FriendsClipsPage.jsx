@@ -69,7 +69,7 @@ class FriendsClipsPage extends React.Component {
                 </div>
                 <div className="clips__video-container">
                     {this.state.clips.map(video => 
-                        <Video clipsData={this.state.clips} key={video.id} />)}    
+                        <Video key={video.id} clipsData={this.state.clips}/>)}    
                 </div>
                 <div className="clips__body">
                 <div className="clips__line"></div>

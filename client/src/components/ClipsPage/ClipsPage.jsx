@@ -54,11 +54,12 @@ class ClipsPage extends React.Component {
     }   
 
     flip = () => {
-        let arr = [this.state.clips]
+        let arr = this.state.clips
         arr.reverse();
         this.setState({
-            clips: arr[0].reverse()
+            clips: arr
         })
+        console.log(arr)
     }
     
     render() {
@@ -100,9 +101,8 @@ class ClipsPage extends React.Component {
                 <img src={Flip} className="clips__button-reverse" alt="Reverse Logo"/>
             </button>
             <div className="clips__video-container">
-                {this.state.page===1 &&
-                    this.state.clips.map(video => 
-                        <Video clipsData={this.state.clips} key={video.id}/>)    
+                {this.state.clips.map(video => 
+                    <Video key={video.id} clipsData={this.state.clips}/>)    
                 }
             </div>
             <div className="clips__body"></div>

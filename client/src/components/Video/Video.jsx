@@ -3,7 +3,6 @@ import $ from 'jquery';
 import './video.scss';
 
 function Video(props) {
-    console.log(props.clipsData[0])
 
     $(function(){  // $(document).ready shorthand
         $('.video__clip-container').fadeIn('slow');
@@ -28,17 +27,29 @@ function Video(props) {
                   }   
               }); 
 
-            });
-
-            console.log(props)
-            if (props.clipsData.agent === "Sage") {
+            })    
+            
+        });
+        console.log(props.clipsData[0])    
+        const clips = props.clipsData[0];
+        
+        clips.forEach(function (clip) {
+            if (clip.agent === "Sage") {
                 document.querySelectorAll('.video__clip-text').forEach(el => el.classList.add('sage'));
-            } else if (props.clipsData.agent === "Reyna") {
-              document.querySelectorAll('.video__clip-text').forEach(el => el.classList.add('reyna'));
-            } else if (props.clipsData.agent === "Brimstone") { 
+            } else if (clip.agent === "Reyna") {
+                document.querySelectorAll('.video__clip-text').forEach(el => el.classList.add('reyna'));
+            } else if (clip.agent === "Brimstone") { 
                 document.querySelectorAll('.video__clip-text').forEach(el => el.classList.add('brimstone'));
+            } else if (clip.agent === "Phoenix") { 
+                document.querySelectorAll('.video__clip-text').forEach(el => el.classList.add('phoenix'));
+            } else if (clip.agent === "Skye") { 
+                document.querySelectorAll('.video__clip-text').forEach(el => el.classList.add('skye'));
+            } else if (clip.agent === "Breach"){
+                document.querySelectorAll('.video__clip-text').forEach(el => el.classList.add('breach'));
+            } else {
+                return null
             }
-      });
+        })
 
     return (
         <div className="video">
