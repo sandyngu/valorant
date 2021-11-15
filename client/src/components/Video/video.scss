@@ -18,6 +18,14 @@
             padding: 2vw;
             border-radius: 0.4vw;
             opacity: 1;
+
+            &-agent {
+                // background-image: url('../../assets/images/agents/sage.png');
+                // background-position: 95% 110%;
+                // background-size: 35%;
+                // background-repeat: no-repeat;
+                font-size: 0vw;
+            }
         }
         &-text {
             color: white;
@@ -48,15 +56,15 @@
 
 .sage {
     background-image: url('../../assets/images/agents/sage.png');
-    background-position: right;
-    background-size: 40%;
+    background-position: 95% 115%;
+    background-size: 35%;
     background-repeat: no-repeat;
 }
 
 .reyna {
     background-image: url('../../assets/images/agents/reyna.png');
-    background-position: right;
-    background-size: 40%;
+    background-position: 95% 115%;
+    background-size: 35%;
     background-repeat: no-repeat;
 }
 
