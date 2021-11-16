@@ -20,11 +20,9 @@
             opacity: 1;
 
             &-agent {
-                // background-image: url('../../assets/images/agents/sage.png');
-                // background-position: 95% 110%;
-                // background-size: 35%;
-                // background-repeat: no-repeat;
                 font-size: 0vw;
+                background-repeat: no-repeat;
+                background-size: 55%;
             }
         }
         &-text {
@@ -54,51 +52,122 @@
     }
 }
 
+.andrew {
+    background-image: url('../../assets/images/agents/andrew.png');
+    background-position: 90% 120%;
+}
+
+.ian {
+    background-image: url('../../assets/images/agents/ian.png');
+    background-position: 110% 140%;
+    background-size: 65%;
+}
+.tim {
+    background-image: url('../../assets/images/agents/tim.png');
+    background-position: 110% 120%;
+}
+.bruce {
+    background-image: url('../../assets/images/agents/bruce.png');
+    background-position: 90% 105%;
+}
+.kyle {
+    background-image: url('../../assets/images/agents/kyle.png');
+    background-position: 135% 140%;
+    background-size: 70%;
+}
+.raymond {
+    background-image: url('../../assets/images/agents/raymond.png');
+    background-position: 80% 122%;
+    background-size: 60%;
+}
+.igal {
+    background-image: url('../../assets/images/agents/igal.png');
+    background-position: 110% 130%;
+    background-size: 60%;
+}
+
 .sage {
     background-image: url('../../assets/images/agents/sage.png');
-    background-position: 95% 115%;
-    background-size: 35%;
-    background-repeat: no-repeat;
+    background-position: 105% 118%;
+    background-size: 55%;
 }
 
 .reyna {
     background-image: url('../../assets/images/agents/reyna.png');
-    background-position: 95% 115%;
-    background-size: 35%;
-    background-repeat: no-repeat;
+    background-position: 90% 105%;
 }
 
 .phoenix {
     background-image: url('../../assets/images/agents/phoenix.png');
-    background-position: right;
-    background-size: 40%;
-    background-repeat: no-repeat;
+    background-position: 80% 122%;
+    background-size: 60%;
 }
 
 .skye {
     background-image: url('../../assets/images/agents/skye.png');
-    background-position: right;
-    background-size: 40%;
-    background-repeat: no-repeat;
+    background-position: 95% 115%;
 }
 
 .brim {
     background-image: url('../../assets/images/agents/brim.png');
-    background-position: right;
-    background-size: 40%;
-    background-repeat: no-repeat;
+    background-position: 70% 111%;
+    background-size: 55%;
 }
 
 .astra {
     background-image: url('../../assets/images/agents/astra.png');
-    background-position: right;
-    background-size: 40%;
-    background-repeat: no-repeat;
+    background-position: 95% 135%;
 }
 
 .breach {
     background-image: url('../../assets/images/agents/breach.png');
-    background-position: right;
-    background-size: 40%;
-    background-repeat: no-repeat;
+    background-position: 95% 115%;
+}
+
+.cypher {
+    background-image: url('../../assets/images/agents/cypher.png');
+    background-position: 110% 130%;
+    background-size: 60%;
+}
+
+.yoru {
+    background-image: url('../../assets/images/agents/yoru.png');
+    background-position: 85% 120%;
+}
+
+.jett {
+    background-image: url('../../assets/images/agents/jett.png');
+    background-position: 85% 120%;
+}
+
+.kj {
+    background-image: url('../../assets/images/agents/kj.png');
+    background-position: 85% 120%;
+    background-size: 60%;
+}
+
+.omen {
+    background-image: url('../../assets/images/agents/omen.png');
+    background-position: 110% 140%;
+    background-size: 65%;
+} 
+
+.kayo {
+    background-image: url('../../assets/images/agents/kayo.png');
+    background-position: 85% 110%;
+}
+
+.raze {
+    background-image: url('../../assets/images/agents/raze.png');
+    background-position: 85% 120%;
+}
+
+.sova {
+    background-image: url('../../assets/images/agents/sova.png');
+    background-position: 85% 120%;
+}
+
+.chamber {
+    background-image: url('../../assets/images/agents/sova.png');
+    background-position: 85% 120%;
 }

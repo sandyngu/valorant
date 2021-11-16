@@ -36,15 +36,6 @@ class Video extends React.Component {
             console.log(this.props.clipsData[0])
             
             $(document).ready(function () {
-                // $('.video__clip-container-agent').each(function () {
-                //     if ($('div.video__clip-text-agent:contains("Sage")').length > 0) {
-                //         $(this).addClass('sage');
-                //         console.log('this is sage');
-                //     } else if ($('div.video__clip-text-agent:contains("Reyna")').length > 0) {
-                //         $(this).addClass('reyna');
-                //         console.log('nope');
-                //     }
-                // });
 
                 $('div.video__clip-container-agent:contains("Sage")').each(function () {
                     $(this).addClass("sage");
@@ -52,8 +43,74 @@ class Video extends React.Component {
                 $('div.video__clip-container-agent:contains("Reyna")').each(function () {
                     $(this).addClass("reyna");
                 });
+                $('div.video__clip-container-agent:contains("Brimstone")').each(function () {
+                    $(this).addClass("brim");
+                });
+                $('div.video__clip-container-agent:contains("Phoenix")').each(function () {
+                    $(this).addClass("phoenix");
+                });
+                $('div.video__clip-container-agent:contains("Skye")').each(function () {
+                    $(this).addClass("skye");
+                });
+                $('div.video__clip-container-agent:contains("Astra")').each(function () {
+                    $(this).addClass("astra");
+                });
+                $('div.video__clip-container-agent:contains("Omen")').each(function () {
+                    $(this).addClass("omen");
+                });
+                $('div.video__clip-container-agent:contains("Breach")').each(function () {
+                    $(this).addClass("breach");
+                });
+                $('div.video__clip-container-agent:contains("Yoru")').each(function () {
+                    $(this).addClass("yoru");
+                });
+                $('div.video__clip-container-agent:contains("Cypher")').each(function () {
+                    $(this).addClass("cypher");
+                });
+                $('div.video__clip-container-agent:contains("Killjoy")').each(function () {
+                    $(this).addClass("killjoy");
+                });
+                $('div.video__clip-container-agent:contains("Jett")').each(function () {
+                    $(this).addClass("jett");
+                });
+                $('div.video__clip-container-agent:contains("KAY/O")').each(function () {
+                    $(this).addClass("kayo");
+                });
+                $('div.video__clip-container-agent:contains("Raze")').each(function () {
+                    $(this).addClass("raze");
+                });
+                $('div.video__clip-container-agent:contains("Viper")').each(function () {
+                    $(this).addClass("viper");
+                });
+                $('div.video__clip-container-agent:contains("Sova")').each(function () {
+                    $(this).addClass("sova");
+                });
+                $('div.video__clip-container-agent:contains("Chamber")').each(function () {
+                    $(this).addClass("chamber");
+                });
+
+                $('div.video__clip-container-agent:contains("Andrew")').each(function () {
+                    $(this).addClass("andrew");
+                });
+                $('div.video__clip-container-agent:contains("Bruce")').each(function () {
+                    $(this).addClass("bruce");
+                });
+                $('div.video__clip-container-agent:contains("Ian")').each(function () {
+                    $(this).addClass("ian");
+                });
+                $('div.video__clip-container-agent:contains("Igal")').each(function () {
+                    $(this).addClass("igal");
+                });
+                $('div.video__clip-container-agent:contains("Kyle")').each(function () {
+                    $(this).addClass("kyle");
+                });
+                $('div.video__clip-container-agent:contains("Raymond")').each(function () {
+                    $(this).addClass("raymond");
+                });
+                $('div.video__clip-container-agent:contains("Tim")').each(function () {
+                    $(this).addClass("tim");
+                });
             });
-           
             
         // const videos = this.props.clipsData[0];
         // $(document).ready(function() {

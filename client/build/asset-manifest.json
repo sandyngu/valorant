@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/valorant/static/css/main.b6af7706.chunk.css",
-    "main.js": "/valorant/static/js/main.589d208d.chunk.js",
-    "main.js.map": "/valorant/static/js/main.589d208d.chunk.js.map",
+    "main.css": "/valorant/static/css/main.4024b458.chunk.css",
+    "main.js": "/valorant/static/js/main.7b824a18.chunk.js",
+    "main.js.map": "/valorant/static/js/main.7b824a18.chunk.js.map",
     "runtime-main.js": "/valorant/static/js/runtime-main.f8d85120.js",
     "runtime-main.js.map": "/valorant/static/js/runtime-main.f8d85120.js.map",
-    "static/js/2.1d8c9ee6.chunk.js": "/valorant/static/js/2.1d8c9ee6.chunk.js",
-    "static/js/2.1d8c9ee6.chunk.js.map": "/valorant/static/js/2.1d8c9ee6.chunk.js.map",
+    "static/js/2.5ff178c6.chunk.js": "/valorant/static/js/2.5ff178c6.chunk.js",
+    "static/js/2.5ff178c6.chunk.js.map": "/valorant/static/js/2.5ff178c6.chunk.js.map",
     "static/js/3.04e0c5c8.chunk.js": "/valorant/static/js/3.04e0c5c8.chunk.js",
     "static/js/3.04e0c5c8.chunk.js.map": "/valorant/static/js/3.04e0c5c8.chunk.js.map",
     "index.html": "/valorant/index.html",
-    "static/css/main.b6af7706.chunk.css.map": "/valorant/static/css/main.b6af7706.chunk.css.map",
-    "static/js/2.1d8c9ee6.chunk.js.LICENSE.txt": "/valorant/static/js/2.1d8c9ee6.chunk.js.LICENSE.txt",
+    "static/css/main.4024b458.chunk.css.map": "/valorant/static/css/main.4024b458.chunk.css.map",
+    "static/js/2.5ff178c6.chunk.js.LICENSE.txt": "/valorant/static/js/2.5ff178c6.chunk.js.LICENSE.txt",
     "static/media/upload.scss": "/valorant/static/media/Valorant-Font.b2a962b6.woff",
     "static/media/agents.27c12db0.png": "/valorant/static/media/agents.27c12db0.png",
     "static/media/agents3.6a9109fb.jpeg": "/valorant/static/media/agents3.6a9109fb.jpeg",
+    "static/media/video.scss": "/valorant/static/media/yoru.572c93b2.png",
     "static/media/anniversary.5d8834b9.jpg": "/valorant/static/media/anniversary.5d8834b9.jpg",
-    "static/media/video.scss": "/valorant/static/media/skye.b950b4d3.png",
     "static/media/banner-red.a1f8f97a.png": "/valorant/static/media/banner-red.a1f8f97a.png",
     "static/media/bind.107911f7.jpg": "/valorant/static/media/bind.107911f7.jpg",
     "static/media/breeze.6fc1ce7e.jpg": "/valorant/static/media/breeze.6fc1ce7e.jpg",
@@ -47,8 +47,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f8d85120.js",
-    "static/js/2.1d8c9ee6.chunk.js",
-    "static/css/main.b6af7706.chunk.css",
-    "static/js/main.589d208d.chunk.js"
+    "static/js/2.5ff178c6.chunk.js",
+    "static/css/main.4024b458.chunk.css",
+    "static/js/main.7b824a18.chunk.js"
   ]
 }
