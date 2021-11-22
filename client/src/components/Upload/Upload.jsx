@@ -27,7 +27,8 @@ function Upload() {
                 date: e.target.date.value,
                 agent: e.target.agent.value,
                 video: e.target.video.value,
-                description: e.target.description.value
+                description: e.target.description.value,
+                poster: e.target.poster.value
             })
             .catch(err => console.log(err));
             console.log(newVideo)
@@ -50,7 +51,8 @@ function Upload() {
                 date: e.target.date.value,
                 agent: e.target.agent.value,
                 video: e.target.video.value,
-                description: e.target.description.value
+                description: e.target.description.value,
+                poster: e.target.poster.value
             })
             .catch(err => console.log(err));
             console.log(newVideo)
@@ -152,6 +154,8 @@ function Upload() {
                     <input type="text" name="video" className="upload__form-input upload__form-input-video" placeholder="Where can we get the video?"/>
                     <label className="upload__form-title">Description:</label>
                     <input type="text" name="description" className="upload__form-input upload__form-input-description" placeholder="What's happening in the clip?"/>
+                    <label className="upload__form-title">Map:</label>
+                    <input type="text" name="poster" className="upload__form-input upload__form-input-poster" placeholder="What map is it?"/>
                     <label className="upload__form-title">Code:</label>
                     <input type="text" name="code" className="upload__form-input upload__form-input-code" placeholder="What's the secret code?"/>
                     <div className="upload__form-options">

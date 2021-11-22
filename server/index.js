@@ -112,12 +112,12 @@ setInterval(function () {
 }, 5000);
 
 app.post('/clips', (req, res) => {
-  const { date, agent, video, description } = req.body
+  const { date, agent, video, description, poster } = req.body
   req.setTimeout(60*10*1000)
   console.log(req.body)
 
-  connection.query('INSERT INTO clips(date, agent, video, description) VALUES (?,?,?,?)',
-  [date, agent, video, description],
+  connection.query('INSERT INTO clips(date, agent, video, description, poster) VALUES (?,?,?,?,?)',
+  [date, agent, video, description, poster],
   
   (err, res) => {
     if (err) {
@@ -127,12 +127,12 @@ app.post('/clips', (req, res) => {
 });
 
 app.post('/friendsclips', (req, res) => {
-  const { date, agent, video, description } = req.body
-  console.log(req.body)
+  const { date, agent, video, description, poster } = req.body
   req.setTimeout(60*10*1000)
+  console.log(req.body)
 
-  connection.query('INSERT INTO friendsclips(date, agent, video, description) VALUES (?,?,?,?)',
-  [date, agent, video, description],
+  connection.query('INSERT INTO friendsclips(date, agent, video, description, poster) VALUES (?,?,?,?,?)',
+  [date, agent, video, description, poster],
   
   (err, res) => {
     if (err) {
