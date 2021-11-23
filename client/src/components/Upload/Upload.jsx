@@ -4,6 +4,7 @@ import $ from 'jquery';
 import './upload.scss';
 import Brim from '../../assets/images/brimmy.gif';
 
+
 function Upload() {
 
     function cancelForm (e) {
@@ -64,8 +65,8 @@ function Upload() {
             $(document).ready(function() {
                 $(".upload__form-options-button--submit").click(function() {
                     $(".clips__video-container").animate({
-                        scrollTop: $(
-                          '.clips__video-container').get(0).scrollHeight
+                        // scrollTop: $('.clips__video-container').get(0).scrollHeight,
+                        scrollTop: $('.clips__video-container').height()
                     }, 2000);
                 });
             });
@@ -146,6 +147,7 @@ function Upload() {
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Andrew</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Bruce</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Ian</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Jenny</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Kyle</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Raymond</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Tim</option>

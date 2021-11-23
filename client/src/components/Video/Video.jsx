@@ -88,7 +88,6 @@ class Video extends React.Component {
                 $('div.video__clip-container-agent:contains("Chamber")').each(function () {
                     $(this).addClass("chamber");
                 });
-
                 $('div.video__clip-container-agent:contains("Andrew")').each(function () {
                     $(this).addClass("andrew");
                 });
@@ -101,6 +100,9 @@ class Video extends React.Component {
                 $('div.video__clip-container-agent:contains("Igal")').each(function () {
                     $(this).addClass("igal");
                 });
+                $('div.video__clip-container-agent:contains("Jenny")').each(function () {
+                    $(this).addClass("jenny");
+                });
                 $('div.video__clip-container-agent:contains("Kyle")').each(function () {
                     $(this).addClass("kyle");
                 });
@@ -109,7 +111,9 @@ class Video extends React.Component {
                 });
                 $('div.video__clip-container-agent:contains("Tim")').each(function () {
                     $(this).addClass("tim");
+                    $(this).removeClass("cypher");
                 });
+                
             });
             
         // const videos = this.props.clipsData[0];
