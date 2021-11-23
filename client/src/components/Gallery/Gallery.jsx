@@ -17,6 +17,23 @@ import Image15 from '../../assets/images/gallery/kayo cypher.jpg'
 import Image16 from '../../assets/images/gallery/girls night.jpg'
 import Image17 from '../../assets/images/gallery/brim.png'
 import Image18 from '../../assets/images/gallery/sage noodles.jpg'
+import Image19 from '../../assets/images/gallery/agents5.jpg'
+import Image20 from '../../assets/images/gallery/agents4.jpg'
+import Image21 from '../../assets/images/gallery/amongus.jpg'
+import Image22 from '../../assets/images/gallery/breeze party.jpg'
+import Image23 from '../../assets/images/gallery/jett2.jpg'
+import Image24 from '../../assets/images/gallery/jett3.jpg'
+import Image25 from '../../assets/images/gallery/jett4.jpg'
+import Image26 from '../../assets/images/gallery/jett5.jpg'
+import Image27 from '../../assets/images/gallery/kayo.jpg'
+import Image28 from '../../assets/images/gallery/kj cypher.jpg'
+import Image29 from '../../assets/images/gallery/kj.jpg'
+import Image30 from '../../assets/images/gallery/slowpokexraze.jpg'
+import Image31 from '../../assets/images/gallery/split sketch.png'
+import Image32 from '../../assets/images/gallery/split.jpg'
+import Image33 from '../../assets/images/gallery/val girls.jpg'
+import Image34 from '../../assets/images/gallery/vogue.jpg'
+import Image35 from '../../assets/images/gallery/agents2.jpg'
 import './gallery.scss';
 
 function Gallery() {
@@ -47,6 +64,23 @@ function Gallery() {
                 <img src={Image16} className="gallery__photo gallery__photo16" alt="Valorant Art"/>
                 <img src={Image17} className="gallery__photo gallery__photo17" alt="Valorant Art"/>
                 <img src={Image18} className="gallery__photo gallery__photo18" alt="Valorant Art"/>
+                <img src={Image19} className="gallery__photo gallery__photo19" alt="Valorant Art"/>
+                <img src={Image20} className="gallery__photo gallery__photo20" alt="Valorant Art"/>
+                <img src={Image21} className="gallery__photo gallery__photo21" alt="Valorant Art"/>
+                <img src={Image22} className="gallery__photo gallery__photo22" alt="Valorant Art"/>
+                <img src={Image23} className="gallery__photo gallery__photo23" alt="Valorant Art"/>
+                <img src={Image24} className="gallery__photo gallery__photo24" alt="Valorant Art"/>
+                <img src={Image25} className="gallery__photo gallery__photo25" alt="Valorant Art"/>
+                <img src={Image26} className="gallery__photo gallery__photo26" alt="Valorant Art"/>
+                <img src={Image27} className="gallery__photo gallery__photo27" alt="Valorant Art"/>
+                <img src={Image28} className="gallery__photo gallery__photo28" alt="Valorant Art"/>
+                <img src={Image29} className="gallery__photo gallery__photo29" alt="Valorant Art"/>
+                <img src={Image30} className="gallery__photo gallery__photo30" alt="Valorant Art"/>
+                <img src={Image31} className="gallery__photo gallery__photo31" alt="Valorant Art"/>
+                <img src={Image32} className="gallery__photo gallery__photo32" alt="Valorant Art"/>
+                <img src={Image33} className="gallery__photo gallery__photo33" alt="Valorant Art"/>
+                <img src={Image34} className="gallery__photo gallery__photo34" alt="Valorant Art"/>
+                <img src={Image35} className="gallery__photo gallery__photo35" alt="Valorant Art"/>
             </div>
         </div>
         </>
