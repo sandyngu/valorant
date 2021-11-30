@@ -1,8 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import moment from "moment";
 import $ from 'jquery';
 import Video from '../Video/Video';
 import Upload from '../../assets/images/upload.png';
+import Flip from '../../assets/images/flip.png';
 import '../ClipsPage/clipspage.scss';
 
 class FriendsClipsPage extends React.Component {
@@ -33,13 +35,34 @@ class FriendsClipsPage extends React.Component {
         document.querySelector('.clips__button-upload').classList.remove('clips__button-upload--hover');
     }
 
+    flipHover = () => {
+        document.querySelector('.clips__button-reverse').classList.add('clips__button-reverse--hover');
+    }
+    
+    flipLeave = () => {
+        document.querySelector('.clips__button-reverse').classList.remove('clips__button-reverse--hover');
+    } 
+
+    flip = () => {
+        let a = this.state.clips[0];
+        
+        a.sort(function(a,b) { 
+            return new Date(a.start).getTime() - new Date(b.start).getTime() 
+        });
+        this.setState({
+            clips: [a]
+        })
+        console.log(a)
+
+    }
+
     render() {
 
-        $(document).ready(function() {
-            $(".clips__video-container").bind("mousewheel", function() {
-                return false;
-            });
-        });
+        // $(document).ready(function() {
+        //     $(".clips__video-container").bind("mousewheel", function() {
+        //         return false;
+        //     });
+        // });
 
         var scrolled=0;
 
@@ -67,6 +90,9 @@ class FriendsClipsPage extends React.Component {
                 <div className="clips__heading">
                     <div className="clips__heading-text">Friends' Clips</div>
                 </div>
+                <button className="clips__button--reverse" onClick={() => this.flip()} onMouseOver={() => this.flipHover()} onMouseLeave={() => this.flipLeave()}>Most Recent
+                    <img src={Flip} className="clips__button-reverse" alt="Reverse Logo"/>
+                </button>
                 <div className="clips__video-container">
                     {this.state.clips.map(video => 
                         <Video key={video.id} clipsData={this.state.clips}/>)}    

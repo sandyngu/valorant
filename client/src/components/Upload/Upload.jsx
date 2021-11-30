@@ -124,7 +124,8 @@ function Upload() {
                         <option className="upload__form-dropdown-option">Friends' Clips</option>
                     </select>
                     <label className="upload__form-title">Date (mm.dd.yyyy):</label>
-                    <input type="text" name="date" className="upload__form-input upload__form-input-date" placeholder="Add a date to your video"/>
+                    {/* <input type="text" name="date" className="upload__form-input upload__form-input-date" placeholder="Add a date to your video"/> */}
+                    <br/><input type="date" name="date" className="upload__form-input upload__form-input-date"></input>
                     <label className="upload__form-title">Agent Name:</label>
                     <select className="upload__form-dropdown upload__form-input" name="agent" id="agent">
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Who is it?</option>

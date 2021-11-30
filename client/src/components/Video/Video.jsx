@@ -32,8 +32,6 @@ class Video extends React.Component {
                 })    
                 
             });
-        
-            console.log(this.props.clipsData[0])
             
             $(document).ready(function () {
 

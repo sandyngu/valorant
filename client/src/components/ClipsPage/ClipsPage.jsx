@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import moment from "moment";
 import $ from 'jquery';
 import Video from '../Video/Video';
 import Upload from '../../assets/images/upload.png';
@@ -42,33 +43,33 @@ class ClipsPage extends React.Component {
     
     flipLeave = () => {
         document.querySelector('.clips__button-reverse').classList.remove('clips__button-reverse--hover');
-    }
-    
-    showClips() {
-        for (let i=0; i < this.state.clips.length; i++) {
-            if (this.state.clips.length > 1) {
-                this.state.showClips.pop(i);
-                console.log(this.state.showClips)
-            }
-        }
-    }   
+    } 
 
     flip = () => {
-        let arr = this.state.clips
-        arr.reverse();
+        let a = this.state.clips[0];
+        
+        a.sort(function(a,b){
+            return new Date(a.date) - new Date(b.date)
+          })
         this.setState({
-            clips: arr
+            clips: [a]
         })
-        console.log(arr)
+        console.log(a)
+
     }
     
     render() {
 
-        $(document).ready(function() {
-            $(".clips__video-container").bind("mousewheel", function() {
-                return false;
-            });
-        });
+        // $(document).ready(function() {
+        //     $(".clips__video-container").bind("mousewheel", function() {
+        //         return false;
+        //     });
+        // });
+
+        // var size = 15;
+        // var videos = this.state.clips.slice(0, size).map(i => {
+        //     return <Video videos={i} key={i.id} clipsData={this.state.clips}/>
+        // });
 
         var scrolled=0;
 
