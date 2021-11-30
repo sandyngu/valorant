@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import moment from "moment";
 import $ from 'jquery';
 import Video from '../Video/Video';
 import Upload from '../../assets/images/upload.png';

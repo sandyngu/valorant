@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import moment from "moment";
 import $ from 'jquery';
 import Video from '../Video/Video';
 import Upload from '../../assets/images/upload.png';
@@ -71,6 +70,7 @@ class ClipsPage extends React.Component {
         //     return <Video videos={i} key={i.id} clipsData={this.state.clips}/>
         // });
 
+
         var scrolled=0;
 
         $(document).ready(function(){  
@@ -92,7 +92,6 @@ class ClipsPage extends React.Component {
         });
 
     return (
-        <>
         <div className="clips">
             <div className="clips__heading-box"></div>
             <div className="clips__heading">
@@ -117,7 +116,7 @@ class ClipsPage extends React.Component {
                 <img src={Upload} className="clips__button-upload" alt="Upload Logo"/>
             </button>
         </div>
-        </>
+
     )
     }
 }

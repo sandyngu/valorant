@@ -30,7 +30,7 @@ class App extends React.Component {
           <Route path='/gallery' exact component={Gallery} />
           <Route path='/upload' exact component={Upload} />
         </Switch>
-        <audio autoPlay className="audio" controls type="audio/ogg" src={Brim} id="brimAudio"/>
+        <audio /*autoPlay*/ className="audio" controls type="audio/ogg" src={Brim} id="brimAudio"/>
       </div>
     );
   }
