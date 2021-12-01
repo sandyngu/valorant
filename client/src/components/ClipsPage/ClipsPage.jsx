@@ -50,11 +50,13 @@ class ClipsPage extends React.Component {
         
         if (this.state.clips[0][0].id !== 15) {
             document.querySelector('.clips__button--reverse-text').innerHTML="Most Recent";
+            $(".clips__video-container").scrollTop(0);
             this.setState({
                 clips: [b]
             })
         } else if (this.state.clips[0][0].id === 15) {
             document.querySelector('.clips__button--reverse-text').innerHTML="Oldest Clips";
+            $(".clips__video-container").scrollTop(0);
             this.setState({
                 clips: [b]
             });
