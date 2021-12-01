@@ -90,10 +90,6 @@
             padding: 1.05vw 3vw;
             z-index: 2;
             position: absolute;
-
-            &-hide {
-                display: none;
-            }
         }
         &--upload {
             right: 10%;
@@ -139,4 +135,12 @@
     text-align: left;
     font-family: 'DINNextW1G';
     font-weight: 50;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline-block;
 }

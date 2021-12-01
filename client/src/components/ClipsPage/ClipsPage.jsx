@@ -48,20 +48,19 @@ class ClipsPage extends React.Component {
         let a = this.state.clips[0];
         let b = a.slice().reverse();
         
-        if (this.state.clips[0][0] !== 15) {
+        if (this.state.clips[0][0].id !== 15) {
+            document.querySelector('.clips__button--reverse-text').innerHTML="Most Recent";
             this.setState({
                 clips: [b]
             })
-        document.querySelector('.clips__button--reverse-new').classList.add('.clips__button--reverse-hide');
-        document.querySelector('.clips__button--reverse-old').classList.remove('.clips__button--reverse-hide');
-        } else {
+        } else if (this.state.clips[0][0].id === 15) {
+            document.querySelector('.clips__button--reverse-text').innerHTML="Oldest Clips";
             this.setState({
-                clips: [a]
-            })
-        document.querySelector('.clips__button--reverse-old').classList.add('.clips__button--reverse-hide');
-        document.querySelector('.clips__button--reverse-new').classList.remove('.clips__button--reverse-hide');
-        }
-    }
+                clips: [b]
+            });
+        };
+    };
+
     
     render() {
 
@@ -91,10 +90,8 @@ class ClipsPage extends React.Component {
             <div className="clips__heading">
                 <div className="clips__heading-text">Chawp's Clips</div>
             </div>
-            <button className="clips__button--reverse clips__button--reverse-new" onClick={() => this.flip()} onMouseOver={() => this.flipHover()} onMouseLeave={() => this.flipLeave()}>Most Recent
-                <img src={Flip} className="clips__button-reverse" alt="Reverse Logo"/>
-            </button>
-            <button className="clips__button--reverse clips__button--reverse-old clips__button--reverse-hide" onClick={() => this.flipBack()} onMouseOver={() => this.flipHover()} onMouseLeave={() => this.flipLeave()}>Older Clips
+            <button className="clips__button--reverse clips__button--reverse-new" onClick={() => this.flip()} onMouseOver={() => this.flipHover()} onMouseLeave={() => this.flipLeave()}>
+                <span className="clips__button--reverse-text">Most Recent</span>
                 <img src={Flip} className="clips__button-reverse" alt="Reverse Logo"/>
             </button>
             <div className="clips__video-container">

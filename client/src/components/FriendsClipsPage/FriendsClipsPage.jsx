@@ -44,15 +44,21 @@ class FriendsClipsPage extends React.Component {
 
     flip = () => {
         let a = this.state.clips[0];
+        let b = a.slice().reverse();
         
-        a.sort(function(a,b) { 
-            return new Date(a.start).getTime() - new Date(b.start).getTime() 
-        });
-        this.setState({
-            clips: [a]
-        })
-        console.log(a)
-
+        if (this.state.clips[0][0] !== 15) {
+            this.setState({
+                clips: [b]
+            })
+        document.querySelector('.clips__button--reverse-new').classList.add('hide');
+        document.querySelector('.clips__button--reverse-old').classList.remove('hide');
+        } else {
+            this.setState({
+                clips: [a]
+            })
+        document.querySelector('.clips__button--reverse-old').classList.add('hide');
+        document.querySelector('.clips__button--reverse-new').classList.remove('hide');
+        }
     }
 
     render() {
@@ -89,7 +95,10 @@ class FriendsClipsPage extends React.Component {
                 <div className="clips__heading">
                     <div className="clips__heading-text">Friends' Clips</div>
                 </div>
-                <button className="clips__button--reverse" onClick={() => this.flip()} onMouseOver={() => this.flipHover()} onMouseLeave={() => this.flipLeave()}>Most Recent
+                <button className="clips__button--reverse clips__button--reverse-new" onClick={() => this.flip()} onMouseOver={() => this.flipHover()} onMouseLeave={() => this.flipLeave()}>Most Recent
+                <img src={Flip} className="clips__button-reverse" alt="Reverse Logo"/>
+                </button>
+                <button className="clips__button--reverse clips__button--reverse-old clips__button--reverse-hide" onClick={() => this.flip()} onMouseOver={() => this.flipHover()} onMouseLeave={() => this.flipLeave()}>Older Clips
                     <img src={Flip} className="clips__button-reverse" alt="Reverse Logo"/>
                 </button>
                 <div className="clips__video-container">
