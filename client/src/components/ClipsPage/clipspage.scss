@@ -90,6 +90,10 @@
             padding: 1.05vw 3vw;
             z-index: 2;
             position: absolute;
+
+            &-hide {
+                display: none;
+            }
         }
         &--upload {
             right: 10%;

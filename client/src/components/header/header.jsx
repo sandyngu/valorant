@@ -64,10 +64,10 @@ class Header extends React.Component {
                   <img src={RedBanner} className="header__banner-red" alt="Valorant Banner"/>
                   <img src={this.state.banner} className="header__banner" alt="Valorant Banner"/>
                   <div className="header__name-container header__name-container1">
-                      <p className="header__name header__name1">Chawpsticks #NA1</p>
+                      <p className="header__name header__name1">Chawpsticks #123</p>
                   </div>
                   <div className="header__name-container header__name-container2">
-                      <h1 className="header__name header__name2">Chawpsticks #NA1</h1>
+                      <h1 className="header__name header__name2">Chawpsticks #123</h1>
                   </div>
                   <Navigation changeHomeBanner={this.changeHomeBanner} changeClipsBanner={this.changeClipsBanner} changeAgentsBanner={this.changeAgentsBanner} changeGalleryBanner={this.changeGalleryBanner} changeFriendsBanner={this.changeFriendsBanner} changeUploadBanner={this.changeUploadBanner}/>
               </div>
