@@ -36,16 +36,7 @@ function Upload() {
             
             alert('New Video Successfully Uploaded!');
             cancelForm(e);
-            setTimeout(refreshClipsPage, 1500);
-
-            $(document).ready(function() {
-                $(".upload__form-options-button--submit").click(function() {
-                    $(".clips__video-container").animate({
-                        scrollTop: $(
-                          '.clips__video-container').get(0).scrollHeight
-                    }, 2000);
-                });
-            });
+            setTimeout(refreshClipsPage, 1000);
 
         } else if (e.target.code.value === "696969" && e.target.page.value === "Friends' Clips") {
             axios.post('/friendsclips', {
@@ -60,30 +51,29 @@ function Upload() {
             
             alert('New Video Successfully Uploaded!');
             cancelForm(e);
-            setTimeout(refreshFriendsClipsPage, 1500);
-
-            $(document).ready(function() {
-                $(".upload__form-options-button--submit").click(function() {
-                    $(".clips__video-container").animate({
-                        // scrollTop: $('.clips__video-container').get(0).scrollHeight,
-                        scrollTop: $('.clips__video-container').height()
-                    }, 2000);
-                });
-            });
+            setTimeout(refreshFriendsClipsPage, 1000);
 
         } else {
             alert('The Code You Entered Was Incorrect, Upload Not Complete');
-        }   
+        }   setTimeout(refreshFriendsClipsPage, 1000);
     };
 
     function refreshClipsPage() {
         document.querySelector('.nav-list__link-clips').click()
-        $(".clips__video-container").scrollTop($(".clips__video-container")[0].scrollHeight);
+
+        $(document).ready(function() {
+            $(".clips__video-container").animate({ scrollTop: $(".clips__video-container")[0].scrollHeight}, 1000);
+        })
+        window.scrollTo(0,document.querySelector(".clips__video-container").scrollHeight);
     }
 
     function refreshFriendsClipsPage() {
         document.querySelector('.nav-list__link-friendsclips').click()
-        $(".clips__video-container").scrollTop($(".clips__video-container")[0].scrollHeight);
+        
+        $(document).ready(function() {
+            $(".clips__video-container").animate({ scrollTop: $(".clips__video-container")[0].scrollHeight}, 1000);
+        })
+        window.scrollTo(0,document.querySelector(".clips__video-container").scrollHeight);
     }
 
     $(document).ready(function() {

@@ -71,7 +71,7 @@ class FriendsClipsPage extends React.Component {
                 $(".clips__video-container").animate({
                         scrollTop:  scrolled
                 });
-                window.scrollTo(0,600);
+                window.scrollTo(0,850);
             });
             
             $(".clips__button--back").on("click" ,function(){
@@ -79,7 +79,7 @@ class FriendsClipsPage extends React.Component {
                 $(".clips__video-container").animate({
                         scrollTop:  scrolled
                 });
-                window.scrollTo(0,600);
+                window.scrollTo(0,850);
             });
         });
 
