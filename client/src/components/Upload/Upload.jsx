@@ -108,7 +108,7 @@ function Upload() {
                 <img src={Brim} className="upload__container-brim" alt="Brimstone Gif"/>
                 <form className="upload__form" onSubmit={(e) => uploadVideo(e)}>
                     <label className="upload__form-title">Page:</label>
-                    <select className="upload__form-dropdown upload__form-input" name="page" id="page">
+                    <select className="upload__form-dropdown upload__form-input upload__form-input-dropdown" name="page" id="page">
                         <option className="upload__form-dropdown-option">Which page is this for?</option>
                         <option className="upload__form-dropdown-option">Chawpsticks' Clips</option>
                         <option className="upload__form-dropdown-option">Friends' Clips</option>
@@ -116,7 +116,7 @@ function Upload() {
                     <label className="upload__form-title">Date (yyyy-mm-dd):</label>
                     <br/><input type="date" name="date" className="upload__form-input upload__form-input-date"></input>
                     <label className="upload__form-title">Agent Name:</label>
-                    <select className="upload__form-dropdown upload__form-input" name="agent" id="agent">
+                    <select className="upload__form-dropdown upload__form-input upload__form-input-dropdown" name="agent" id="agent">
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Who is it?</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Astra</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Breach</option>
@@ -142,7 +142,7 @@ function Upload() {
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Raymond</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Tim</option>
                     </select>
-                    <label className="upload__form-title">Video URL/Path (include .mp4):</label>
+                    <label className="upload__form-title">Video URL/Path:</label>
                     <input type="text" name="video" className="upload__form-input upload__form-input-video" placeholder="Where can we get the video?"/>
                     <label className="upload__form-title">Description:</label>
                     <input type="text" name="description" className="upload__form-input upload__form-input-description" placeholder="What's happening in the clip?"/>

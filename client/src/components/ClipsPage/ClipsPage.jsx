@@ -10,8 +10,7 @@ class ClipsPage extends React.Component {
 
     state = {
         clips: [],
-        flippedClips: [],
-        page: 1
+        url: "https://drive.google.com/uc?export=download&id=1zl54K3VxN9ZwPQk0Mp5e3YxaS98Q5X0V"
     }
 
     componentDidMount() {
@@ -48,21 +47,20 @@ class ClipsPage extends React.Component {
         let a = this.state.clips[0];
         let b = a.slice().reverse();
         
-        if (this.state.clips[0][0].id !== 15) {
-            document.querySelector('.clips__button--reverse-text').innerHTML="Most Recent";
+        if (this.state.clips[0][0].id !== 5) {
+            document.querySelector('.clips__button--reverse-text').innerHTML="Recent";
             $(".clips__video-container").scrollTop(0);
             this.setState({
                 clips: [b]
             })
-        } else if (this.state.clips[0][0].id === 15) {
-            document.querySelector('.clips__button--reverse-text').innerHTML="Oldest Clips";
+        } else if (this.state.clips[0][0].id === 5) {
+            document.querySelector('.clips__button--reverse-text').innerHTML="Oldest";
             $(".clips__video-container").scrollTop(0);
             this.setState({
                 clips: [b]
             });
         };
     };
-
     
     render() {
 
@@ -93,12 +91,12 @@ class ClipsPage extends React.Component {
                 <div className="clips__heading-text">Chawp's Clips</div>
             </div>
             <button className="clips__button--reverse clips__button--reverse-new" onClick={() => this.flip()} onMouseOver={() => this.flipHover()} onMouseLeave={() => this.flipLeave()}>
-                <span className="clips__button--reverse-text">Most Recent</span>
+                Sort by: <span className="clips__button--reverse-text">Recent</span>
                 <img src={Flip} className="clips__button-reverse" alt="Reverse Logo"/>
             </button>
             <div className="clips__video-container">
                 {this.state.clips.map(video => 
-                    <Video key={video.id} clipsData={this.state.clips}/>)    
+                    <Video key={video.id} clipsData={this.state.clips} url={this.state.url}/>)    
                 }
             </div>
             <div className="clips__body"></div>

@@ -105,13 +105,20 @@ function Video(props) {
         });
             
     });
+    console.log(props.url)
 
     return (
         <div className="video">
             {props.clipsData[0].map(video =>
                 <div className="video__clip-container" key={video.id}>
                 <div className="video__clip-container-agent">{video.agent}
-                    <video className="video__clip" controls src={video.video} preload="none" type="video/mp4" poster={video.poster} title="Clip" allowFullScreen/>
+                    {/* <video className="video__clip" controls src={video.video} type="video/mp4" preload="none" poster={video.poster} title="Clip" allowFullScreen/> */}
+                    <video className="video__clip" controls type="video/mp4" preload="none" poster={video.poster} title="Clip" allowFullScreen>
+                    <source
+                        src={video.video}
+                        type="video/webm"
+                    />
+                    </video>
                     <div className="video__clip-text">
                         <div className="video__clip-text-container">
                             <p className="video__clip-text-date">{video.date}</p>
