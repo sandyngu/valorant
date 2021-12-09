@@ -3,6 +3,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import './upload.scss';
 import Brim from '../../assets/images/brimmy.gif';
+import Error from '../../assets/images/error.png';
 
 
 function Upload() {
@@ -23,18 +24,52 @@ function Upload() {
             description: e.target.description.value
         }
 
+        let map = '';
+        if (e.target.poster.value === 'Ascent') {
+            map = 'https://i.postimg.cc/4xdQnsBs/ascent.png'
+        } else if (e.target.poster.value === 'Bind') {
+            map = 'https://i.postimg.cc/m2sDpk7g/bind.png'
+        } else if (e.target.poster.value === 'Breeze') {
+            map = 'https://i.postimg.cc/kM8GyK6H/breeze.png'
+        } else if (e.target.poster.value === 'Fracture') {
+            map = 'https://i.postimg.cc/xCZwxPy9/fracture.png'
+        } else if (e.target.poster.value === 'Haven') {
+            map = 'https://i.postimg.cc/W19147Cd/haven.png'
+        } else if (e.target.poster.value === 'Icebox') {
+            map = 'https://i.postimg.cc/SxQKqPT0/icebox.png'
+        } else if (e.target.poster.value === 'Split') {
+            map = 'https://i.postimg.cc/bN9v7PRH/split.png'
+        }
+
+        if (e.target.page.value === 'Which page is this for?') {
+            document.querySelector('.upload__form-input-page').classList.add('error');
+        } if (e.target.agent.value === 'Who is it?') {
+            document.querySelector('.upload__form-input-agent').classList.add('error');
+        } if (e.target.date.value === '') {
+            document.querySelector('.upload__form-input-date').classList.add('error');
+        } if (e.target.video.value === '') {
+            document.querySelector('.upload__form-input-video').classList.add('error');
+        } if (e.target.description.value === '') {
+            document.querySelector('.upload__form-input-description').classList.add('error');
+        } if (e.target.poster.value === 'What map is it?') {
+            document.querySelector('.upload__form-input-poster').classList.add('error');
+        } if (e.target.code.value === '') {
+            document.querySelector('.upload__form-input-code').classList.add('error');
+        }
+        document.querySelector('.upload__form-error').style.display="inline-block";
+
         if (e.target.code.value === "696969" && e.target.page.value === "Chawpsticks' Clips") {
             axios.post('/clips', {
                 date: e.target.date.value,
                 agent: e.target.agent.value,
                 video: e.target.video.value,
                 description: e.target.description.value,
-                poster: e.target.poster.value
+                poster: map
             })
             .catch(err => console.log(err));
             console.log(newVideo)
             
-            alert('New Video Successfully Uploaded!');
+            alert('New video successfully uploaded!');
             cancelForm(e);
             setTimeout(refreshClipsPage, 1000);
 
@@ -44,18 +79,18 @@ function Upload() {
                 agent: e.target.agent.value,
                 video: e.target.video.value,
                 description: e.target.description.value,
-                poster: e.target.poster.value
+                poster: map
             })
             .catch(err => console.log(err));
             console.log(newVideo)
             
-            alert('New Video Successfully Uploaded!');
+            alert('New video successfully uploaded!');
             cancelForm(e);
             setTimeout(refreshFriendsClipsPage, 1000);
 
         } else {
-            alert('The Code You Entered Was Incorrect, Upload Not Complete');
-        }   setTimeout(refreshFriendsClipsPage, 1000);
+            alert('Something went wrong. Upload NOT completed.');
+        }
     };
 
     function refreshClipsPage() {
@@ -95,7 +130,7 @@ function Upload() {
                 $(".upload__form-dropdown-option--divider").show(); 
                 $(".upload__form-dropdown-option--friend").show();
             }
-        });  
+        });
     });
 
     return (
@@ -108,15 +143,15 @@ function Upload() {
                 <img src={Brim} className="upload__container-brim" alt="Brimstone Gif"/>
                 <form className="upload__form" onSubmit={(e) => uploadVideo(e)}>
                     <label className="upload__form-title">Page:</label>
-                    <select className="upload__form-dropdown upload__form-input upload__form-input-dropdown" name="page" id="page">
+                    <select className="upload__form-input upload__form-input-dropdown upload__form-input-page" name="page" id="page">
                         <option className="upload__form-dropdown-option">Which page is this for?</option>
                         <option className="upload__form-dropdown-option">Chawpsticks' Clips</option>
                         <option className="upload__form-dropdown-option">Friends' Clips</option>
                     </select>
-                    <label className="upload__form-title">Date (yyyy-mm-dd):</label>
-                    <br/><input type="date" name="date" className="upload__form-input upload__form-input-date"></input>
+                    <label className="upload__form-title">Date:</label>
+                    <br/><input type="date" name="date" className="upload__form-input upload__form-input-date" id="date"/>
                     <label className="upload__form-title">Agent Name:</label>
-                    <select className="upload__form-dropdown upload__form-input upload__form-input-dropdown" name="agent" id="agent">
+                    <select className="upload__form-input upload__form-input-dropdown upload__form-input-agent" name="agent" id="agent">
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Who is it?</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Astra</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Breach</option>
@@ -143,13 +178,23 @@ function Upload() {
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Tim</option>
                     </select>
                     <label className="upload__form-title">Video URL/Path:</label>
-                    <input type="text" name="video" className="upload__form-input upload__form-input-video" placeholder="Where can we get the video?"/>
+                    <input type="text" name="video" className="upload__form-input upload__form-input-video" placeholder="Where can we get the video?" id="video"/>
                     <label className="upload__form-title">Description:</label>
-                    <input type="text" name="description" className="upload__form-input upload__form-input-description" placeholder="What's happening in the clip?"/>
+                    <input type="text" name="description" className="upload__form-input upload__form-input-description" placeholder="What's happening in the clip?" id="description"/>
                     <label className="upload__form-title">Map:</label>
-                    <input type="text" name="poster" className="upload__form-input upload__form-input-poster" placeholder="What map is it?"/>
+                    <select className="upload__form-input upload__form-input-dropdown upload__form-input-poster" name="poster" id="poster">
+                        <option className="upload__form-dropdown-option">What map is it?</option>
+                        <option className="upload__form-dropdown-option">Ascent</option>
+                        <option className="upload__form-dropdown-option">Bind</option>
+                        <option className="upload__form-dropdown-option">Breeze</option>
+                        <option className="upload__form-dropdown-option">Fracture</option>
+                        <option className="upload__form-dropdown-option">Haven</option>
+                        <option className="upload__form-dropdown-option">Icebox</option>
+                        <option className="upload__form-dropdown-option">Split</option>
+                    </select>
                     <label className="upload__form-title">Code:</label>
-                    <input type="text" name="code" className="upload__form-input upload__form-input-code" placeholder="What's the secret code?"/>
+                    <input type="text" name="code" className="upload__form-input upload__form-input-code" placeholder="What's the secret code?" id="code"/>
+                    <div className="upload__form-error upload__form-error--hide"><img src={Error} alt="Error Icon" className="upload__form-error-icon"/> Please fix the highlighted fields before submission.</div>
                     <div className="upload__form-options">
                         <button className="upload__form-options-button upload__form-options-button--submit">Submit</button>
                         <button className="upload__form-options-button upload__form-options-button--cancel" onClick={(e) => cancelForm(e)}>Cancel</button>

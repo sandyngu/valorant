@@ -21,7 +21,7 @@
         }
     }
     &__form {
-        margin: 2.5vw;
+        margin: 2vw;
         width: 100%;
         
         &-title {
@@ -38,9 +38,23 @@
             border-radius: 0.1vw;
             outline: none;
             border: none;
+            
+            &-dropdown {
+                width: 21.7vw;
+            }
         }
-        &-dropdown {
-            width: 87.5%;
+        &-error {
+            color: white;
+            text-align: center;
+            padding: 0vw 1vw 1vw 0vw;
+
+            &--hide {
+                display: none;
+            }
+
+            &-icon {
+                width: 1.25vw;
+            }
         }
         &-options {
             display: flex;
@@ -65,3 +79,11 @@ input::-webkit-input-placeholder {
     color: black;
 }
 
+.error {
+    border: #FF0000 0.1vw solid;
+    color: #FF0000;
+}
+
+.error::placeholder {
+    color: #FF0000;
+}
