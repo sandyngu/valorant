@@ -65,10 +65,9 @@ class ClipsPage extends React.Component {
     render() {
 
         var scrolled=0;
-
-        $(document).ready(function(){  
+ 
             $(".clips__button--next").on("click" ,function(){
-                scrolled=scrolled+1918;
+                scrolled=scrolled+1897;
                 $(".clips__video-container").animate({
                         scrollTop:  scrolled
                 });
@@ -76,13 +75,13 @@ class ClipsPage extends React.Component {
             });
             
             $(".clips__button--back").on("click" ,function(){
-                scrolled=scrolled-1918;
+                scrolled=scrolled-1897;
                 $(".clips__video-container").animate({
                         scrollTop:  scrolled
                 });
                 window.scrollTo(0,850);
             });
-        });
+
 
     return (
         <div className="clips">

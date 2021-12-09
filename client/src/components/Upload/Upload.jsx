@@ -11,7 +11,6 @@ function Upload() {
     function cancelForm (e) {
         const uploadForm = document.querySelector('.upload__form');
         uploadForm.reset();
-        e.preventDefault();
     };
 
     function uploadVideo(e) {
@@ -96,19 +95,25 @@ function Upload() {
     function refreshClipsPage() {
         document.querySelector('.nav-list__link-clips').click()
 
-        $(document).ready(function() {
-            $(".clips__video-container").animate({ scrollTop: $(".clips__video-container")[0].scrollHeight}, 1000);
-        })
-        window.scrollTo(0,document.querySelector(".clips__video-container").scrollHeight);
+        $(document).ready(function(){
+            var divTop = $('.clips__video-container').height();
+            $('html, body').animate({ scrollTop: divTop }, 'slow');
+
+            var div = $('.clips__video-container');
+
+            div.animate({
+                scrollTop: div[0].scrollHeight
+            }, 1000);
+        });   
     }
 
     function refreshFriendsClipsPage() {
         document.querySelector('.nav-list__link-friendsclips').click()
         
         $(document).ready(function() {
-            $(".clips__video-container").animate({ scrollTop: $(".clips__video-container")[0].scrollHeight}, 1000);
+            var divTop = $('.clips__video-container').height();
+            $('html, body').animate({ scrollTop: divTop }, 'slow');
         })
-        window.scrollTo(0,document.querySelector(".clips__video-container").scrollHeight);
     }
 
     $(document).ready(function() {
@@ -197,7 +202,7 @@ function Upload() {
                     <div className="upload__form-error upload__form-error--hide"><img src={Error} alt="Error Icon" className="upload__form-error-icon"/> Please fix the highlighted fields before submission.</div>
                     <div className="upload__form-options">
                         <button className="upload__form-options-button upload__form-options-button--submit">Submit</button>
-                        <button className="upload__form-options-button upload__form-options-button--cancel" onClick={(e) => cancelForm(e)}>Cancel</button>
+                        <button className="upload__form-options-button upload__form-options-button--cancel" /*onClick={(e) => cancelForm(e)}*/ onClick={()=>refreshClipsPage()}>Cancel</button>
                     </div>
                 </form>
             </div>
