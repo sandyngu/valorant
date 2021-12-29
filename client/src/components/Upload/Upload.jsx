@@ -42,20 +42,30 @@ function Upload() {
 
         if (e.target.page.value === 'Which page is this for?') {
             document.querySelector('.upload__form-input-page').classList.add('error');
+            showError();
         } if (e.target.agent.value === 'Who is it?') {
             document.querySelector('.upload__form-input-agent').classList.add('error');
+            showError();
         } if (e.target.date.value === '') {
             document.querySelector('.upload__form-input-date').classList.add('error');
+            showError();
         } if (e.target.video.value === '') {
             document.querySelector('.upload__form-input-video').classList.add('error');
+            showError();
         } if (e.target.description.value === '') {
             document.querySelector('.upload__form-input-description').classList.add('error');
+            showError();
         } if (e.target.poster.value === 'What map is it?') {
             document.querySelector('.upload__form-input-poster').classList.add('error');
+            showError();
         } if (e.target.code.value === '') {
             document.querySelector('.upload__form-input-code').classList.add('error');
+            showError();
         }
-        document.querySelector('.upload__form-error').style.display="inline-block";
+        
+        function showError() {
+            document.querySelector('.upload__form-error').style.display="inline-block";
+        }
 
         if (e.target.code.value === "696969" && e.target.page.value === "Chawpsticks' Clips") {
             axios.post('/clips', {
@@ -92,19 +102,34 @@ function Upload() {
         }
     };
 
+    let div = document.getElementById('div')
+
     function refreshClipsPage() {
         document.querySelector('.nav-list__link-clips').click()
 
-        $(document).ready(function(){
-            var divTop = $('.clips__video-container').height();
-            $('html, body').animate({ scrollTop: divTop }, 'slow');
+        // $(document).ready(function(){
+        //     var divTop = $('.clips__video-container').height();
+        //     $('html, body').animate({ scrollTop: divTop }, 'slow');
+            
+        //     $("#div").animate({ scrollTop: $("#div")[0].scrollHeight }, 1000);
+        // })
 
-            var div = $('.clips__video-container');
 
-            div.animate({
-                scrollTop: div[0].scrollHeight
-            }, 1000);
-        });   
+
+            function scroll(speed) {
+                $(div).animate({
+                    scrollTop: $(div).prop('scrollHeight')
+                }, 'fast', function () {
+                    $(this).animate({
+                        scrollTop: 0
+                    }, speed);
+                });
+            }
+        
+            let speed = 1000;
+        
+            scroll(speed)
+
     }
 
     function refreshFriendsClipsPage() {

@@ -21,7 +21,7 @@ class App extends React.Component {
     
     return (
       <div className="App">
-        <Header />
+        <Header/>
         <Switch>
           <Route path='/' exact render={routeProps => <Home  {...routeProps} />} />
           <Route path='/clips' exact component={ClipsPage} />

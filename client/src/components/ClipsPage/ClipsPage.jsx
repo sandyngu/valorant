@@ -93,7 +93,7 @@ class ClipsPage extends React.Component {
                 Sort by: <span className="clips__button--reverse-text">Recent</span>
                 <img src={Flip} className="clips__button-reverse" alt="Reverse Logo"/>
             </button>
-            <div className="clips__video-container">
+            <div className="clips__video-container" id="div">
                 {this.state.clips.map(video => 
                     <Video key={video.id} clipsData={this.state.clips} url={this.state.url}/>)    
                 }

@@ -9,7 +9,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <BrowserRouter basename={window.location.pathname || ''}>
     <React.StrictMode>
-      <App />
+      <App/>
     </React.StrictMode>
   </BrowserRouter>,
   document.getElementById('root')
