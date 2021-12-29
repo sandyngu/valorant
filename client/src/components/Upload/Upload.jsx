@@ -8,7 +8,7 @@ import Error from '../../assets/images/error.png';
 
 function Upload() {
 
-    function cancelForm (e) {
+    function cancelForm () {
         const uploadForm = document.querySelector('.upload__form');
         uploadForm.reset();
     };
@@ -107,37 +107,22 @@ function Upload() {
     function refreshClipsPage() {
         document.querySelector('.nav-list__link-clips').click()
 
-        // $(document).ready(function(){
-        //     var divTop = $('.clips__video-container').height();
-        //     $('html, body').animate({ scrollTop: divTop }, 'slow');
+        $(document).ready(function(){
+            var divTop = $('.clips__video-container').height();
+            $('html, body').animate({ scrollTop: divTop }, 'slow');
             
-        //     $("#div").animate({ scrollTop: $("#div")[0].scrollHeight }, 1000);
-        // })
-
-
-
-            function scroll(speed) {
-                $(div).animate({
-                    scrollTop: $(div).prop('scrollHeight')
-                }, 'fast', function () {
-                    $(this).animate({
-                        scrollTop: 0
-                    }, speed);
-                });
-            }
-        
-            let speed = 1000;
-        
-            scroll(speed)
-
+            $("#div").animate({ scrollTop: 100000 }, 2000);
+        })
     }
 
     function refreshFriendsClipsPage() {
         document.querySelector('.nav-list__link-friendsclips').click()
         
-        $(document).ready(function() {
+        $(document).ready(function(){
             var divTop = $('.clips__video-container').height();
             $('html, body').animate({ scrollTop: divTop }, 'slow');
+            
+            $("#div").animate({ scrollTop: $("#div")[0].scrollHeight }, 2000);
         })
     }
 
@@ -227,7 +212,7 @@ function Upload() {
                     <div className="upload__form-error upload__form-error--hide"><img src={Error} alt="Error Icon" className="upload__form-error-icon"/> Please fix the highlighted fields before submission.</div>
                     <div className="upload__form-options">
                         <button className="upload__form-options-button upload__form-options-button--submit">Submit</button>
-                        <button className="upload__form-options-button upload__form-options-button--cancel" /*onClick={(e) => cancelForm(e)}*/ onClick={()=>refreshClipsPage()}>Cancel</button>
+                        <button className="upload__form-options-button upload__form-options-button--cancel" onClick={() => cancelForm()}>Cancel</button>
                     </div>
                 </form>
             </div>
