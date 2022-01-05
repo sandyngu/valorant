@@ -1,6 +1,5 @@
 {
   "name": "valorant",
-  "homepage": "https://sandyngu.github.io/valorant/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
