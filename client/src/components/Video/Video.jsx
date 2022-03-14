@@ -78,6 +78,9 @@ function Video(props) {
         $('div.video__clip-container-agent:contains("Chamber")').each(function () {
             $(this).addClass("chamber");
         });
+        $('div.video__clip-container-agent:contains("Neon")').each(function () {
+            $(this).addClass("neon");
+        });
         $('div.video__clip-container-agent:contains("Andrew")').each(function () {
             $(this).addClass("andrew");
         });
@@ -102,6 +105,9 @@ function Video(props) {
         $('div.video__clip-container-agent:contains("Tim")').each(function () {
             $(this).addClass("tim");
             $(this).removeClass("cypher");
+        });
+        $('div.video__clip-container-agent:contains("Alex")').each(function () {
+            $(this).addClass("alex");
         });
             
     });
