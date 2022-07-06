@@ -7,7 +7,7 @@
     height: 85vw;
     left: 10%;
     top: 1;
-    margin-top: 10vw;
+    margin-top: 5vw;
     text-align: center;
 
     &__container {
@@ -62,7 +62,7 @@
         }
     }
     &__text {
-        font-size: 0.88vw;
+        font-size: 0.9vw;
         text-align: left;
         color: #444444;
 
@@ -77,9 +77,8 @@
         }
 
         &-first {
-            text-transform: uppercase;
             font-weight: bold;
-            font-size: 0.85vw;
+            font-size: 0.9vw;
         }
         &--strike {
             text-decoration: line-through;
@@ -95,23 +94,23 @@
             left: 24.75%;
 
             &1 {
-                padding: 1.1vw 2.35vw;
+                padding: 1.1vw 2.7vw;
             }
 
             &2 {
                 margin-top: 5.08vw;
                 left: 20.3%;
-                padding: 1.1vw 2.7vw;
+                padding: 1.1vw 3.05vw;
             }
             &3 {
                 margin-top: 10.35vw;
                 left: 19%;
-                padding: 1.1vw 2.45vw;
+                padding: 1.1vw 2.85vw;
             }
             &4 {
                 margin-top: 15.35vw;
                 left: 25.2%;
-                padding: 1.1vw 2.55vw;
+                padding: 1.1vw 2.85vw;
             }
 
             &-container {
