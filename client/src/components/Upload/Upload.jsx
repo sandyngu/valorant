@@ -171,6 +171,7 @@ function Upload() {
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Astra</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Breach</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Brimstone</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Fade</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Jett</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">KAY/O</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Killjoy</option>
@@ -189,6 +190,7 @@ function Upload() {
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Andrew</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Bruce</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Ian</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Igal</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Jenny</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Kyle</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Raymond</option>
