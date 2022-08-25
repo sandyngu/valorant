@@ -36,6 +36,8 @@ function Upload() {
             map = 'https://i.postimg.cc/W19147Cd/haven.png'
         } else if (e.target.poster.value === 'Icebox') {
             map = 'https://i.postimg.cc/SxQKqPT0/icebox.png'
+        } else if (e.target.poster.value === 'Pearl') {
+            map = 'https://i.postimg.cc/7hR1kyWJ/pearl.png'
         } else if (e.target.poster.value === 'Split') {
             map = 'https://i.postimg.cc/bN9v7PRH/split.png'
         }
@@ -209,6 +211,7 @@ function Upload() {
                         <option className="upload__form-dropdown-option">Fracture</option>
                         <option className="upload__form-dropdown-option">Haven</option>
                         <option className="upload__form-dropdown-option">Icebox</option>
+                        <option className="upload__form-dropdown-option">Pearl</option>
                         <option className="upload__form-dropdown-option">Split</option>
                     </select>
                     <label className="upload__form-title">Code:</label>

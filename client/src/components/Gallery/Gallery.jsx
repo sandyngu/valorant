@@ -34,6 +34,15 @@ import Image32 from '../../assets/images/gallery/split.jpg'
 import Image33 from '../../assets/images/gallery/val girls.jpg'
 import Image34 from '../../assets/images/gallery/vogue.jpg'
 import Image35 from '../../assets/images/gallery/agents2.jpg'
+import Image36 from '../../assets/images/gallery/new6.png'
+import Image37 from '../../assets/images/gallery/new.jpg'
+import Image38 from '../../assets/images/gallery/new1.jpg'
+import Image39 from '../../assets/images/gallery/new2.jpg'
+import Image40 from '../../assets/images/gallery/new3.jpg'
+import Image41 from '../../assets/images/gallery/new4.jpg'
+import Image42 from '../../assets/images/gallery/new5.jpg'
+import Image43 from '../../assets/images/gallery/new7.jpg'
+import Image44 from '../../assets/images/gallery/new8.jpg'
 import './gallery.scss';
 
 function Gallery() {
@@ -81,6 +90,15 @@ function Gallery() {
                 <img src={Image33} className="gallery__photo gallery__photo33" alt="Valorant Art"/>
                 <img src={Image34} className="gallery__photo gallery__photo34" alt="Valorant Art"/>
                 <img src={Image35} className="gallery__photo gallery__photo35" alt="Valorant Art"/>
+                <img src={Image36} className="gallery__photo gallery__photo36" alt="Valorant Art"/>
+                <img src={Image37} className="gallery__photo gallery__photo37" alt="Valorant Art"/>
+                <img src={Image38} className="gallery__photo gallery__photo38" alt="Valorant Art"/>
+                <img src={Image39} className="gallery__photo gallery__photo39" alt="Valorant Art"/>
+                <img src={Image40} className="gallery__photo gallery__photo40" alt="Valorant Art"/>
+                <img src={Image41} className="gallery__photo gallery__photo41" alt="Valorant Art"/>
+                <img src={Image42} className="gallery__photo gallery__photo42" alt="Valorant Art"/>
+                <img src={Image43} className="gallery__photo gallery__photo43" alt="Valorant Art"/>
+                <img src={Image44} className="gallery__photo gallery__photo44" alt="Valorant Art"/>
             </div>
         </div>
         </>

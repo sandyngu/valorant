@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a1fee5a.chunk.css",
-    "main.js": "/static/js/main.7acda048.chunk.js",
-    "main.js.map": "/static/js/main.7acda048.chunk.js.map",
+    "main.css": "/static/css/main.de3002fb.chunk.css",
+    "main.js": "/static/js/main.29892307.chunk.js",
+    "main.js.map": "/static/js/main.29892307.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e554902e.js",
     "runtime-main.js.map": "/static/js/runtime-main.e554902e.js.map",
     "static/js/2.1d8c9ee6.chunk.js": "/static/js/2.1d8c9ee6.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.04e0c5c8.chunk.js": "/static/js/3.04e0c5c8.chunk.js",
     "static/js/3.04e0c5c8.chunk.js.map": "/static/js/3.04e0c5c8.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.7a1fee5a.chunk.css.map": "/static/css/main.7a1fee5a.chunk.css.map",
+    "static/css/main.de3002fb.chunk.css.map": "/static/css/main.de3002fb.chunk.css.map",
     "static/js/2.1d8c9ee6.chunk.js.LICENSE.txt": "/static/js/2.1d8c9ee6.chunk.js.LICENSE.txt",
     "static/media/upload.scss": "/static/media/Val-Font.b2a962b6.woff",
     "static/media/agents.27c12db0.png": "/static/media/agents.27c12db0.png",
@@ -46,6 +46,15 @@
     "static/media/kj cypher.8a036641.jpg": "/static/media/kj cypher.8a036641.jpg",
     "static/media/kj.597fa7bf.jpg": "/static/media/kj.597fa7bf.jpg",
     "static/media/kj.60eeb9df.png": "/static/media/kj.60eeb9df.png",
+    "static/media/new.3422c4c8.jpg": "/static/media/new.3422c4c8.jpg",
+    "static/media/new1.fc6ab25b.jpg": "/static/media/new1.fc6ab25b.jpg",
+    "static/media/new2.d2c12279.jpg": "/static/media/new2.d2c12279.jpg",
+    "static/media/new3.70a0df97.jpg": "/static/media/new3.70a0df97.jpg",
+    "static/media/new4.e5c65dba.jpg": "/static/media/new4.e5c65dba.jpg",
+    "static/media/new5.cf02faf6.jpg": "/static/media/new5.cf02faf6.jpg",
+    "static/media/new6.49e5d589.png": "/static/media/new6.49e5d589.png",
+    "static/media/new7.5901ecfe.jpg": "/static/media/new7.5901ecfe.jpg",
+    "static/media/new8.45e417ff.jpg": "/static/media/new8.45e417ff.jpg",
     "static/media/omen.7476c1d6.jpg": "/static/media/omen.7476c1d6.jpg",
     "static/media/sage and viper.2a2aff8b.jpg": "/static/media/sage and viper.2a2aff8b.jpg",
     "static/media/sage noodles.cf6a571c.jpg": "/static/media/sage noodles.cf6a571c.jpg",
@@ -67,7 +76,7 @@
   "entrypoints": [
     "static/js/runtime-main.e554902e.js",
     "static/js/2.1d8c9ee6.chunk.js",
-    "static/css/main.7a1fee5a.chunk.css",
-    "static/js/main.7acda048.chunk.js"
+    "static/css/main.de3002fb.chunk.css",
+    "static/js/main.29892307.chunk.js"
   ]
 }
