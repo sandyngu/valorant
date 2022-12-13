@@ -39,7 +39,7 @@ function Home() {
                     <div className="home__text"><span className="home__text-first">VALORANT IS A 5v5 CHARACTER-BASED TACTICAL SHOOTER.</span> 
                         <br/><br/>Here you will be blessed with some of my highlight reels and my friends' highlight reels from the game. 
                         <span className="home__text--strike">I am hardstuck gold.</span> <span className="home__text--strike">I am finally plat!
-                        </span> <span className="home__text--strike">I'm gold again...</span> I'M PLAT! and have spent an unhealthy amount of time on the game. Tracker.gg says I have spent 1300+ hours on the game. I have been playing since beta.
+                        </span> I'M DIAMOND! and have spent an unhealthy amount of time on the game. Tracker.gg says I have spent 1800+ hours on the game. I have been playing since beta.
                         <br/><br/>Please feel free to browse around and join me on my journey to radiant. Enjoy the content, agent :).
                     </div>
                     <div className="home__text-line"></div>

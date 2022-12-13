@@ -84,6 +84,9 @@ function Video(props) {
         $('div.video__clip-container-agent:contains("Fade")').each(function () {
             $(this).addClass("fade");
         });
+        $('div.video__clip-container-agent:contains("Harbor")').each(function () {
+            $(this).addClass("harbor");
+        });
         $('div.video__clip-container-agent:contains("Andrew")').each(function () {
             $(this).addClass("andrew");
         });

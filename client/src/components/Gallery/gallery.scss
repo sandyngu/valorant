@@ -3,7 +3,7 @@
 .gallery {
     background-color: rgba(255,255,255,0.1);
     width: 80%;
-    height: 700vw;
+    height: 800vw;
     position: absolute;
     left: 10%;
     top: 1;
@@ -15,7 +15,7 @@
         position: absolute;
         background-color: rgba(255,255,255,0.1);
         left: 5%; 
-        height: 90%;
+        height: 98%;
         top: 0;
         margin-top: 12.75vw;
     }
@@ -267,9 +267,61 @@
         }
         &36 {
             top: 0;
-            margin-top: 568.75vw;
+            margin-top: 589.5vw;
             left: 7%;
+            width: 35vw; 
+        }
+        &37 {
+            top: 0;
+            margin-top: 589.5vw;
+            right: 7%;
+            width: 31.5vw;    
+        }
+        &38 {
+            top: 0;
+            margin-top: 609vw;
+            right: 7%;
             width: 31.5vw; 
+        }
+        &39 {
+            top: 0;
+            margin-top: 628.75vw;
+            right: 7%;
+            width: 31.5vw; 
+        }
+        &40 {
+            top: 0;
+            margin-top: 646vw;
+            right: 7%;
+            width: 31.5vw; 
+        }
+        &41 {
+            top: 0;
+            margin-top: 679.5vw;
+            right: 7%;
+            width: 31.5vw; 
+        }
+        &42 {
+            top: 0;
+            margin-top: 689.5vw;
+            left: 7%;
+            width: 35vw; 
+
+        }
+        &43 {
+            top: 0;
+            margin-top: 713vw;
+            right: 7%;
+            width: 31.5vw; 
+        }
+        &44 {
+            top: 0;
+            margin-top: 735.5vw;
+            right: 7%;
+            width: 31.5vw; 
+        }
+        &45 {
+
         }
     }
 }
