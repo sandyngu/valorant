@@ -36,6 +36,8 @@ function Upload() {
             map = 'https://i.postimg.cc/W19147Cd/haven.png'
         } else if (e.target.poster.value === 'Icebox') {
             map = 'https://i.postimg.cc/SxQKqPT0/icebox.png'
+        } else if (e.target.poster.value === 'Lotus') {
+            map = 'https://i.postimg.cc/SxQKqPT0/lotus.png'
         } else if (e.target.poster.value === 'Pearl') {
             map = 'https://i.postimg.cc/7hR1kyWJ/pearl.png'
         } else if (e.target.poster.value === 'Split') {
@@ -174,7 +176,9 @@ function Upload() {
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Breach</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Brimstone</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Fade</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Harbor</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Jett</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Gekko</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">KAY/O</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Killjoy</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--agent">Neon</option>
@@ -197,6 +201,7 @@ function Upload() {
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Kyle</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Raymond</option>
                         <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Tim</option>
+                        <option className="upload__form-dropdown-option upload__form-dropdown-option--friend">Vincent</option>
                     </select>
                     <label className="upload__form-title">Video URL/Path:</label>
                     <input type="text" name="video" className="upload__form-input upload__form-input-video" placeholder="Where can we get the video?" id="video"/>
@@ -211,6 +216,7 @@ function Upload() {
                         <option className="upload__form-dropdown-option">Fracture</option>
                         <option className="upload__form-dropdown-option">Haven</option>
                         <option className="upload__form-dropdown-option">Icebox</option>
+                        <option className="upload__form-dropdown-option">Lotus</option>
                         <option className="upload__form-dropdown-option">Pearl</option>
                         <option className="upload__form-dropdown-option">Split</option>
                     </select>
