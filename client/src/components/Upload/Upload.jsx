@@ -25,23 +25,23 @@ function Upload() {
 
         let map = '';
         if (e.target.poster.value === 'Ascent') {
-            map = 'https://i.postimg.cc/4xdQnsBs/ascent.png'
+            map = 'https://i.postimg.cc/4xdQnsBs/ascent2.png'
         } else if (e.target.poster.value === 'Bind') {
-            map = 'https://i.postimg.cc/m2sDpk7g/bind.png'
+            map = 'https://i.postimg.cc/m2sDpk7g/bind2.png'
         } else if (e.target.poster.value === 'Breeze') {
-            map = 'https://i.postimg.cc/kM8GyK6H/breeze.png'
+            map = 'https://i.postimg.cc/kM8GyK6H/breeze2.png'
         } else if (e.target.poster.value === 'Fracture') {
-            map = 'https://i.postimg.cc/xCZwxPy9/fracture.png'
+            map = 'https://i.postimg.cc/xCZwxPy9/fracture2.png'
         } else if (e.target.poster.value === 'Haven') {
-            map = 'https://i.postimg.cc/W19147Cd/haven.png'
+            map = 'https://i.postimg.cc/W19147Cd/haven2.png'
         } else if (e.target.poster.value === 'Icebox') {
-            map = 'https://i.postimg.cc/SxQKqPT0/icebox.png'
+            map = 'https://i.postimg.cc/SxQKqPT0/icebox2.png'
         } else if (e.target.poster.value === 'Lotus') {
             map = 'https://i.postimg.cc/SxQKqPT0/lotus.png'
         } else if (e.target.poster.value === 'Pearl') {
-            map = 'https://i.postimg.cc/7hR1kyWJ/pearl.png'
+            map = 'https://i.postimg.cc/7hR1kyWJ/pearl2.png'
         } else if (e.target.poster.value === 'Split') {
-            map = 'https://i.postimg.cc/bN9v7PRH/split.png'
+            map = 'https://i.postimg.cc/bN9v7PRH/split2.png'
         }
 
         if (e.target.page.value === 'Which page is this for?') {
