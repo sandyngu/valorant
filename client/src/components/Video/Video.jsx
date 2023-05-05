@@ -115,7 +115,9 @@ function Video(props) {
         $('div.video__clip-container-agent:contains("Alex")').each(function () {
             $(this).addClass("alex");
         });
-            
+        $('div.video__clip-container-agent:contains("Vincent")').each(function () {
+            $(this).addClass("vincent");
+        });  
     });
 
     return (
