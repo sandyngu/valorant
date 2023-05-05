@@ -16,7 +16,7 @@ class FriendsClipsPage extends React.Component {
         axios.get('/friendsclips') 
         .then(res => {
             this.setState({
-                clips: [res.data].slice.reverse
+                clips: [res.data]
             })
         })
         .catch(err => console.log(err))

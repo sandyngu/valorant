@@ -17,7 +17,7 @@ class ClipsPage extends React.Component {
         axios.get('/clips') 
         .then(res => {
             this.setState({
-                clips: [res.data].slice.reverse()
+                clips: [res.data]
             })
         })
         .catch(err => console.log(err))
