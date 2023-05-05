@@ -17,7 +17,7 @@ class ClipsPage extends React.Component {
         axios.get('/clips') 
         .then(res => {
             this.setState({
-                clips: [res.data]
+                clips: [res.data].slice.reverse()
             })
         })
         .catch(err => console.log(err))
@@ -48,16 +48,16 @@ class ClipsPage extends React.Component {
         let b = a.slice().reverse();
         
         if (this.state.clips[0][0].id !== 5) {
-            document.querySelector('.clips__button--reverse-text').innerHTML="Oldest";
-            $(".clips__video-container").scrollTop(0);
-            this.setState({
-                clips: [a]
-            })
-        } else if (this.state.clips[0][0].id === 5) {
             document.querySelector('.clips__button--reverse-text').innerHTML="Recent";
             $(".clips__video-container").scrollTop(0);
             this.setState({
-                clips: [a]
+                clips: [b]
+            })
+        } else if (this.state.clips[0][0].id === 5) {
+            document.querySelector('.clips__button--reverse-text').innerHTML="Oldest";
+            $(".clips__video-container").scrollTop(0);
+            this.setState({
+                clips: [b]
             });
         };
     };
