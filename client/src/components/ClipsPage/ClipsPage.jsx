@@ -16,8 +16,9 @@ class ClipsPage extends React.Component {
     componentDidMount() {
         axios.get('/clips') 
         .then(res => {
+            let a = res.data.reverse()
             this.setState({
-                clips: [res.data]
+                clips: [a]
             })
         })
         .catch(err => console.log(err))
@@ -63,7 +64,6 @@ class ClipsPage extends React.Component {
     };
     
     render() {
-
         var scrolled=0;
  
             $(".clips__button--next").on("click" ,function(){
@@ -84,13 +84,14 @@ class ClipsPage extends React.Component {
 
 
     return (
+        
         <div className="clips">
             <div className="clips__heading-box"></div>
             <div className="clips__heading">
                 <div className="clips__heading-text">Chawp's Clips</div>
             </div>
             <button className="clips__button--reverse clips__button--reverse-new" onClick={() => this.flip()} onMouseOver={() => this.flipHover()} onMouseLeave={() => this.flipLeave()}>
-                Sort by: <span className="clips__button--reverse-text">Recent</span>
+                Sort by: <span className="clips__button--reverse-text">Oldest</span>
                 <img src={Flip} className="clips__button-reverse" alt="Reverse Logo"/>
             </button>
             <div className="clips__video-container" id="div">
